@@ -1,0 +1,38 @@
+.A_RichTextImage {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 800px;
+  padding: 24px 0 16px;
+}
+
+.A_RichTextImage__Slot {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  height: 360px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.A_RichTextImage__Frame {
+  position: relative;
+  flex: 1 0 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.A_RichTextImage__Frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.A_RichTextImage__Frame-portrait {
+  flex: 0.8 0 0;
+}

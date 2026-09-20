@@ -17,6 +17,14 @@
   margin-bottom: -64px;
 }
 
+.O_Nav-ghost {
+  background: transparent;
+}
+
+.O_Nav.is-scrolled {
+  background: var(--white);
+}
+
 .O_Nav__Actions {
   display: flex;
   align-items: flex-start;

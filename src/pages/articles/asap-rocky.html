@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="S_Page">
-      <nav class="O_Nav" aria-label="Основная навигация">
+      <nav class="O_Nav O_Nav-overlay O_Nav-ghost" aria-label="Основная навигация">
         <a class="A_Logo" href="../../index.html" aria-label="Underground and Pound">
           <img
             src="../../images/logos/logo-mark.svg"
@@ -18,10 +18,10 @@
         </a>
         <div class="O_Nav__Actions">
           <div class="M_NavTabs">
-            <a class="M_Button M_Button-quiet" href="../../index.html">
+            <a class="M_Button" href="../../index.html" aria-current="page">
               <span class="A_TextLabel">Главная</span>
             </a>
-            <a class="M_Button" href="../articles.html" aria-current="page">
+            <a class="M_Button M_Button-quiet" href="../articles.html">
               <span class="A_TextLabel">Статьи</span>
             </a>
             <a class="M_Button M_Button-quiet" href="../tests.html">
@@ -34,19 +34,669 @@
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
+          <a
+            class="A_IconButton"
+            href="../../index.html"
+            aria-label="Поиск"
+          >
+            <img
+              class="A_Icon"
+              src="../../images/icons/magnifying-glass-nav.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </a>
         </div>
       </nav>
-      <main class="S_Inner">
-        <p class="A_TextLabel A_Text-darkGray">22/11—2026</p>
-        <h1 class="A_TextH2">Асап Роки</h1>
-        <p class="A_TextBody A_Text-darkGray">
-          Great work rarely happens in isolation. It begins where different
-          perspectives meet.
-        </p>
-        <p class="A_TextBody">
-          <a href="../articles.html">Обратно ко всем статьям</a>
-        </p>
+
+      <main>
+        <section class="S_ArticleHero">
+          <div class="S_ArticleHero__Inner">
+            <div class="S_ArticleHero__Media">
+              <div class="S_ArticleHero__Image">
+                <img
+                  src="../../images/articles/asap-rocky/hero.svg"
+                  width="680"
+                  height="864"
+                  alt="A$AP Rocky"
+                />
+              </div>
+            </div>
+            <div class="S_ArticleHero__Copy">
+              <h1 class="A_TextH2">Я не хочу выглядеть как кто-то другой</h1>
+              <div class="S_ArticleHero__Bar">
+                <div class="S_ArticleHero__Share">
+                  <button
+                    class="M_Button M_Button-ghost M_Button-share"
+                    type="button"
+                    data-share
+                  >
+                    <span class="A_TextLabel">Поделиться</span>
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/arrow-up-right-16.svg"
+                      width="16"
+                      height="16"
+                      alt=""
+                    />
+                  </button>
+                  <a
+                    class="A_IconButton"
+                    href="#"
+                    data-share-network="telegram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Поделиться в Telegram"
+                  >
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/telegram.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="A_IconButton"
+                    href="#"
+                    data-share-network="pinterest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Поделиться в Pinterest"
+                  >
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/pinterest.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="A_IconButton"
+                    href="https://www.instagram.com/"
+                    data-share-network="instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/instagram.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="S_ArticleHero__Meta">
+                  <p class="A_TextLabel">22.11.2026</p>
+                  <p class="A_TextLabel">Рахат Юсупов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <article class="S_Article">
+          <div class="S_Article__Layout">
+            <aside class="S_Article__Nav">
+              <nav class="M_Breadcrumbs" aria-label="Хлебные крошки">
+                <a class="A_TextBodySerif" href="../../index.html">Главная</a>
+                <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
+                <a class="A_TextBodySerif" href="../articles.html">Статьи</a>
+                <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
+                <span class="A_TextBodySerif M_Breadcrumbs__Current"
+                  >Асап Роки</span
+                >
+              </nav>
+              <nav class="O_ArticleNav" aria-label="Содержание" data-article-nav>
+                <a class="O_ArticleNav__Item" href="#ulichnyj-sveg">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Уличный свэг и люкс</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#rezhisser">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Не лицо, а режиссёр</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#digging">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Жесткий диггинг</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#media-art">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Нью (соушл) медиа-арт</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#vlast">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >От коллекции — к власти над брендом</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#vyvod">
+                  <span class="O_ArticleNav__Label A_TextBody">Вывод</span>
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+              </nav>
+            </aside>
+
+            <div class="S_Article__Main">
+              <div class="M_Tags">
+                <span class="M_Tag">
+                  <span class="A_TextBodyBold">Фэшн</span>
+                </span>
+                <span class="M_Tag">
+                  <span class="A_TextBodyBold">Графический дизайн</span>
+                </span>
+                <span class="M_Tag">
+                  <span class="A_TextBodyBold">Авто-спорт</span>
+                </span>
+              </div>
+
+              <div class="S_ArticleContent">
+                <div class="S_ArticleContent__Slot">
+                  <div class="A_RichText A_RichText-h" id="ulichnyj-sveg">
+                    <h2 class="A_TextH3">Уличный свэг и люкс</h2>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Есть музыканты, которые «сотрудничают» с брендами —
+                      фотографируются в кампейнах и получают чек. А есть A$AP
+                      Rocky (Раким Майерс), для которого коллаборация — это
+                      полноценный креативный жанр: с архивными исследованиями,
+                      режиссурой, лором и собственной эстетической доктриной. За
+                      последние несколько лет он стал креативным директором PUMA
+                      x F1, первым креативным директором в истории Ray-Ban,
+                      создателем коллекций для Guess, Under Armour, JW Anderson
+                      и Moncler — и при этом практически каждый раз вносил в
+                      партнёрство не имя, а метод
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/f1-puma-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/f1-puma-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      A$AP ROCKY x Formula 1 x PUMA
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-hPad" id="rezhisser">
+                    <h2 class="A_TextH3">Не лицо, а режиссёр</h2>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Главное отличие подхода Роки — отказ от роли
+                      «амбассадора». Когда в конце 2023 года PUMA объявила о
+                      назначении его креативным директором направления PUMA x
+                      F1, это было оформлено как многолетняя структурная
+                      должность, а не разовый дроп. По его собственным словам,
+                      работа с такими партнёрами вдохновляет его именно
+                      возможностью сломать устоявшиеся правила: «Когда мир
+                      увидит, что мы делаем, я верю, что произойдёт сдвиг в том,
+                      как бренды относятся к риску и к работе с креаторами из
+                      разных сред». Проще говоря: Роки рассматривает
+                      коллаборацию как инструмент институциональных изменений, а
+                      не как маркетинговую тактику.
+                    </p>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Эту же логику он применяет к себе. В интервью Highsnobiety
+                      он сформулировал её грубовато, но точно: «Я просто хочу
+                      дать людям то, что сам бы носил и в чём разбираюсь.
+                      <span class="A_Text-underline"
+                        >Сейчас такой климат, где нет индивидуальности... Я
+                        хочу быть пастырем в стране овец. Не волком и не акулой
+                        — просто вести в правильном направлении</span
+                      >»
+                    </p>
+                  </div>
+
+                  <div class="A_QuoteWrap">
+                    <blockquote class="A_Quote">
+                      <p class="A_TextLead">
+                        «Создать собственную линейку?<br />
+                        Нет, я просто люблю культуру»
+                      </p>
+                      <div class="A_Quote__Caption">
+                        <p class="A_TextBodyBold">A$AP Rocky</p>
+                        <p class="A_TextBody">
+                          Рэпер, креативный директор AWGE
+                        </p>
+                      </div>
+                    </blockquote>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hAfter" id="digging">
+                    <h2 class="A_TextH3">Жесткий диггинг</h2>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/guess-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/guess-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      A$AP ROCKY × Guess
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Практически каждая коллаборация Роки начинается не с
+                      эскиза, а с архива. В 2016-м, работая с Guess, он лично
+                      поехал в Калифорнию к историческим коллекциям бренда и
+                      объяснял:
+                      <span class="A_Text-underline"
+                        >«Мне казалось, что есть пробел в знаниях о том, какую
+                        большую роль Guess сыграл в городской моде и культуре
+                        конца 80-х — начала 90-х. Этого просто не хватает. Я
+                        почувствовал, что пора это переосмыслить, придать
+                        немного новой энергии и нового вайба»</span
+                      >. Результат — линия GUE$$, где культовый треугольный
+                      логотип размножался в доллары, а классические полосатые
+                      футболки звучали как цитата из нью-йоркского детства
+                      Роки.
+                    </p>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Тот же приём через десять лет применён к PUMA: весной
+                      2025-го он представил кроссовки Mostro Gabbia, собранные
+                      из архивных решений бренда:
+                      <span class="A_Text-underline"
+                        >«У меня была возможность покопаться в архивах PUMA и
+                        смешать лучшее из нескольких моделей, добавив
+                        собственный взгляд и стиль»</span
+                      >. Роки не изобретает бренд заново — он раскапывает его
+                      собственную ДНК и поворачивает её в сторону улицы.
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/puma.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      A$AP ROCKY × PUMA
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_QuoteWrap">
+                    <blockquote class="A_Quote">
+                      <p class="A_TextLead">
+                        У меня была возможность покопаться в архивах PUMA и
+                        смешать лучшее из нескольких моделей, добавив
+                        собственный взгляд и стиль
+                      </p>
+                      <div class="A_Quote__Caption">
+                        <p class="A_TextBodyBold">A$AP Rocky</p>
+                        <p class="A_TextBody">
+                          Рэпер, креативный директор AWGE
+                        </p>
+                      </div>
+                    </blockquote>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hPad" id="media-art">
+                    <h2 class="A_TextH3">Нью (соушл) медиа-арт</h2>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/f1-puma-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/f1-puma-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      A$AP ROCKY x Formula 1 x PUMA
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Самое интересное в работе Роки — то, как он использует
+                      неочевидные медиумы. Показательный случай — Las Vegas
+                      Sphere. На Гран-при Формулы-1 в ноябре 2023 года его
+                      кампания для PUMA x F1 стала первым в истории живым
+                      (live-action) контентом на гигантском сферическом экране
+                      Exosphere
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/sphere-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/sphere-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      A$AP ROCKY x Las Vegas Sphere x Formula 1 x PUMA
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Самое интересное в работе Роки — то, как он использует
+                      неочевидные медиумы. Показательный случай — Las Vegas
+                      Sphere. На Гран-при Формулы-1 в ноябре 2023 года его
+                      кампания для PUMA x F1 стала первым в истории живым
+                      (live-action) контентом на гигантском сферическом экране
+                      Exosphere
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/instagram-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/instagram-2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/instagram-3.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/instagram-4.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      A$AP ROCKY x
+                      <span class="A_Text-strike">Нельзя</span>
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Важно что Роки также является пионером в “артовом” social
+                      media marketinge.<br />
+                      В 2015 его креативное агентство AWGE во многом хайпило за
+                      счет странных постов в
+                      <span class="A_Text-strike">нельзя.</span><br /><br />
+                      А до этого был тамблер и майспейс, в которых было больше
+                      креативной свободы. Но кто еще из реперов в 2015-м мог
+                      запостить три одинаковых белых квадрата в
+                      <span class="A_Text-strike">инсте?</span>
+                    </p>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hPad" id="vlast">
+                    <h2 class="A_TextH3">От коллекции — к власти над брендом</h2>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame A_RichTextImage__Frame-portrait">
+                        <img
+                          src="../../images/articles/asap-rocky/rayban-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/rayban-2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/asap-rocky/rayban-3.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      A$AP ROCKY × Ray-Ban
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Кульминация этой эволюции — Ray-Ban. В феврале 2025 года
+                      Роки стал первым креативным директором в 80-летней истории
+                      бренда: не лицом кампейна, а человеком, отвечающим за
+                      дизайн оправ, рекламные кампании, переосмысление магазинов
+                      и кураторство платформы Ray-Ban Studios. Его первый ход —
+                      коллекция Blacked Out с увеличенными силуэтами и
+                      ультратёмными линзами, затем инфляционные Wayfarer Puffer,
+                      которые мгновенно стали вирусными после появления на нём и
+                      Рианне в Каннах.
+                      <span class="A_Text-underline"
+                        >«Ray-Ban всегда умел эволюционировать, оставаясь верным
+                        своим корням. Быть частью этого пути и писать новую
+                        главу такого культового бренда — большая честь</span
+                      >», — говорил он.
+                    </p>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hPad" id="vyvod">
+                    <h2 class="A_TextH3">Вывод</h2>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Если свести всё воедино, метод Роки выглядит так: архивная
+                      экскавативность + унисекс + смешение высокого и уличного +
+                      нарратив (каждая коллекция рассказывает историю — Гарлема,
+                      джаза 20-х, гетто-готики, гоночной культуры) +
+                      неожиданный медиум, где одежда становится событием —
+                      сфера в Вегасе, бодега в Лондоне, кинокампейн с отсылками
+                      к его собственным концертам
+                    </p>
+                  </div>
+
+                  <div class="S_ArticleRelated">
+                    <p class="A_TextLead">Читайте также:</p>
+                    <div class="A_NextArticles">
+                      <a class="A_NextArticle" href="daniel-arsham.html">
+                        <p class="A_NextArticle__Title A_TextBodySerif">
+                          Даниэль Аршам
+                        </p>
+                        <span class="A_IconButton A_IconButton-s" aria-hidden="true">
+                          <img
+                            class="A_Icon"
+                            src="../../images/icons/caret-right-16.svg"
+                            width="16"
+                            height="16"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                      <a class="A_NextArticle" href="gucci-ghost.html">
+                        <p class="A_NextArticle__Title A_TextBodySerif">
+                          Gucci Ghost
+                        </p>
+                        <span class="A_IconButton A_IconButton-s" aria-hidden="true">
+                          <img
+                            class="A_Icon"
+                            src="../../images/icons/caret-right-16.svg"
+                            width="16"
+                            height="16"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                      <a class="A_NextArticle" href="hajime-sorayama.html">
+                        <p class="A_NextArticle__Title A_TextBodySerif">
+                          Хадзимэ Сораяма
+                        </p>
+                        <span class="A_IconButton A_IconButton-s" aria-hidden="true">
+                          <img
+                            class="A_Icon"
+                            src="../../images/icons/caret-right-16.svg"
+                            width="16"
+                            height="16"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </main>
+
+      <footer class="O_Footer">
+        <div class="O_Footer__Newsletter O_Footer__Newsletter-article">
+          <p class="O_Footer__NewsletterText A_TextLead">
+            Оставайтесь в курсе с нашим информационным бюллетенем, который
+            охватывает последние новости и аналитические материалы отрасли
+          </p>
+          <form class="O_Footer__Form O_Footer__Form-simple" data-newsletter-form>
+            <label class="O_Footer__Field O_Footer__Field-simple">
+              <span class="visually-hidden">Электронная почта</span>
+              <input
+                class="A_Input A_Input-medium"
+                type="email"
+                name="email"
+                placeholder="Ваша почта"
+                required
+              />
+            </label>
+            <button class="M_Button M_Button-m" type="submit">
+              <span class="A_TextLabel">Отправить</span>
+            </button>
+          </form>
+        </div>
+        <div class="O_Footer__Main">
+          <div class="O_Footer__LinksRow">
+            <div class="O_Footer__Brand">
+              <div class="A_LogoFooter">
+                <img
+                  src="../../images/logos/logo-footer.svg"
+                  width="2310"
+                  height="710"
+                  alt="Underground & Pound"
+                />
+              </div>
+            </div>
+            <nav class="O_Footer__Nav" aria-label="Подвал">
+              <div class="O_Footer__NavList">
+                <a class="A_TextH3 A_Text-white" href="../tests.html">Кейсы</a>
+                <a class="A_TextH3 A_Text-white" href="../articles.html"
+                  >Статьи</a
+                >
+                <a class="A_TextH3 A_Text-white" href="../dictionary.html"
+                  >Ресурсы</a
+                >
+                <a class="A_TextH3 A_Text-white" href="../../index.html#webzine"
+                  >Веб-зин</a
+                >
+              </div>
+            </nav>
+          </div>
+          <div class="O_Footer__Bottom">
+            <p class="A_TextBody A_Text-white">HSE DESIGN 2026</p>
+            <p class="A_TextBody A_Text-white">Рахат Юсупов</p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

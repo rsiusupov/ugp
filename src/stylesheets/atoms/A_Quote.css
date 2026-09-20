@@ -1,0 +1,23 @@
+.A_QuoteWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 32px 0;
+}
+
+.A_Quote {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  padding: 32px;
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.A_Quote__Caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}

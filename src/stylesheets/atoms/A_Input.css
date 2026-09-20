@@ -14,3 +14,7 @@
   color: var(--black);
   opacity: 1;
 }
+
+.A_Input-medium {
+  font-weight: 500;
+}

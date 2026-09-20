@@ -56,3 +56,9 @@
   font-size: var(--fs-body);
   line-height: var(--lh-body);
 }
+
+.M_Button-share {
+  height: var(--Button-button-m);
+  gap: 8px;
+  padding: 6px 8px;
+}

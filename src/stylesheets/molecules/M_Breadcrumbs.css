@@ -1,0 +1,32 @@
+.M_Breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 34px;
+  width: 100%;
+}
+
+.M_Breadcrumbs a,
+.M_Breadcrumbs span {
+  white-space: nowrap;
+}
+
+.M_Breadcrumbs a {
+  color: var(--dark-gray);
+  text-decoration: underline;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.M_Breadcrumbs a:hover,
+.M_Breadcrumbs a:focus-visible {
+  color: var(--black);
+}
+
+.M_Breadcrumbs__Sep {
+  color: var(--dark-gray);
+}
+
+.M_Breadcrumbs__Current {
+  color: var(--black);
+}

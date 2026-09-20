@@ -75,3 +75,9 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
+.A_Text-strike {
+  text-decoration: line-through;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

@@ -1,7 +1,8 @@
 .O_Footer {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   overflow: hidden;
@@ -75,6 +76,20 @@
 .O_Footer__Submit:hover .O_Footer__Dot,
 .O_Footer__Submit:focus-visible .O_Footer__Dot {
   background: var(--white);
+}
+
+.O_Footer__Newsletter-article {
+  align-items: flex-end;
+}
+
+.O_Footer__Form-simple {
+  align-items: center;
+  gap: 16px;
+}
+
+.O_Footer__Field-simple {
+  margin-right: 0;
+  padding: 10px;
 }
 
 .O_Footer__Main {

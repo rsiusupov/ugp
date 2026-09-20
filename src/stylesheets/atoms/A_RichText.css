@@ -1,0 +1,28 @@
+.A_RichText {
+  display: flex;
+  width: 100%;
+}
+
+.A_RichText-h {
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.A_RichText-hPad {
+  align-items: center;
+  padding: 24px 0;
+}
+
+.A_RichText-hAfter {
+  align-items: center;
+  padding: 24px 0 16px;
+}
+
+.A_RichText-body {
+  align-items: flex-start;
+  padding-bottom: 24px;
+}
+
+.A_RichText-body .A_TextBody {
+  max-width: 645px;
+}
