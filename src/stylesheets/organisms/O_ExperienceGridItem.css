@@ -1,0 +1,137 @@
+.O_ExperienceGridItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  height: 460px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.O_ExperienceGridItem-mint {
+  background: var(--mint);
+}
+
+.O_ExperienceGridItem-pink {
+  background: var(--pink);
+}
+
+.O_ExperienceGridItem-yellow {
+  background: var(--yellow);
+}
+
+.O_ExperienceGridItem-green {
+  background: var(--green);
+}
+
+.O_ExperienceGridItem__Text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 268px;
+}
+
+.O_ExperienceGridItem__Index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.O_ExperienceGridItem__Index .A_TextBody {
+  color: var(--white);
+  text-align: center;
+}
+
+.O_ExperienceGridItem__Illustration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.O_ExperienceGridItem__Illustration-1 {
+  right: -40px;
+  bottom: -215px;
+  width: 318px;
+  height: 472px;
+}
+
+.O_ExperienceGridItem__Illustration-1 img {
+  transform: rotate(4.23deg);
+}
+
+.O_ExperienceGridItem__Illustration-2 {
+  right: -34px;
+  bottom: -155px;
+  width: 314px;
+  height: 393px;
+}
+
+.O_ExperienceGridItem__Illustration-2 img {
+  transform: rotate(4.21deg);
+}
+
+.O_ExperienceGridItem__Illustration-3 {
+  right: -80px;
+  bottom: -40px;
+  width: 360px;
+  height: 380px;
+}
+
+.O_ExperienceGridItem__Illustration-3 img {
+  width: 360px;
+  height: auto;
+  transform: rotate(5.24deg);
+}
+
+.O_ExperienceGridItem__Illustration-4 {
+  right: -128px;
+  bottom: -107px;
+  width: 418px;
+  height: 418px;
+}
+
+.O_ExperienceGridItem__Cluster {
+  position: relative;
+  width: 304px;
+  height: 304px;
+  transform: rotate(-31.24deg);
+}
+
+.O_ExperienceGridItem__Cluster img {
+  position: absolute;
+}
+
+.O_ExperienceGridItem__Cluster-hand {
+  left: -14%;
+  top: 18%;
+}
+
+.O_ExperienceGridItem__Cluster-eye {
+  right: 4%;
+  top: 27%;
+}
+
+.O_ExperienceGridItem__Cluster-a {
+  left: 12%;
+  bottom: -7%;
+  transform: rotate(74deg) scaleX(-1);
+}
+
+.O_ExperienceGridItem__Cluster-b {
+  left: 22%;
+  top: -8%;
+  transform: rotate(105deg) scaleX(-1);
+}
+
+.O_ExperienceGridItem__Cluster-c {
+  left: -10%;
+  top: -16%;
+  transform: rotate(75deg) scaleX(-1);
+}

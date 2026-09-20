@@ -1,0 +1,82 @@
+.S_About {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 600px;
+  padding: var(--margin);
+  overflow: visible;
+  background: var(--white);
+}
+
+.S_About__Content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  max-width: 680px;
+}
+
+.S_About__Copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin);
+}
+
+.S_About__Copy .A_TextBody {
+  max-width: 495px;
+}
+
+.S_About__Illustration {
+  position: absolute;
+  top: 99px;
+  left: calc(41.67% + 62px);
+  width: 781.387px;
+  height: 681.673px;
+  pointer-events: none;
+}
+
+.S_About__Boombox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 20.28%;
+}
+
+.S_About__Fire {
+  position: absolute;
+  top: 6.55%;
+  right: 10.61%;
+  bottom: 0;
+  left: 30.29%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.S_About__Fire img {
+  transform: rotate(15deg);
+}
+
+@media (max-width: 1100px) {
+  .S_About {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .S_About__Content {
+    width: 100%;
+  }
+
+  .S_About__Illustration {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 640px;
+    height: 420px;
+    margin-top: 24px;
+  }
+}

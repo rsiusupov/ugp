@@ -1,0 +1,16 @@
+.A_Input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--black);
+}
+
+.A_Input::placeholder {
+  color: var(--black);
+  opacity: 1;
+}

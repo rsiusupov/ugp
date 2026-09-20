@@ -1,0 +1,77 @@
+.A_TextH1 {
+  font-family: 'Taler', serif;
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  color: var(--black);
+}
+
+.A_TextH2 {
+  font-family: 'Taler', serif;
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  color: var(--black);
+}
+
+.A_TextH3 {
+  font-family: 'Taler', serif;
+  font-weight: 400;
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  color: var(--black);
+}
+
+.A_TextLead {
+  font-family: 'Taler', serif;
+  font-weight: 600;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--black);
+}
+
+.A_TextBody {
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--black);
+}
+
+.A_TextBodyBold {
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 700;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--black);
+}
+
+.A_TextBodySerif {
+  font-family: 'Taler', serif;
+  font-weight: 600;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--black);
+}
+
+.A_TextLabel {
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: var(--fs-label);
+  color: var(--black);
+}
+
+.A_Text-white {
+  color: var(--white);
+}
+
+.A_Text-darkGray {
+  color: var(--dark-gray);
+}
+
+.A_Text-underline {
+  text-decoration: underline;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

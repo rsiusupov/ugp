@@ -1,0 +1,35 @@
+:root {
+  --black: #1a1a1a;
+  --blue: #0d6ae1;
+  --brown: #ac9573;
+  --dark-gray: #4d4d4d;
+  --gray: #a6a6a6;
+  --green: #22843b;
+  --light-gray: #f2f2f2;
+  --mint: #69c1b1;
+  --orange: #fb853c;
+  --pink: #e466a2;
+  --red: #d11b1b;
+  --white: #ffffff;
+  --yellow: #f7d40d;
+
+  --Button-button-l: 48px;
+  --Button-button-m: 40px;
+  --Button-button-s: 32px;
+  --Button-button-xs: 28px;
+  --fs-body: 16px;
+  --fs-h1: 84px;
+  --fs-h2: 64px;
+  --fs-h3: 32px;
+  --fs-label: 12px;
+  --fs-lead: 24px;
+
+  --lh-body: 20px;
+  --lh-h1: 68px;
+  --lh-h2: 56px;
+  --lh-h3: 28px;
+  --lh-label: 12px;
+  --lh-lead: 24px;
+  --gap: 16px;
+  --margin: 32px;
+}

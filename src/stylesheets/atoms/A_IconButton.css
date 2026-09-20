@@ -1,0 +1,22 @@
+.A_IconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--Button-button-m);
+  height: var(--Button-button-m);
+  padding: 10px;
+  background: var(--black);
+  color: var(--white);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.A_IconButton:hover,
+.A_IconButton:focus-visible {
+  background: var(--dark-gray);
+}
+
+.A_Icon {
+  display: block;
+  flex-shrink: 0;
+}

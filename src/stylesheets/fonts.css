@@ -1,24 +1,31 @@
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_bold.woff'),
-    url('../fonts/pt-root-ui_bold.woff2');
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_medium.woff'),
-    url('../fonts/pt-root-ui_medium.woff2');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_regular.woff'),
-    url('../fonts/pt-root-ui_regular.woff2');
+  font-family: 'Taler';
+  src: url('../fonts/Taler-Regular-BF64daedf0b6c89.otf') format('opentype');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../fonts/pt-root-ui_light.woff'),
-    url('../fonts/pt-root-ui_light.woff2');
-  font-weight: 300;
+  font-family: 'Taler';
+  src: url('../fonts/Taler-SemiBold-BF64daedf0b0709.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('../fonts/InterDisplay-Bold.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Display';
+  src: url('../fonts/InterDisplay-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }

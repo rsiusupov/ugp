@@ -1,0 +1,42 @@
+.O_Nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 64px;
+  padding: 12px var(--margin);
+  background: var(--white);
+}
+
+.O_Nav-overlay {
+  margin-bottom: -64px;
+}
+
+.O_Nav__Actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+@media (max-width: 900px) {
+  .O_Nav {
+    height: auto;
+    min-height: 64px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .O_Nav__Actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .M_NavTabs {
+    flex-wrap: wrap;
+  }
+}

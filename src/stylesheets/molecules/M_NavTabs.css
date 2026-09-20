@@ -1,0 +1,16 @@
+.M_NavTabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  background: var(--light-gray);
+}
+
+.M_NavTabs .M_Button-quiet {
+  background: transparent;
+}
+
+.M_NavTabs .M_Button-quiet:hover,
+.M_NavTabs .M_Button-quiet:focus-visible {
+  background: var(--white);
+}

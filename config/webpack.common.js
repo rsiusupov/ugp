@@ -33,7 +33,12 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader'
+        loader: 'html-loader',
+        options: {
+          sources: {
+            urlFilter: (attribute, value) => !/\.html(?:#.*)?$/i.test(value)
+          }
+        }
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,

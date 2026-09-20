@@ -1,0 +1,58 @@
+.M_Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: var(--Button-button-xs);
+  padding: 6px 8px;
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.M_Button .A_TextLabel {
+  color: inherit;
+}
+
+.M_Button:hover,
+.M_Button:focus-visible {
+  background: var(--dark-gray);
+  border-color: var(--dark-gray);
+}
+
+.M_Button-ghost {
+  background: var(--white);
+  color: var(--black);
+}
+
+.M_Button-ghost:hover,
+.M_Button-ghost:focus-visible {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.M_Button-quiet {
+  background: var(--light-gray);
+  color: var(--black);
+  border-color: transparent;
+}
+
+.M_Button-quiet:hover,
+.M_Button-quiet:focus-visible {
+  background: var(--gray);
+  border-color: transparent;
+  color: var(--black);
+}
+
+.M_Button-m {
+  height: var(--Button-button-m);
+  padding: 10px;
+}
+
+.M_Button-m .A_TextLabel {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}

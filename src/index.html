@@ -3,20 +3,595 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
+    <title>Underground & Pound</title>
   </head>
   <body>
-    <h1>Главная</h1>
+    <div class="S_Page">
+      <nav class="O_Nav O_Nav-overlay" aria-label="Основная навигация">
+        <a class="A_Logo" href="index.html" aria-label="Underground and Pound">
+          <img
+            src="images/logos/logo-mark.svg"
+            width="32"
+            height="32"
+            alt=""
+          />
+        </a>
+        <div class="O_Nav__Actions">
+          <div class="M_NavTabs">
+            <a class="M_Button" href="index.html" aria-current="page">
+              <span class="A_TextLabel">Главная</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="pages/articles.html">
+              <span class="A_TextLabel">Статьи</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="pages/tests.html">
+              <span class="A_TextLabel">Разборы</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="pages/dictionary.html">
+              <span class="A_TextLabel">Ресурсы</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="#about">
+              <span class="A_TextLabel">О проекте</span>
+            </a>
+          </div>
+          <button
+            class="A_IconButton"
+            type="button"
+            data-search-toggle
+            aria-label="Поиск"
+          >
+            <img
+              class="A_Icon"
+              src="images/icons/magnifying-glass-nav.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </button>
+        </div>
+      </nav>
 
-    <h2>Категории</h2>
-    <ul>
-      <li><a href="pages/articles.html">Статьи</a></li>
-      <li><a href="pages/tests.html">Тесты</a></li>
-      <li><a href="pages/dictionary.html">Словарь</a></li>
-    </ul>
-    <h3>Статьи</h3>
-    <a href="pages/articles/plants.html">Статья №1</a>
-    <h3>Тесты</h3>
-    <a href="pages/tests/test1.html">Тест №1</a>
+      <main>
+        <section class="S_Hero">
+          <div class="S_Hero__Top">
+            <p class="S_Hero__Note A_TextBodySerif A_Text-darkGray">
+              Коллабы<br />
+              художников и брендов
+            </p>
+            <div class="S_Hero__Center">
+              <div class="A_LogoWordmark">
+                <img
+                  src="images/logos/logo-wordmark.svg"
+                  width="2305"
+                  height="710"
+                  alt="Underground & Pound"
+                />
+              </div>
+              <form class="M_SearchBar" role="search" data-search-form>
+                <label class="M_SearchBar__Field">
+                  <span class="visually-hidden">Поиск по сайту</span>
+                  <input
+                    class="A_Input"
+                    type="search"
+                    name="q"
+                    placeholder="Поиск"
+                    data-search-input
+                  />
+                </label>
+                <button class="A_IconButton" type="submit" aria-label="Искать">
+                  <img
+                    class="A_Icon"
+                    src="images/icons/magnifying-glass.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </button>
+              </form>
+            </div>
+            <a class="S_Hero__Aside O_HeroCardContacts" href="#about">
+              <div class="O_HeroCardContacts__Illustration">
+                <img
+                  src="images/illustrations/hero-contacts.svg"
+                  width="400"
+                  height="600"
+                  alt=""
+                />
+              </div>
+              <p class="A_TextBodyBold A_Text-underline">
+                Контакты<br />
+                Автора
+              </p>
+            </a>
+          </div>
+
+          <div class="S_Hero__Cards">
+            <article class="O_HeroCard">
+              <div class="O_HeroCard__Text">
+                <h2 class="A_TextLead A_Text-underline">
+                  Разборы<br />
+                  кейсов
+                </h2>
+              </div>
+              <a class="M_Button M_Button-ghost" href="pages/tests.html">
+                <span class="A_TextLabel">Читать</span>
+              </a>
+              <div class="O_HeroCard__Illustration O_HeroCard__Illustration-cases">
+                <img
+                  src="images/illustrations/hero-card-cases.svg"
+                  width="334.402"
+                  height="501"
+                  alt=""
+                />
+              </div>
+            </article>
+
+            <article class="O_HeroCard">
+              <div class="O_HeroCard__Text">
+                <h2 class="A_TextLead A_Text-underline">
+                  Авторские<br />
+                  статьи
+                </h2>
+              </div>
+              <a class="M_Button M_Button-ghost" href="pages/articles.html">
+                <span class="A_TextLabel">Читать</span>
+              </a>
+              <div
+                class="O_HeroCard__Illustration O_HeroCard__Illustration-articles"
+              >
+                <img
+                  src="images/illustrations/hero-card-articles.svg"
+                  width="236.054"
+                  height="487.312"
+                  alt=""
+                />
+              </div>
+            </article>
+
+            <article class="O_HeroCard O_HeroCard-yellow">
+              <div class="O_HeroCard__Text">
+                <h2 class="A_TextLead A_Text-underline">
+                  Интерактивный<br />
+                  комикс
+                </h2>
+                <p class="A_TextBodyBold A_Text-underline">
+                  Побудьте в роли<br />
+                  андерграундного репера<br />
+                  пытающегося продвинуть альбом
+                </p>
+              </div>
+              <a class="M_Button M_Button-ghost" href="#webzine">
+                <span class="A_TextLabel">Читать</span>
+              </a>
+              <div class="O_HeroCard__Illustration O_HeroCard__Illustration-comic">
+                <img
+                  src="images/illustrations/hero-card-comic.svg"
+                  width="257.844"
+                  height="259"
+                  alt=""
+                />
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="S_About" id="about">
+          <div class="S_About__Content">
+            <div class="S_About__Copy">
+              <h2 class="A_TextH3">
+                Изобразительное искусство всегда служило инструментом убеждения
+              </h2>
+              <p class="A_TextBody A_Text-darkGray">
+                Бренды используют высокую культуру ради престижа и статуса.
+                Underground and Pound коннектит бизнес с художниками для создания
+                по-настоящему аутентичных проектов
+              </p>
+            </div>
+          </div>
+          <div class="S_About__Illustration">
+            <div class="S_About__Boombox">
+              <img
+                src="images/illustrations/about-boombox.svg"
+                width="781.388"
+                height="543.458"
+                alt=""
+              />
+            </div>
+            <div class="S_About__Fire">
+              <img
+                src="images/illustrations/about-fire.svg"
+                width="324.684"
+                height="572.473"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="S_Experience">
+          <h2 class="A_TextH2 A_Text-white">
+            Из не-искусства<br />
+            в искусство
+          </h2>
+          <div class="S_Experience__Grid">
+            <article class="O_ExperienceGridItem O_ExperienceGridItem-mint">
+              <div class="O_ExperienceGridItem__Text">
+                <div class="O_ExperienceGridItem__Index">
+                  <p class="A_TextBody">1</p>
+                </div>
+                <p class="A_TextLead">
+                  Показываем артистов, которые смогли пробиться
+                </p>
+              </div>
+              <div
+                class="O_ExperienceGridItem__Illustration O_ExperienceGridItem__Illustration-1"
+              >
+                <img
+                  src="images/illustrations/experience-1.svg"
+                  width="290.305"
+                  height="456.433"
+                  alt=""
+                />
+              </div>
+            </article>
+
+            <article class="O_ExperienceGridItem O_ExperienceGridItem-pink">
+              <div class="O_ExperienceGridItem__Text">
+                <div class="O_ExperienceGridItem__Index">
+                  <p class="A_TextBody">2</p>
+                </div>
+                <p class="A_TextLead">
+                  Стимулируем<br />
+                  диалог между артом и бизнесом
+                </p>
+              </div>
+              <div
+                class="O_ExperienceGridItem__Illustration O_ExperienceGridItem__Illustration-2"
+              >
+                <img
+                  src="images/illustrations/experience-2.svg"
+                  width="287.915"
+                  height="372.851"
+                  alt=""
+                />
+              </div>
+            </article>
+
+            <article class="O_ExperienceGridItem O_ExperienceGridItem-yellow">
+              <div class="O_ExperienceGridItem__Text">
+                <div class="O_ExperienceGridItem__Index">
+                  <p class="A_TextBody">3</p>
+                </div>
+                <p class="A_TextLead">Помогаем художникам собрать свой мир</p>
+              </div>
+              <div
+                class="O_ExperienceGridItem__Illustration O_ExperienceGridItem__Illustration-3"
+              >
+                <img
+                  src="images/illustrations/experience-3.svg"
+                  width="800"
+                  height="771.715"
+                  alt=""
+                />
+              </div>
+            </article>
+
+            <article class="O_ExperienceGridItem O_ExperienceGridItem-green">
+              <div class="O_ExperienceGridItem__Text">
+                <div class="O_ExperienceGridItem__Index">
+                  <p class="A_TextBody">4</p>
+                </div>
+                <p class="A_TextLead">
+                  Развиваем<br />
+                  насмотренность
+                </p>
+              </div>
+              <div
+                class="O_ExperienceGridItem__Illustration O_ExperienceGridItem__Illustration-4"
+              >
+                <div class="O_ExperienceGridItem__Cluster">
+                  <img
+                    class="O_ExperienceGridItem__Cluster-hand"
+                    src="images/illustrations/experience-4-hand.svg"
+                    width="109.27"
+                    height="165.785"
+                    alt=""
+                  />
+                  <img
+                    class="O_ExperienceGridItem__Cluster-eye"
+                    src="images/illustrations/experience-4-eye.svg"
+                    width="118.67"
+                    height="143.625"
+                    alt=""
+                  />
+                  <img
+                    class="O_ExperienceGridItem__Cluster-a"
+                    src="images/illustrations/experience-4-a.svg"
+                    width="181.011"
+                    height="172.011"
+                    alt=""
+                  />
+                  <img
+                    class="O_ExperienceGridItem__Cluster-b"
+                    src="images/illustrations/experience-4-b.svg"
+                    width="181.011"
+                    height="172.011"
+                    alt=""
+                  />
+                  <img
+                    class="O_ExperienceGridItem__Cluster-c"
+                    src="images/illustrations/experience-4-c.svg"
+                    width="181.529"
+                    height="173.134"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="S_Articles" id="articles">
+          <div class="M_ArticlesHeader">
+            <h2 class="A_TextH2">Статьи</h2>
+            <a
+              class="A_IconButton"
+              href="pages/articles.html"
+              aria-label="Все статьи"
+            >
+              <img
+                class="A_Icon"
+                src="images/icons/arrow-up-right.svg"
+                width="20"
+                height="20"
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div class="S_Articles__Grid">
+            <a class="O_ArticleCard" href="pages/articles/asap-rocky.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="images/articles/asap-rocky.svg"
+                    width="400"
+                    height="550"
+                    alt="Асап Роки"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h3 class="A_TextLead">Асап Роки</h3>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+
+            <a class="O_ArticleCard" href="pages/articles/daniel-arsham.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="images/articles/arsham.svg"
+                    width="400"
+                    height="550"
+                    alt="Дэниэль Аршам"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h3 class="A_TextLead">Дэниэль Аршам</h3>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+
+            <a class="O_ArticleCard" href="pages/articles/gucci-ghost.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="images/articles/gucci-ghost.svg"
+                    width="400"
+                    height="550"
+                    alt="Gucci Ghost"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h3 class="A_TextLead">Gucci Ghost</h3>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+
+            <a class="O_ArticleCard" href="pages/articles/hajime-sorayama.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="images/articles/sorayama.svg"
+                    width="400"
+                    height="550"
+                    alt="Хадзимэ Сораяма"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h3 class="A_TextLead">Хадзимэ Сораяма</h3>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+
+            <a class="O_ArticleCard" href="pages/articles/samuel-ross.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="images/articles/samuel-ross.svg"
+                    width="400"
+                    height="550"
+                    alt="Сэмюэль Росс"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h3 class="A_TextLead">Сэмюэль Росс</h3>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+
+            <a class="O_ArticleCard" href="pages/articles/kaws.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="images/articles/kaws.svg"
+                    width="400"
+                    height="550"
+                    alt="KAWS"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h3 class="A_TextLead">KAWS</h3>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="S_Webzine" id="webzine">
+          <div class="S_Webzine__Container">
+            <div class="S_Webzine__Illustration S_Webzine__Illustration-back">
+              <img
+                src="images/illustrations/webzine-2.svg"
+                width="598.193"
+                height="319.282"
+                alt=""
+              />
+            </div>
+            <div class="S_Webzine__Illustration S_Webzine__Illustration-front">
+              <img
+                src="images/illustrations/webzine-1.svg"
+                width="379.058"
+                height="222.61"
+                alt=""
+              />
+            </div>
+            <div class="S_Webzine__Content">
+              <div class="S_Webzine__Copy">
+                <h2 class="A_TextH3">
+                  Вебзин<br />
+                  про рэп
+                </h2>
+                <p class="A_TextBodyBold">
+                  Комикс про рэпера, который пытается<br />
+                  масштабировать свою медийку
+                </p>
+              </div>
+              <a class="M_ButtonCTA" href="pages/dictionary.html">
+                <span class="M_Button M_Button-quiet M_Button-m">
+                  <span class="A_TextBodyBold">Почитать реп</span>
+                </span>
+                <span class="A_IconButton" aria-hidden="true">
+                  <img
+                    class="A_Icon"
+                    src="images/icons/arrow-up-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="O_Footer">
+        <div class="O_Footer__Newsletter">
+          <p class="O_Footer__NewsletterText A_TextLead">
+            Stay in the know with our newsletter covering the latest industry
+            news and insights
+          </p>
+          <form class="O_Footer__Form" data-newsletter-form>
+            <label class="O_Footer__Field">
+              <span class="visually-hidden">Email address</span>
+              <input
+                class="A_Input"
+                type="email"
+                name="email"
+                placeholder="Email adress"
+                required
+              />
+            </label>
+            <button class="O_Footer__Submit" type="submit">
+              <span class="O_Footer__Dot"></span>
+              <span class="A_TextBody">Send request</span>
+            </button>
+          </form>
+        </div>
+        <div class="O_Footer__Main">
+          <div class="O_Footer__LinksRow">
+            <div class="O_Footer__Brand">
+              <div class="A_LogoFooter">
+                <img
+                  src="images/logos/logo-footer.svg"
+                  width="2310"
+                  height="710"
+                  alt="Underground & Pound"
+                />
+              </div>
+            </div>
+            <nav class="O_Footer__Nav" aria-label="Подвал">
+              <div class="O_Footer__NavList">
+                <a class="A_TextH3 A_Text-white" href="pages/tests.html">Кейсы</a>
+                <a class="A_TextH3 A_Text-white" href="pages/articles.html"
+                  >Статьи</a
+                >
+                <a class="A_TextH3 A_Text-white" href="pages/dictionary.html"
+                  >Ресурсы</a
+                >
+                <a class="A_TextH3 A_Text-white" href="#webzine">Веб-зин</a>
+              </div>
+            </nav>
+          </div>
+          <div class="O_Footer__Bottom">
+            <p class="A_TextBody A_Text-white">HSE DESIGN 2026</p>
+            <p class="A_TextBody A_Text-white">Рахат Юсупов</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

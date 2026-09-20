@@ -1,0 +1,88 @@
+.O_HeroCard {
+  position: relative;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  padding: 12px;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--black);
+}
+
+.O_HeroCard-yellow {
+  background: var(--yellow);
+  border-color: transparent;
+}
+
+.O_HeroCard__Text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 70%;
+}
+
+.O_HeroCard .M_Button {
+  position: relative;
+  z-index: 1;
+}
+
+.O_HeroCard__Illustration {
+  position: absolute;
+  pointer-events: none;
+}
+
+.O_HeroCard__Illustration-cases {
+  right: -76px;
+  bottom: -154px;
+  width: 334.402px;
+  height: 501px;
+}
+
+.O_HeroCard__Illustration-articles {
+  right: -90.5px;
+  bottom: -179.5px;
+  width: 336px;
+  height: 503px;
+}
+
+.O_HeroCard__Illustration-articles img {
+  margin-left: 18%;
+}
+
+.O_HeroCard__Illustration-comic {
+  right: -40px;
+  bottom: -38px;
+  width: 257.844px;
+  height: 259px;
+}
+
+.O_HeroCardContacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 216px;
+  text-align: center;
+}
+
+.O_HeroCardContacts__Illustration {
+  width: 216px;
+  overflow: hidden;
+}
+
+.O_HeroCardContacts__Illustration img {
+  width: 216px;
+  height: auto;
+}
+
+.O_HeroCardContacts .A_TextBodyBold {
+  text-align: center;
+}

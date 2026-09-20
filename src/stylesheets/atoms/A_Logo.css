@@ -1,0 +1,20 @@
+.A_Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--Button-button-m);
+  height: var(--Button-button-m);
+  padding: 4px;
+  background: var(--black);
+  flex-shrink: 0;
+}
+
+.A_Logo img {
+  display: block;
+}
+
+.A_LogoWordmark img,
+.A_LogoFooter img {
+  display: block;
+  height: auto;
+}

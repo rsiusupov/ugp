@@ -1,0 +1,23 @@
+.M_SearchBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.M_SearchBar__Field {
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  min-width: 0;
+  height: var(--Button-button-m);
+  padding: 10px 12px;
+  background: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 2px;
+}
+
+.M_SearchBar .A_IconButton {
+  border-radius: 2px;
+}

@@ -1,0 +1,26 @@
+.S_Articles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--margin);
+  width: 100%;
+  padding: 64px var(--margin);
+}
+
+.S_Articles__Grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .S_Articles__Grid {
+    grid-template-columns: 1fr;
+  }
+
+  .O_ArticleCard {
+    height: auto;
+    min-height: 520px;
+  }
+}
