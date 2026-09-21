@@ -91,6 +91,19 @@ document.querySelectorAll('[data-share-network]').forEach((link) => {
   }
 })
 
+const luckyLink = document.querySelector('[data-lucky-link]')
+if (luckyLink) {
+  const luckyPages = [
+    'pages/articles/asap-rocky.html',
+    'pages/articles/daniel-arsham.html',
+    'pages/articles/gucci-ghost.html',
+    'pages/articles/hajime-sorayama.html',
+    'pages/articles/samuel-ross.html',
+    'pages/articles/kaws.html'
+  ]
+  luckyLink.href = luckyPages[Math.floor(Math.random() * luckyPages.length)]
+}
+
 const articleNav = document.querySelector('[data-article-nav]')
 if (articleNav) {
   const links = [...articleNav.querySelectorAll('a[href^="#"]')]

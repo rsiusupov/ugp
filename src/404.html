@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var host = location.hostname
+        var isGithubProject = /\.github\.io$/.test(host)
+        var parts = location.pathname.split('/').filter(Boolean)
+        var roots = [
+          'pages',
+          'images',
+          'fonts',
+          'index.html',
+          'index.js',
+          'index.css',
+          '404.html'
+        ]
+        var prefix = ''
+
+        if (isGithubProject && parts[0] && roots.indexOf(parts[0]) === -1) {
+          prefix = '/' + parts[0]
+        }
+
+        var base = document.createElement('base')
+        base.href = location.origin + prefix + '/'
+        document.head.insertBefore(base, document.head.firstChild)
+      })()
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Underground & Pound</title>
+  </head>
+  <body>
+    <div class="S_Page">
+      <nav class="O_Nav O_Nav-overlay" aria-label="Основная навигация">
+        <a class="A_Logo" href="index.html" aria-label="Underground and Pound">
+          <img
+            src="images/logos/logo-mark.svg"
+            width="32"
+            height="32"
+            alt=""
+          />
+        </a>
+        <div class="O_Nav__Actions">
+          <div class="M_NavTabs">
+            <a class="M_Button" href="index.html" aria-current="page">
+              <span class="A_TextLabel">Главная</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="pages/articles.html">
+              <span class="A_TextLabel">Статьи</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="pages/tests.html">
+              <span class="A_TextLabel">Разборы</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="pages/dictionary.html">
+              <span class="A_TextLabel">Ресурсы</span>
+            </a>
+            <a class="M_Button M_Button-quiet" href="index.html#about">
+              <span class="A_TextLabel">О проекте</span>
+            </a>
+          </div>
+          <a class="A_IconButton" href="index.html" aria-label="Поиск">
+            <img
+              class="A_Icon"
+              src="images/icons/magnifying-glass-nav.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </a>
+        </div>
+      </nav>
+
+      <main>
+        <section class="S_NotFound">
+          <div class="S_NotFound__Copy">
+            <h1 class="A_TextH2">
+              Вы долистали<br />
+              до несуществующего куска<br />
+              интернета, потрагайте траву
+            </h1>
+            <div class="S_NotFound__Actions">
+              <a class="S_NotFound__Home" href="index.html">
+                <span class="A_TextBody">На главную</span>
+              </a>
+              <a
+                class="A_TextBody A_Text-underline"
+                href="pages/articles.html"
+                data-lucky-link
+              >
+                Мне не повезет
+              </a>
+            </div>
+          </div>
+          <div class="S_NotFound__404">
+            <img
+              src="images/illustrations/not-found-404.svg"
+              width="785.703"
+              height="396.123"
+              alt="404"
+            />
+          </div>
+          <div class="S_NotFound__Tv">
+            <img
+              src="images/illustrations/not-found-tv.svg"
+              width="969.445"
+              height="675.538"
+              alt=""
+            />
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
