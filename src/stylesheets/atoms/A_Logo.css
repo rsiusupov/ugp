@@ -13,8 +13,7 @@
   display: block;
 }
 
-.A_LogoWordmark img,
-.A_LogoFooter img {
+.A_LogoWordmark img {
   display: block;
   height: auto;
 }

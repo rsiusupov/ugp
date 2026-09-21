@@ -4,7 +4,6 @@ const searchInput = document.querySelector('[data-search-input]')
 const searchForm = document.querySelector('[data-search-form]')
 const searchToggle = document.querySelector('[data-search-toggle]')
 const articleCards = document.querySelectorAll('.O_ArticleCard')
-const newsletterForm = document.querySelector('[data-newsletter-form]')
 
 if (searchToggle && searchInput) {
   searchToggle.addEventListener('click', () => {
@@ -31,19 +30,6 @@ if (searchForm) {
       behavior: 'smooth',
       block: 'start'
     })
-  })
-}
-
-if (newsletterForm) {
-  newsletterForm.addEventListener('submit', (event) => {
-    event.preventDefault()
-    const button = newsletterForm.querySelector(
-      '.O_Footer__Submit span.A_TextBody, [type="submit"] .A_TextLabel'
-    )
-    if (button) {
-      button.textContent = 'Отправлено'
-    }
-    newsletterForm.reset()
   })
 }
 

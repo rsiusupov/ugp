@@ -1,10 +1,20 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
 const htmlPages = require('./webpack.pages.js')
 
 const webpack = require('webpack')
 const path = require('path')
+
+function footerPartial(template_filename, root) {
+  return {
+    path: path.join(__dirname, '../src/partials/footer.html'),
+    location: 'body',
+    priority: 'low',
+    template_filename,
+    options: { root }
+  }
+}
 
 module.exports = {
   entry: {
@@ -56,7 +66,29 @@ module.exports = {
       }
     ]
   },
-  plugins: [new MiniCssExtractPlugin(), ...htmlPages],
+  plugins: [
+    new MiniCssExtractPlugin(),
+    ...htmlPages,
+    new HtmlWebpackPartialsPlugin([
+      footerPartial(['./index.html', './404.html'], ''),
+      footerPartial(
+        ['./pages/articles.html', './pages/tests.html', './pages/dictionary.html'],
+        '../'
+      ),
+      footerPartial(
+        [
+          './pages/articles/asap-rocky.html',
+          './pages/articles/daniel-arsham.html',
+          './pages/articles/gucci-ghost.html',
+          './pages/articles/hajime-sorayama.html',
+          './pages/articles/samuel-ross.html',
+          './pages/articles/kaws.html',
+          './pages/tests/test1.html'
+        ],
+        '../../'
+      )
+    ])
+  ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()]
   },
