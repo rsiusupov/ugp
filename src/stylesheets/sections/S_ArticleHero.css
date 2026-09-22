@@ -11,6 +11,14 @@
   background: var(--yellow);
 }
 
+.S_ArticleHero-mint {
+  background: var(--mint);
+}
+
+.S_ArticleHero-blue {
+  background: var(--blue);
+}
+
 .S_ArticleHero__Inner {
   display: flex;
   gap: var(--gap);

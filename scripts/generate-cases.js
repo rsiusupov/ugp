@@ -10,8 +10,8 @@ const TAGS = {
   'case-04': ['Фэшн', 'Стрит-арт'],
   'case-05': ['Фэшн', 'Поп-арт'],
   'case-06': ['Фэшн', 'Инсталляция'],
-  'case-07': ['Объект', 'Скульптура'],
-  'case-08': ['Объект', 'Скульптура'],
+  'case-07': ['Арт-объект', 'Скульптура'],
+  'case-08': ['Арт-объект', 'Скульптура'],
   'case-09': ['Фэшн', 'Графический дизайн'],
   'case-10': ['Фэшн', 'Скульптура'],
   'case-11': ['Фэшн'],
@@ -23,7 +23,7 @@ const TAGS = {
   'case-17': ['Диджитал-медиа'],
   'case-18': ['Диджитал-медиа', 'AR'],
   'case-19': ['Скульптура', 'Поп-арт'],
-  'case-20': ['Объект'],
+  'case-20': ['Арт-объект'],
   'case-21': ['Авто-спорт', 'Скульптура'],
   'case-22': ['Авто-спорт', 'Живопись'],
   'case-23': ['Авто-спорт'],
@@ -31,7 +31,7 @@ const TAGS = {
   'case-25': ['Авто-спорт', 'Поп-арт'],
   'case-26': ['Графический дизайн'],
   'case-27': ['Графический дизайн'],
-  'case-28': ['Объект'],
+  'case-28': ['Арт-объект'],
   'case-29': ['Фэшн', 'Авто-спорт'],
   'case-30': ['Фэшн'],
   'case-31': ['Фэшн'],
@@ -61,6 +61,16 @@ function splitTitle(title) {
 function padIndex(index) {
   return String(index).padStart(2, '0')
 }
+
+const FILTER_TAGS = [
+  'Скульптура',
+  'Арт-объект',
+  'Фэшн',
+  'Стрит-арт',
+  'Поп-арт',
+  'Графический дизайн',
+  'Диджитал-медиа'
+]
 
 function quoteMarkup(quote) {
   return `              <blockquote class="M_Quote">
@@ -270,17 +280,52 @@ ${quotesMarkup}
 
 function renderListingPage() {
   const cards = cases
-    .map((item, index) => {
+    .map((item) => {
       const { shortTitle, lede } = splitTitle(item.title)
-      return `          <a class="O_CaseCard" href="cases/${item.id}.html">
-            <span class="O_CaseCard__Index A_TextLabel">${padIndex(index + 1)}</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">${escapeHtml(shortTitle)}</h2>
-              <p class="A_TextBody">${escapeHtml(lede)}</p>
+      const tags = TAGS[item.id] || []
+      const tagsMarkup = tags
+        .map(
+          (tag) => `              <span class="M_Tag">
+                <span class="A_TextBodyBold">${escapeHtml(tag)}</span>
+              </span>`
+        )
+        .join('\n')
+
+      return `          <a
+            class="O_CaseCard"
+            href="cases/${item.id}.html"
+            data-case-card
+            data-tags="${escapeHtml(tags.join('|'))}"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/${item.id}/${item.id}-1.png"
+                alt="${escapeHtml(shortTitle)}"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">${escapeHtml(shortTitle)}</h2>
+                <p class="A_TextBody">${escapeHtml(lede)}</p>
+              </div>
+              <div class="M_Tags">
+${tagsMarkup}
+              </div>
             </div>
           </a>`
     })
     .join('\n')
+
+  const filtersMarkup = FILTER_TAGS.map(
+    (tag) => `          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="${escapeHtml(tag)}"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">${escapeHtml(tag)}</span>
+          </button>`
+  ).join('\n')
 
   return `<!DOCTYPE html>
 <html lang="ru">
@@ -291,7 +336,7 @@ function renderListingPage() {
   </head>
   <body>
     <div class="S_Page">
-      <nav class="O_Nav" aria-label="Основная навигация">
+      <nav class="O_Nav O_Nav-overlay O_Nav-ghost" aria-label="Основная навигация">
         <a class="A_Logo" href="../index.html" aria-label="Underground and Pound">
           <img src="../images/logos/logo-mark.svg" width="32" height="32" alt="" />
         </a>
@@ -313,15 +358,160 @@ function renderListingPage() {
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
+          <a class="A_IconButton" href="../index.html" aria-label="Поиск">
+            <img
+              class="A_Icon"
+              src="../images/icons/magnifying-glass-nav.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </a>
         </div>
       </nav>
-      <main class="S_Articles">
-        <div class="M_ArticlesHeader">
-          <h1 class="A_TextH2">Разборы кейсов</h1>
-        </div>
-        <div class="S_Articles__Grid">
+
+      <main data-case-listing>
+        <section class="S_ArticlesHero S_ArticlesHero-green">
+          <div class="S_ArticlesHero__Inner">
+            <div class="S_ArticlesHero__Media">
+              <div class="S_ArticlesHero__Image">
+                <img
+                  src="../images/illustrations/cases-hero.svg"
+                  width="334"
+                  height="501"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="S_ArticlesHero__Copy">
+              <div class="S_ArticlesHero__Intro">
+                <h1 class="A_TextH1">
+                  Разбор<br />
+                  Кейсов
+                </h1>
+                <p class="A_TextBodyBold S_ArticlesHero__Lead">
+                  Собираем самые последние кейсы
+                  <br />
+                  с рекламными кампаниями крупных брендов и художников
+                </p>
+              </div>
+              <div class="S_ArticlesHero__Share">
+                <button
+                  class="M_Button M_Button-ghost M_Button-share"
+                  type="button"
+                  data-share
+                >
+                  <span class="A_TextLabel">Поделиться</span>
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/arrow-up-right-16.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                  />
+                </button>
+                <a
+                  class="A_IconButton"
+                  href="#"
+                  data-share-network="telegram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поделиться в Telegram"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/telegram.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="A_IconButton"
+                  href="#"
+                  data-share-network="pinterest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поделиться в Pinterest"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/pinterest.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="A_IconButton"
+                  href="https://www.instagram.com/"
+                  data-share-network="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/instagram.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="S_Cases">
+          <div class="S_Cases__Toolbar">
+            <div class="S_Cases__Filters" data-case-filters>
+${filtersMarkup}
+            </div>
+          </div>
+          <div class="S_Cases__Grid" data-case-grid>
 ${cards}
-        </div>
+            <p class="S_Cases__Empty A_TextBody" data-case-empty hidden>
+              Нет кейсов с этим тегом.
+            </p>
+          </div>
+          <div class="S_Cases__Pagination">
+            <button
+              class="M_Button M_Button-ghost is-disabled"
+              type="button"
+              data-case-page-prev
+              aria-disabled="true"
+            >
+              <img
+                class="A_Icon"
+                src="../images/icons/caret-left-16.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+              <span class="A_TextLabel">Назад</span>
+            </button>
+            <p class="S_Cases__PageIndex A_TextBody" aria-live="polite">
+              <span data-case-page-current>1</span>
+              <span class="A_Text-darkGray">/</span>
+              <span class="A_Text-darkGray" data-case-page-total>1</span>
+            </p>
+            <button
+              class="M_Button M_Button-ghost"
+              type="button"
+              data-case-page-next
+            >
+              <span class="A_TextLabel">Дальше</span>
+              <img
+                class="A_Icon"
+                src="../images/icons/caret-right-16.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+            </button>
+          </div>
+        </section>
       </main>
     </div>
   </body>

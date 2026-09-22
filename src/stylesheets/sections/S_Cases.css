@@ -1,0 +1,86 @@
+.S_Cases {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.S_Cases__Toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 32px var(--margin);
+}
+
+.S_Cases__Filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.S_Cases__Grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  width: 100%;
+  padding: 0 var(--margin) 32px;
+}
+
+.S_Cases__Empty {
+  grid-column: 1 / -1;
+  padding: 48px 0;
+  text-align: center;
+}
+
+.S_Cases__Pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 var(--margin) 32px;
+}
+
+.S_Cases__Pagination .M_Button {
+  height: var(--Button-button-m);
+  gap: 8px;
+}
+
+.S_Cases__Pagination .M_Button-ghost .A_Icon {
+  filter: invert(1);
+}
+
+.S_Cases__Pagination .M_Button-ghost:hover .A_Icon,
+.S_Cases__Pagination .M_Button-ghost:focus-visible .A_Icon {
+  filter: none;
+}
+
+.S_Cases__Pagination .M_Button.is-disabled,
+.S_Cases__Pagination .M_Button[aria-disabled='true'] {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+}
+
+.S_Cases__PageIndex {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  .S_Cases__Grid {
+    grid-template-columns: 1fr;
+  }
+}

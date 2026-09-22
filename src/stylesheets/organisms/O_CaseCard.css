@@ -1,11 +1,11 @@
 .O_CaseCard {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
-  padding: 16px;
-  border: 1px solid var(--black);
+  overflow: hidden;
   background: var(--white);
+  border: 1px solid var(--black);
 }
 
 .O_CaseCard:hover,
@@ -13,18 +13,37 @@
   background: var(--light-gray);
 }
 
-.O_CaseCard__Index {
+.O_CaseCard[hidden] {
+  display: none;
+}
+
+.O_CaseCard__Media {
+  height: 420px;
+  width: 100%;
+  overflow: hidden;
   flex-shrink: 0;
-  min-width: 24px;
+}
+
+.O_CaseCard__Media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.O_CaseCard__Body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 16px;
 }
 
 .O_CaseCard__Text {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   min-width: 0;
-}
-
-.O_CaseCard__Text .A_TextBody {
-  color: var(--dark-gray);
+  width: 100%;
 }

@@ -1,5 +1,6 @@
 import Swiper from 'swiper'
 import { Keyboard } from 'swiper/modules'
+import { initCaseListing } from './cases-listing'
 import '../stylesheets/style.css'
 
 const searchInput = document.querySelector('[data-search-input]')
@@ -162,3 +163,5 @@ if (articleNav) {
   syncArticleNav()
   window.addEventListener('scroll', syncArticleNav, { passive: true })
 }
+
+initCaseListing()

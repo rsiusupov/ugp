@@ -11,5 +11,29 @@
   justify-content: center;
   padding: 6px 12px;
   border: 1px solid var(--black);
+  background: var(--white);
   white-space: nowrap;
+}
+
+button.M_Tag {
+  cursor: pointer;
+}
+
+button.M_Tag:hover,
+button.M_Tag:focus-visible {
+  background: var(--light-gray);
+}
+
+.M_Tag.is-active {
+  background: var(--black);
+  color: var(--white);
+}
+
+.M_Tag.is-active .A_TextBodyBold {
+  color: inherit;
+}
+
+.M_Tag.is-active:hover,
+.M_Tag.is-active:focus-visible {
+  background: var(--dark-gray);
 }

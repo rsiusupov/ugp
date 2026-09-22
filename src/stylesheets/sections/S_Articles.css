@@ -19,6 +19,35 @@
   background: var(--orange);
 }
 
+.S_ArticlesHero-green {
+  overflow: hidden;
+  background: var(--green);
+}
+
+.S_ArticlesHero-green .S_ArticlesHero__Inner,
+.S_ArticlesHero-green .S_ArticlesHero__Media,
+.S_ArticlesHero-green .S_ArticlesHero__Image {
+  overflow: visible;
+}
+
+.S_ArticlesHero-green .S_ArticlesHero__Image {
+  background: var(--green);
+}
+
+.S_ArticlesHero-green .S_ArticlesHero__Image img {
+  left: calc(50% - 6px);
+  bottom: -352px;
+  width: 766px;
+  height: 1147px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.S_ArticlesHero-green .S_ArticlesHero__Copy {
+  z-index: 1;
+  padding-top: 128px;
+}
+
 .S_ArticlesHero__Inner {
   display: flex;
   align-items: center;
@@ -28,6 +57,7 @@
   height: 100%;
   margin: 0 auto;
   padding: 0 var(--margin);
+  overflow: hidden;
 }
 
 .S_ArticlesHero__Media {
@@ -45,7 +75,7 @@
   flex: 1 0 0;
   min-height: 0;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .S_ArticlesHero__Image img {
@@ -98,10 +128,6 @@
   width: 100%;
 }
 
-.S_Articles__Grid .O_CaseCard {
-  min-height: 148px;
-}
-
 @media (max-width: 1100px) {
   .S_ArticlesHero {
     height: auto;
@@ -121,6 +147,14 @@
 
   .S_ArticlesHero__Image {
     min-height: 520px;
+  }
+
+  .S_ArticlesHero-green .S_ArticlesHero__Image img {
+    left: 50%;
+    bottom: -24px;
+    width: min(100%, 520px);
+    height: auto;
+    transform: translateX(-50%);
   }
 
   .S_ArticlesHero__Copy {

@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="S_Page">
-      <nav class="O_Nav" aria-label="Основная навигация">
+      <nav class="O_Nav O_Nav-overlay O_Nav-ghost" aria-label="Основная навигация">
         <a class="A_Logo" href="../index.html" aria-label="Underground and Pound">
           <img src="../images/logos/logo-mark.svg" width="32" height="32" alt="" />
         </a>
@@ -29,238 +29,1042 @@
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
+          <a class="A_IconButton" href="../index.html" aria-label="Поиск">
+            <img
+              class="A_Icon"
+              src="../images/icons/magnifying-glass-nav.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </a>
         </div>
       </nav>
-      <main class="S_Articles">
-        <div class="M_ArticlesHeader">
-          <h1 class="A_TextH2">Разборы кейсов</h1>
-        </div>
-        <div class="S_Articles__Grid">
-          <a class="O_CaseCard" href="cases/case-01.html">
-            <span class="O_CaseCard__Index A_TextLabel">01</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">KAWS × Dior</h2>
-              <p class="A_TextBody">Dior Men SS19 (дебютный показ и кампания Кима Джонса), 2018</p>
+
+      <main data-case-listing>
+        <section class="S_ArticlesHero S_ArticlesHero-green">
+          <div class="S_ArticlesHero__Inner">
+            <div class="S_ArticlesHero__Media">
+              <div class="S_ArticlesHero__Image">
+                <img
+                  src="../images/illustrations/cases-hero.svg"
+                  width="334"
+                  height="501"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="S_ArticlesHero__Copy">
+              <div class="S_ArticlesHero__Intro">
+                <h1 class="A_TextH1">
+                  Разбор<br />
+                  Кейсов
+                </h1>
+                <p class="A_TextBodyBold S_ArticlesHero__Lead">
+                  Собираем самые последние кейсы
+                  <br />
+                  с рекламными кампаниями крупных брендов и художников
+                </p>
+              </div>
+              <div class="S_ArticlesHero__Share">
+                <button
+                  class="M_Button M_Button-ghost M_Button-share"
+                  type="button"
+                  data-share
+                >
+                  <span class="A_TextLabel">Поделиться</span>
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/arrow-up-right-16.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                  />
+                </button>
+                <a
+                  class="A_IconButton"
+                  href="#"
+                  data-share-network="telegram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поделиться в Telegram"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/telegram.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="A_IconButton"
+                  href="#"
+                  data-share-network="pinterest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поделиться в Pinterest"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/pinterest.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="A_IconButton"
+                  href="https://www.instagram.com/"
+                  data-share-network="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/instagram.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="S_Cases">
+          <div class="S_Cases__Toolbar">
+            <div class="S_Cases__Filters" data-case-filters>
+          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="Скульптура"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">Скульптура</span>
+          </button>
+          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="Арт-объект"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">Арт-объект</span>
+          </button>
+          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="Фэшн"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">Фэшн</span>
+          </button>
+          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="Стрит-арт"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">Стрит-арт</span>
+          </button>
+          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="Поп-арт"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">Поп-арт</span>
+          </button>
+          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="Графический дизайн"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">Графический дизайн</span>
+          </button>
+          <button
+            class="M_Tag"
+            type="button"
+            data-case-filter="Диджитал-медиа"
+            aria-pressed="false"
+          >
+            <span class="A_TextBodyBold">Диджитал-медиа</span>
+          </button>
+            </div>
+          </div>
+          <div class="S_Cases__Grid" data-case-grid>
+          <a
+            class="O_CaseCard"
+            href="cases/case-01.html"
+            data-case-card
+            data-tags="Фэшн|Скульптура"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-01/case-01-1.png"
+                alt="KAWS × Dior"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">KAWS × Dior</h2>
+                <p class="A_TextBody">Dior Men SS19 (дебютный показ и кампания Кима Джонса), 2018</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Скульптура</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-02.html">
-            <span class="O_CaseCard__Index A_TextLabel">02</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Daniel Arsham × Dior</h2>
-              <p class="A_TextBody">Dior Men SS20 (сет-дизайн и объекты), 2019</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-02.html"
+            data-case-card
+            data-tags="Фэшн|Скульптура"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-02/case-02-1.png"
+                alt="Daniel Arsham × Dior"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Daniel Arsham × Dior</h2>
+                <p class="A_TextBody">Dior Men SS20 (сет-дизайн и объекты), 2019</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Скульптура</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-03.html">
-            <span class="O_CaseCard__Index A_TextLabel">03</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Hajime Sorayama × Dior</h2>
-              <p class="A_TextBody">Dior Men Pre-Fall 2019, Токио, 2018</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-03.html"
+            data-case-card
+            data-tags="Фэшн|Иллюстрация"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-03/case-03-1.png"
+                alt="Hajime Sorayama × Dior"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Hajime Sorayama × Dior</h2>
+                <p class="A_TextBody">Dior Men Pre-Fall 2019, Токио, 2018</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Иллюстрация</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-04.html">
-            <span class="O_CaseCard__Index A_TextLabel">04</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">GucciGhost (Trevor Andrew) × Gucci</h2>
-              <p class="A_TextBody">коллекция Gucci Fall 2016 / «GucciGhost», 2016</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-04.html"
+            data-case-card
+            data-tags="Фэшн|Стрит-арт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-04/case-04-1.png"
+                alt="GucciGhost (Trevor Andrew) × Gucci"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">GucciGhost (Trevor Andrew) × Gucci</h2>
+                <p class="A_TextBody">коллекция Gucci Fall 2016 / «GucciGhost», 2016</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Стрит-арт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-05.html">
-            <span class="O_CaseCard__Index A_TextLabel">05</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Takashi Murakami × Louis Vuitton</h2>
-              <p class="A_TextBody">Louis Vuitton × Murakami (2003; ре-эдишн 2025)</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-05.html"
+            data-case-card
+            data-tags="Фэшн|Поп-арт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-05/case-05-1.png"
+                alt="Takashi Murakami × Louis Vuitton"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Takashi Murakami × Louis Vuitton</h2>
+                <p class="A_TextBody">Louis Vuitton × Murakami (2003; ре-эдишн 2025)</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Поп-арт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-06.html">
-            <span class="O_CaseCard__Index A_TextLabel">06</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Yayoi Kusama × Louis Vuitton</h2>
-              <p class="A_TextBody">«Creating Infinity», 2023</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-06.html"
+            data-case-card
+            data-tags="Фэшн|Инсталляция"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-06/case-06-1.png"
+                alt="Yayoi Kusama × Louis Vuitton"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Yayoi Kusama × Louis Vuitton</h2>
+                <p class="A_TextBody">«Creating Infinity», 2023</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Инсталляция</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-07.html">
-            <span class="O_CaseCard__Index A_TextLabel">07</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Daniel Arsham × RIMOWA</h2>
-              <p class="A_TextBody">«Eroded Attaché» (2019) и «Eroded Turntable in Pilot Case» (2022)</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-07.html"
+            data-case-card
+            data-tags="Арт-объект|Скульптура"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-07/case-07-1.png"
+                alt="Daniel Arsham × RIMOWA"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Daniel Arsham × RIMOWA</h2>
+                <p class="A_TextBody">«Eroded Attaché» (2019) и «Eroded Turntable in Pilot Case» (2022)</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Арт-объект</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Скульптура</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-08.html">
-            <span class="O_CaseCard__Index A_TextLabel">08</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Daniel Arsham × Tiffany &amp; Co.</h2>
-              <p class="A_TextBody">«Bronze Eroded Tiffany Blue Box», 2021</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-08.html"
+            data-case-card
+            data-tags="Арт-объект|Скульптура"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-08/case-08-1.png"
+                alt="Daniel Arsham × Tiffany &amp; Co."
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Daniel Arsham × Tiffany &amp; Co.</h2>
+                <p class="A_TextBody">«Bronze Eroded Tiffany Blue Box», 2021</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Арт-объект</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Скульптура</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-09.html">
-            <span class="O_CaseCard__Index A_TextLabel">09</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">KAWS × UNIQLO (UT)</h2>
-              <p class="A_TextBody">капсула UT SS2016, 2016</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-09.html"
+            data-case-card
+            data-tags="Фэшн|Графический дизайн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-09/case-09-1.png"
+                alt="KAWS × UNIQLO (UT)"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">KAWS × UNIQLO (UT)</h2>
+                <p class="A_TextBody">капсула UT SS2016, 2016</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Графический дизайн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-10.html">
-            <span class="O_CaseCard__Index A_TextLabel">10</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Tom Sachs × Nike (NikeCraft)</h2>
-              <p class="A_TextBody">Mars Yard (2012), General Purpose Shoe (2022), Mars Yard 3.0 (2025)</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-10.html"
+            data-case-card
+            data-tags="Фэшн|Скульптура"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-10/case-10-1.png"
+                alt="Tom Sachs × Nike (NikeCraft)"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Tom Sachs × Nike (NikeCraft)</h2>
+                <p class="A_TextBody">Mars Yard (2012), General Purpose Shoe (2022), Mars Yard 3.0 (2025)</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Скульптура</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-11.html">
-            <span class="O_CaseCard__Index A_TextLabel">11</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Samuel Ross (A-COLD-WALL*) × Nike</h2>
-              <p class="A_TextBody">капсула Nike x A–COLD–WALL*, 2018</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-11.html"
+            data-case-card
+            data-tags="Фэшн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-11/case-11-1.png"
+                alt="Samuel Ross (A-COLD-WALL*) × Nike"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Samuel Ross (A-COLD-WALL*) × Nike</h2>
+                <p class="A_TextBody">капсула Nike x A–COLD–WALL*, 2018</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-12.html">
-            <span class="O_CaseCard__Index A_TextLabel">12</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Samuel Ross × Oakley</h2>
-              <p class="A_TextBody">«Oakley by Samuel Ross» (FW18, Season 2 — 2019, Season 3)</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-12.html"
+            data-case-card
+            data-tags="Фэшн|Техническая одежда"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-12/case-12-1.png"
+                alt="Samuel Ross × Oakley"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Samuel Ross × Oakley</h2>
+                <p class="A_TextBody">«Oakley by Samuel Ross» (FW18, Season 2 — 2019, Season 3)</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Техническая одежда</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-13.html">
-            <span class="O_CaseCard__Index A_TextLabel">13</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Futura (Leonard McGurr) × Hennessy</h2>
-              <p class="A_TextBody">лимитированная бутылка Hennessy V.S, 2012</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-13.html"
+            data-case-card
+            data-tags="Графический дизайн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-13/case-13-1.png"
+                alt="Futura (Leonard McGurr) × Hennessy"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Futura (Leonard McGurr) × Hennessy</h2>
+                <p class="A_TextBody">лимитированная бутылка Hennessy V.S, 2012</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Графический дизайн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-14.html">
-            <span class="O_CaseCard__Index A_TextLabel">14</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Futura × Off-White™ × Nike</h2>
-              <p class="A_TextBody">Nike Dunk Low «Virgil Abloh™ x Futura Laboratories» (показ SS20; аукцион Sotheby's 2023)</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-14.html"
+            data-case-card
+            data-tags="Фэшн|Стрит-арт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-14/case-14-1.png"
+                alt="Futura × Off-White™ × Nike"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Futura × Off-White™ × Nike</h2>
+                <p class="A_TextBody">Nike Dunk Low «Virgil Abloh™ x Futura Laboratories» (показ SS20; аукцион Sotheby's 2023)</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Стрит-арт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-15.html">
-            <span class="O_CaseCard__Index A_TextLabel">15</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Cindy Sherman × Supreme</h2>
-              <p class="A_TextBody">скейтборды «Grotesque Series», 2017</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-15.html"
+            data-case-card
+            data-tags="Фэшн|Фотография"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-15/case-15-1.png"
+                alt="Cindy Sherman × Supreme"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Cindy Sherman × Supreme</h2>
+                <p class="A_TextBody">скейтборды «Grotesque Series», 2017</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фотография</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-16.html">
-            <span class="O_CaseCard__Index A_TextLabel">16</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">KAWS × The North Face</h2>
-              <p class="A_TextBody">коллекция «XX KAWS», 2022</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-16.html"
+            data-case-card
+            data-tags="Фэшн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-16/case-16-1.png"
+                alt="KAWS × The North Face"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">KAWS × The North Face</h2>
+                <p class="A_TextBody">коллекция «XX KAWS», 2022</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-17.html">
-            <span class="O_CaseCard__Index A_TextLabel">17</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">KAWS × Epic Games (Fortnite) × Serpentine</h2>
-              <p class="A_TextBody">выставка «NEW FICTION», 2022</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-17.html"
+            data-case-card
+            data-tags="Диджитал-медиа"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-17/case-17-1.png"
+                alt="KAWS × Epic Games (Fortnite) × Serpentine"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">KAWS × Epic Games (Fortnite) × Serpentine</h2>
+                <p class="A_TextBody">выставка «NEW FICTION», 2022</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Диджитал-медиа</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-18.html">
-            <span class="O_CaseCard__Index A_TextLabel">18</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">KAWS × Acute Art</h2>
-              <p class="A_TextBody">«EXPANDED HOLIDAY» (AR), 2020</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-18.html"
+            data-case-card
+            data-tags="Диджитал-медиа|AR"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-18/case-18-1.png"
+                alt="KAWS × Acute Art"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">KAWS × Acute Art</h2>
+                <p class="A_TextBody">«EXPANDED HOLIDAY» (AR), 2020</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Диджитал-медиа</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">AR</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-19.html">
-            <span class="O_CaseCard__Index A_TextLabel">19</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Daniel Arsham × Pokémon</h2>
-              <p class="A_TextBody">«Daniel Arsham × Pokémon» / «A Ripple in Time», 2020</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-19.html"
+            data-case-card
+            data-tags="Скульптура|Поп-арт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-19/case-19-1.png"
+                alt="Daniel Arsham × Pokémon"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Daniel Arsham × Pokémon</h2>
+                <p class="A_TextBody">«Daniel Arsham × Pokémon» / «A Ripple in Time», 2020</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Скульптура</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Поп-арт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-20.html">
-            <span class="O_CaseCard__Index A_TextLabel">20</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Daniel Arsham × Hot Wheels (Mattel Creations)</h2>
-              <p class="A_TextBody">2023–2024</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-20.html"
+            data-case-card
+            data-tags="Арт-объект"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-20/case-20-1.png"
+                alt="Daniel Arsham × Hot Wheels (Mattel Creations)"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Daniel Arsham × Hot Wheels (Mattel Creations)</h2>
+                <p class="A_TextBody">2023–2024</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Арт-объект</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-21.html">
-            <span class="O_CaseCard__Index A_TextLabel">21</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Daniel Arsham × Porsche</h2>
-              <p class="A_TextBody">«NEBULA 928», 2023</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-21.html"
+            data-case-card
+            data-tags="Авто-спорт|Скульптура"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-21/case-21-1.png"
+                alt="Daniel Arsham × Porsche"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Daniel Arsham × Porsche</h2>
+                <p class="A_TextBody">«NEBULA 928», 2023</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Авто-спорт</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Скульптура</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-22.html">
-            <span class="O_CaseCard__Index A_TextLabel">22</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Julie Mehretu × BMW</h2>
-              <p class="A_TextBody">BMW Art Car #20, 2024</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-22.html"
+            data-case-card
+            data-tags="Авто-спорт|Живопись"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-22/case-22-1.png"
+                alt="Julie Mehretu × BMW"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Julie Mehretu × BMW</h2>
+                <p class="A_TextBody">BMW Art Car #20, 2024</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Авто-спорт</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Живопись</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-23.html">
-            <span class="O_CaseCard__Index A_TextLabel">23</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Jeff Koons × BMW</h2>
-              <p class="A_TextBody">BMW Art Car #17 (M3 GT2), 2010</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-23.html"
+            data-case-card
+            data-tags="Авто-спорт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-23/case-23-1.png"
+                alt="Jeff Koons × BMW"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Jeff Koons × BMW</h2>
+                <p class="A_TextBody">BMW Art Car #17 (M3 GT2), 2010</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Авто-спорт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-24.html">
-            <span class="O_CaseCard__Index A_TextLabel">24</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">John Baldessari × BMW</h2>
-              <p class="A_TextBody">BMW Art Car #19 (M6 GTLM), 2016</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-24.html"
+            data-case-card
+            data-tags="Авто-спорт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-24/case-24-1.png"
+                alt="John Baldessari × BMW"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">John Baldessari × BMW</h2>
+                <p class="A_TextBody">BMW Art Car #19 (M6 GTLM), 2016</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Авто-спорт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-25.html">
-            <span class="O_CaseCard__Index A_TextLabel">25</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Andy Warhol × BMW</h2>
-              <p class="A_TextBody">BMW Art Car #4 (M1), 1979</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-25.html"
+            data-case-card
+            data-tags="Авто-спорт|Поп-арт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-25/case-25-1.png"
+                alt="Andy Warhol × BMW"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Andy Warhol × BMW</h2>
+                <p class="A_TextBody">BMW Art Car #4 (M1), 1979</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Авто-спорт</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Поп-арт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-26.html">
-            <span class="O_CaseCard__Index A_TextLabel">26</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Andy Warhol × Absolut</h2>
-              <p class="A_TextBody">«Absolut Warhol», 1985</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-26.html"
+            data-case-card
+            data-tags="Графический дизайн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-26/case-26-1.png"
+                alt="Andy Warhol × Absolut"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Andy Warhol × Absolut</h2>
+                <p class="A_TextBody">«Absolut Warhol», 1985</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Графический дизайн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-27.html">
-            <span class="O_CaseCard__Index A_TextLabel">27</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Keith Haring × Absolut</h2>
-              <p class="A_TextBody">литографии 1986 / «Absolut Haring Artist Edition», 2025</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-27.html"
+            data-case-card
+            data-tags="Графический дизайн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-27/case-27-1.png"
+                alt="Keith Haring × Absolut"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Keith Haring × Absolut</h2>
+                <p class="A_TextBody">литографии 1986 / «Absolut Haring Artist Edition», 2025</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Графический дизайн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-28.html">
-            <span class="O_CaseCard__Index A_TextLabel">28</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Estate of Jean-Michel Basquiat × Dom Pérignon</h2>
-              <p class="A_TextBody">Vintage 2015 Special Edition «In Italian», 2024</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-28.html"
+            data-case-card
+            data-tags="Арт-объект"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-28/case-28-1.png"
+                alt="Estate of Jean-Michel Basquiat × Dom Pérignon"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Estate of Jean-Michel Basquiat × Dom Pérignon</h2>
+                <p class="A_TextBody">Vintage 2015 Special Edition «In Italian», 2024</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Арт-объект</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-29.html">
-            <span class="O_CaseCard__Index A_TextLabel">29</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">A$AP Rocky (AWGE) × Mercedes-Benz</h2>
-              <p class="A_TextBody">кампания «Grow Up» (2017) и коллекция AWGE × Mercedes-Benz × PacSun (2022)</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-29.html"
+            data-case-card
+            data-tags="Фэшн|Авто-спорт"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-29/case-29-1.png"
+                alt="A$AP Rocky (AWGE) × Mercedes-Benz"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">A$AP Rocky (AWGE) × Mercedes-Benz</h2>
+                <p class="A_TextBody">кампания «Grow Up» (2017) и коллекция AWGE × Mercedes-Benz × PacSun (2022)</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Авто-спорт</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-30.html">
-            <span class="O_CaseCard__Index A_TextLabel">30</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">A$AP Rocky × Ray-Ban</h2>
-              <p class="A_TextBody">креативный директор; кампания «Blacked Out Icons» и Metal Collection (с Nas), 2025–2026</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-30.html"
+            data-case-card
+            data-tags="Фэшн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-30/case-30-1.png"
+                alt="A$AP Rocky × Ray-Ban"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">A$AP Rocky × Ray-Ban</h2>
+                <p class="A_TextBody">креативный директор; кампания «Blacked Out Icons» и Metal Collection (с Nas), 2025–2026</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-31.html">
-            <span class="O_CaseCard__Index A_TextLabel">31</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Hajime Sorayama × PUMA</h2>
-              <p class="A_TextBody">капсула к Году Дракона, 2024</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-31.html"
+            data-case-card
+            data-tags="Фэшн"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-31/case-31-1.png"
+                alt="Hajime Sorayama × PUMA"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Hajime Sorayama × PUMA</h2>
+                <p class="A_TextBody">капсула к Году Дракона, 2024</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Фэшн</span>
+              </span>
+              </div>
             </div>
           </a>
-          <a class="O_CaseCard" href="cases/case-32.html">
-            <span class="O_CaseCard__Index A_TextLabel">32</span>
-            <div class="O_CaseCard__Text">
-              <h2 class="A_TextLead">Refik Anadol × Samsung</h2>
-              <p class="A_TextBody">«Artificial Landscapes» для MICRO LED, 2021</p>
+          <a
+            class="O_CaseCard"
+            href="cases/case-32.html"
+            data-case-card
+            data-tags="Диджитал-медиа|AI"
+          >
+            <div class="O_CaseCard__Media">
+              <img
+                src="../images/cases/case-32/case-32-1.png"
+                alt="Refik Anadol × Samsung"
+              />
+            </div>
+            <div class="O_CaseCard__Body">
+              <div class="O_CaseCard__Text">
+                <h2 class="A_TextLead">Refik Anadol × Samsung</h2>
+                <p class="A_TextBody">«Artificial Landscapes» для MICRO LED, 2021</p>
+              </div>
+              <div class="M_Tags">
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">Диджитал-медиа</span>
+              </span>
+              <span class="M_Tag">
+                <span class="A_TextBodyBold">AI</span>
+              </span>
+              </div>
             </div>
           </a>
-        </div>
+            <p class="S_Cases__Empty A_TextBody" data-case-empty hidden>
+              Нет кейсов с этим тегом.
+            </p>
+          </div>
+          <div class="S_Cases__Pagination">
+            <button
+              class="M_Button M_Button-ghost is-disabled"
+              type="button"
+              data-case-page-prev
+              aria-disabled="true"
+            >
+              <img
+                class="A_Icon"
+                src="../images/icons/caret-left-16.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+              <span class="A_TextLabel">Назад</span>
+            </button>
+            <p class="S_Cases__PageIndex A_TextBody" aria-live="polite">
+              <span data-case-page-current>1</span>
+              <span class="A_Text-darkGray">/</span>
+              <span class="A_Text-darkGray" data-case-page-total>1</span>
+            </p>
+            <button
+              class="M_Button M_Button-ghost"
+              type="button"
+              data-case-page-next
+            >
+              <span class="A_TextLabel">Дальше</span>
+              <img
+                class="A_Icon"
+                src="../images/icons/caret-right-16.svg"
+                width="16"
+                height="16"
+                alt=""
+              />
+            </button>
+          </div>
+        </section>
       </main>
     </div>
   </body>
