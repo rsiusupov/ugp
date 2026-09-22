@@ -33,3 +33,13 @@
   --gap: 16px;
   --margin: 32px;
 }
+
+@media (max-width: 833px) {
+  :root {
+    --margin: 16px;
+    --fs-h1: 48px;
+    --lh-h1: 44px;
+    --fs-h2: 40px;
+    --lh-h2: 36px;
+  }
+}

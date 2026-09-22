@@ -21,10 +21,11 @@ const htmlPages = [
   createPages('./src/index.html', './index.html', ['index']),
   createPages('./src/404.html', './404.html', ['index']),
   createPages('./src/pages/articles.html', './pages/articles.html', ['index']),
-  createPages('./src/pages/tests.html', './pages/tests.html', ['index']),
+  createPages('./src/pages/cases.html', './pages/cases.html', ['index']),
   createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
     'index'
   ]),
+  createPages('./src/pages/about.html', './pages/about.html', ['index']),
   createPages(
     './src/pages/articles/asap-rocky.html',
     './pages/articles/asap-rocky.html',

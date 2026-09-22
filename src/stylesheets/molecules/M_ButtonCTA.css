@@ -1,16 +1,10 @@
 .M_ButtonCTA {
   display: inline-flex;
-  align-items: center;
+  align-items: stretch;
   gap: 2px;
 }
 
 .M_ButtonCTA .M_Button {
   height: auto;
-  padding: 10px;
-}
-
-.M_ButtonCTA .M_Button .A_TextLabel,
-.M_ButtonCTA .M_Button .A_TextBodyBold {
-  font-size: var(--fs-body);
-  line-height: var(--lh-body);
+  padding: 6px 8px;
 }

@@ -77,7 +77,7 @@ module.exports = {
     new HtmlWebpackPartialsPlugin([
       footerPartial(['./index.html', './404.html'], ''),
       footerPartial(
-        ['./pages/articles.html', './pages/tests.html', './pages/dictionary.html'],
+        ['./pages/articles.html', './pages/cases.html', './pages/dictionary.html'],
         '../'
       ),
       footerPartial(

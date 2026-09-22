@@ -60,7 +60,7 @@ export function updateCaseListing(listing) {
   setDisabled(nextBtn, page >= totalPages)
 
   listing.querySelectorAll('[data-case-filter]').forEach((button) => {
-    const isActive = button.dataset.caseFilter === tag
+    const isActive = (button.getAttribute('data-case-filter') || '') === tag
     button.classList.toggle('is-active', isActive)
     button.setAttribute('aria-pressed', isActive ? 'true' : 'false')
   })
@@ -78,8 +78,7 @@ export function initCaseListing() {
 
   listing.querySelectorAll('[data-case-filter]').forEach((button) => {
     button.addEventListener('click', () => {
-      const tag = button.dataset.caseFilter || ''
-      listing.dataset.activeTag = listing.dataset.activeTag === tag ? '' : tag
+      listing.dataset.activeTag = button.getAttribute('data-case-filter') || ''
       listing.dataset.page = '1'
       updateCaseListing(listing)
     })

@@ -74,3 +74,14 @@
     opacity: 0.35;
   }
 }
+
+@media (max-width: 833px) {
+  .S_Webzine {
+    padding: 32px var(--margin);
+  }
+
+  .S_Webzine__Illustration-front,
+  .S_Webzine__Illustration-back {
+    display: none;
+  }
+}

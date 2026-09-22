@@ -31,20 +31,157 @@
   gap: 4px;
 }
 
-@media (max-width: 900px) {
-  .O_Nav {
-    height: auto;
-    min-height: 64px;
-    flex-wrap: wrap;
-    gap: 8px;
+.O_Nav__Wordmark,
+.O_Nav__Toggle,
+.O_Nav__Icon-close {
+  display: none;
+}
+
+@media (max-width: 833px) {
+  .O_Nav,
+  .O_Nav.O_Nav-overlay,
+  .O_Nav.O_Nav-ghost,
+  .O_Nav.is-scrolled {
+    height: 48px;
+    min-height: 48px;
+    padding: 4px var(--margin);
+    background: var(--white);
+  }
+
+  .O_Nav-overlay {
+    margin-bottom: -48px;
   }
 
   .O_Nav__Actions {
-    width: 100%;
-    justify-content: space-between;
+    display: none;
   }
 
-  .M_NavTabs {
-    flex-wrap: wrap;
+  .O_Nav__Toggle {
+    display: flex;
   }
+
+  .O_Nav.is-open,
+  .O_Nav.O_Nav-overlay.is-open,
+  .O_Nav.O_Nav-ghost.is-open {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 40px 40px auto;
+    align-items: start;
+    align-content: start;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    padding: 12px var(--margin) 32px;
+    background: var(--black);
+    overflow: auto;
+  }
+
+  .O_Nav.is-open .A_Logo {
+    display: none;
+  }
+
+  .O_Nav.is-open .O_Nav__Wordmark {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    align-items: center;
+    height: 40px;
+  }
+
+  .O_Nav.is-open .O_Nav__Wordmark img {
+    display: block;
+    height: 40px;
+    width: auto;
+    filter: invert(1);
+  }
+
+  .O_Nav.is-open .O_Nav__Toggle {
+    grid-column: 2;
+    grid-row: 1;
+    background: var(--white);
+  }
+
+  .O_Nav.is-open .O_Nav__Toggle:hover,
+  .O_Nav.is-open .O_Nav__Toggle:focus-visible {
+    background: var(--light-gray);
+  }
+
+  .O_Nav.is-open .O_Nav__Icon-menu {
+    display: none;
+  }
+
+  .O_Nav.is-open .O_Nav__Icon-close {
+    display: block;
+  }
+
+  .O_Nav.is-open .O_Nav__Actions {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+  }
+
+  .O_Nav.is-open .O_Nav__Search {
+    display: none;
+  }
+
+  .O_Nav.is-open .M_NavTabs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .O_Nav.is-open .M_NavTabs .M_Button,
+  .O_Nav.is-open .M_NavTabs .M_Button-quiet {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--dark-gray);
+    border-radius: 0;
+    color: var(--gray);
+    white-space: normal;
+  }
+
+  .O_Nav.is-open .M_NavTabs .M_Button .A_TextLabel,
+  .O_Nav.is-open .M_NavTabs .M_Button-quiet .A_TextLabel {
+    font-family: 'Taler', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    color: inherit;
+  }
+
+  .O_Nav.is-open .M_NavTabs .M_Button[aria-current='page'],
+  .O_Nav.is-open .M_NavTabs a:not(.M_Button-quiet) {
+    color: var(--white);
+  }
+
+  .O_Nav.is-open .M_NavTabs .M_Button:hover,
+  .O_Nav.is-open .M_NavTabs .M_Button:focus-visible,
+  .O_Nav.is-open .M_NavTabs .M_Button-quiet:hover,
+  .O_Nav.is-open .M_NavTabs .M_Button-quiet:focus-visible {
+    background: transparent;
+    color: var(--white);
+  }
+}
+
+body.is-nav-open {
+  overflow: hidden;
 }

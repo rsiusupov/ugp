@@ -156,3 +156,19 @@
     width: 100%;
   }
 }
+
+@media (max-width: 833px) {
+  .O_Footer__Bottom {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .A_LogoFooter {
+    height: 96px;
+    background-size: contain;
+  }
+
+  .O_Footer__Brand {
+    height: 96px;
+  }
+}

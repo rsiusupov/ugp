@@ -16,26 +16,34 @@
             alt=""
           />
         </a>
+        <a class="O_Nav__Wordmark" href="index.html" aria-hidden="true" tabindex="-1">
+          <img
+            src="images/logos/logo-wordmark.svg"
+            width="2305"
+            height="710"
+            alt=""
+          />
+        </a>
         <div class="O_Nav__Actions">
-          <div class="M_NavTabs">
+          <div class="M_NavTabs" id="site-menu">
             <a class="M_Button" href="index.html" aria-current="page">
               <span class="A_TextLabel">Главная</span>
             </a>
             <a class="M_Button M_Button-quiet" href="pages/articles.html">
               <span class="A_TextLabel">Статьи</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="pages/tests.html">
+            <a class="M_Button M_Button-quiet" href="pages/cases.html">
               <span class="A_TextLabel">Разборы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="pages/dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="#about">
+            <a class="M_Button M_Button-quiet" href="pages/about.html">
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
           <button
-            class="A_IconButton"
+            class="A_IconButton O_Nav__Search"
             type="button"
             data-search-toggle
             aria-label="Поиск"
@@ -49,6 +57,29 @@
             />
           </button>
         </div>
+        <button
+          class="A_IconButton O_Nav__Toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Открыть меню"
+        >
+            <img
+              class="A_Icon O_Nav__Icon-menu"
+              src="images/icons/list.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+            <img
+              class="A_Icon O_Nav__Icon-close"
+              src="images/icons/x.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+        </button>
       </nav>
 
       <main>
@@ -113,7 +144,7 @@
                   кейсов
                 </h2>
               </div>
-              <a class="M_Button M_Button-ghost" href="pages/tests.html">
+              <a class="M_Button M_Button-ghost" href="pages/cases.html">
                 <span class="A_TextLabel">Читать</span>
               </a>
               <div class="O_HeroCard__Illustration O_HeroCard__Illustration-cases">
@@ -363,8 +394,7 @@
                 <div class="O_ArticleCard__Text">
                   <h3 class="A_TextLead">Асап Роки</h3>
                   <p class="A_TextBody">
-                    Great work rarely happens in isolation. It begins where
-                    different perspectives meet.
+                    «Я не хочу выглядеть как кто-то другой»
                   </p>
                 </div>
               </div>
@@ -386,8 +416,7 @@
                 <div class="O_ArticleCard__Text">
                   <h3 class="A_TextLead">Дэниэль Аршам</h3>
                   <p class="A_TextBody">
-                    Great work rarely happens in isolation. It begins where
-                    different perspectives meet.
+                    «По сути, мы все — ископаемые и артефакты в ожидании»
                   </p>
                 </div>
               </div>
@@ -409,8 +438,8 @@
                 <div class="O_ArticleCard__Text">
                   <h3 class="A_TextLead">Gucci Ghost</h3>
                   <p class="A_TextBody">
-                    Great work rarely happens in isolation. It begins where
-                    different perspectives meet.
+                    Как забуллить бренд<br />
+                    и заставить его сотрудничать
                   </p>
                 </div>
               </div>
@@ -432,8 +461,8 @@
                 <div class="O_ArticleCard__Text">
                   <h3 class="A_TextLead">Хадзимэ Сораяма</h3>
                   <p class="A_TextBody">
-                    Great work rarely happens in isolation. It begins where
-                    different perspectives meet.
+                    «Если я что-то делаю, я говорю им сто процентов того, чего
+                    хочу»
                   </p>
                 </div>
               </div>
@@ -455,8 +484,8 @@
                 <div class="O_ArticleCard__Text">
                   <h3 class="A_TextLead">Сэмюэль Росс</h3>
                   <p class="A_TextBody">
-                    Great work rarely happens in isolation. It begins where
-                    different perspectives meet.
+                    «Меня интересует, как одежда стареет, и я хочу взять
+                    пользователя с собой в это путешествие»
                   </p>
                 </div>
               </div>
@@ -478,8 +507,8 @@
                 <div class="O_ArticleCard__Text">
                   <h3 class="A_TextLead">KAWS</h3>
                   <p class="A_TextBody">
-                    Great work rarely happens in isolation. It begins where
-                    different perspectives meet.
+                    «Мне интересна возможность попасть к аудитории, которая не
+                    может покупать скульптуры»
                   </p>
                 </div>
               </div>
@@ -511,17 +540,18 @@
             <div class="S_Webzine__Content">
               <div class="S_Webzine__Copy">
                 <h2 class="A_TextH3">
-                  Вебзин<br />
-                  про рэп
+                  Интерактивные<br />
+                  тесты
                 </h2>
                 <p class="A_TextBodyBold">
-                  Комикс про рэпера, который пытается<br />
-                  масштабировать свою медийку
+                  Пройди тесты и узнай<br />
+                  какие бренды и типы коллаборации<br />
+                  тебе подойдут как художнику
                 </p>
               </div>
               <a class="M_ButtonCTA" href="pages/dictionary.html">
-                <span class="M_Button M_Button-quiet M_Button-m">
-                  <span class="A_TextBodyBold">Почитать реп</span>
+                <span class="M_Button M_Button-quiet">
+                  <span class="A_TextLabel">Связь</span>
                 </span>
                 <span class="A_IconButton" aria-hidden="true">
                   <img

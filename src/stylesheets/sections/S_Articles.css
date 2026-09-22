@@ -165,8 +165,29 @@
     grid-template-columns: 1fr;
   }
 
-  .O_ArticleCard {
-    height: auto;
-    min-height: 520px;
+  .S_ArticlesHero-green .S_ArticlesHero__Copy {
+    padding-top: 80px;
+  }
+
+  .S_ArticlesHero-green + .S_Cases {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 833px) {
+  .S_ArticlesHero__Image {
+    min-height: 280px;
+  }
+
+  .S_ArticlesHero__Copy {
+    padding: 48px 0 24px;
+  }
+
+  .S_ArticlesHero-green .S_ArticlesHero__Copy {
+    padding-top: 64px;
+  }
+
+  .S_ArticlesHero-green + .S_Cases {
+    padding-top: 48px;
   }
 }

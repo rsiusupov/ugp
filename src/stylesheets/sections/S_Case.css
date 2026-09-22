@@ -142,9 +142,26 @@
     height: auto;
     grid-template-rows: 420px auto;
   }
+}
 
-  .S_Case__Panel {
-    min-height: 520px;
+@media (max-width: 833px) {
+  .S_Case__Meta {
+    flex-wrap: wrap;
     height: auto;
+    gap: 12px;
+  }
+
+  .S_Case__Nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .S_Case__Gallery {
+    grid-template-rows: min(70vw, 320px) auto;
+  }
+
+  .S_Case__Frame img {
+    width: 100%;
+    height: 100%;
   }
 }

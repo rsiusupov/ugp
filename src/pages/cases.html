@@ -11,25 +11,33 @@
         <a class="A_Logo" href="../index.html" aria-label="Underground and Pound">
           <img src="../images/logos/logo-mark.svg" width="32" height="32" alt="" />
         </a>
+        <a class="O_Nav__Wordmark" href="../index.html" aria-hidden="true" tabindex="-1">
+          <img
+            src="../images/logos/logo-wordmark.svg"
+            width="2305"
+            height="710"
+            alt=""
+          />
+        </a>
         <div class="O_Nav__Actions">
-          <div class="M_NavTabs">
+          <div class="M_NavTabs" id="site-menu">
             <a class="M_Button M_Button-quiet" href="../index.html">
               <span class="A_TextLabel">Главная</span>
             </a>
             <a class="M_Button M_Button-quiet" href="articles.html">
               <span class="A_TextLabel">Статьи</span>
             </a>
-            <a class="M_Button" href="tests.html" aria-current="page">
+            <a class="M_Button" href="cases.html" aria-current="page">
               <span class="A_TextLabel">Разборы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../index.html#about">
+            <a class="M_Button M_Button-quiet" href="about.html">
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
-          <a class="A_IconButton" href="../index.html" aria-label="Поиск">
+          <a class="A_IconButton O_Nav__Search" href="../index.html" aria-label="Поиск">
             <img
               class="A_Icon"
               src="../images/icons/magnifying-glass-nav.svg"
@@ -39,6 +47,30 @@
             />
           </a>
         </div>
+          <button
+            class="A_IconButton O_Nav__Toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Открыть меню"
+          >
+            <img
+              class="A_Icon O_Nav__Icon-menu"
+              src="../images/icons/list.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+            <img
+              class="A_Icon O_Nav__Icon-close"
+              src="../images/icons/x.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </button>
+
       </nav>
 
       <main data-case-listing>
@@ -137,6 +169,14 @@
         <section class="S_Cases">
           <div class="S_Cases__Toolbar">
             <div class="S_Cases__Filters" data-case-filters>
+          <button
+            class="M_Tag is-active"
+            type="button"
+            data-case-filter=""
+            aria-pressed="true"
+          >
+            <span class="A_TextBodyBold">Все</span>
+          </button>
           <button
             class="M_Tag"
             type="button"

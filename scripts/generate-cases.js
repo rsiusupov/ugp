@@ -62,6 +62,43 @@ function padIndex(index) {
   return String(index).padStart(2, '0')
 }
 
+function navWordmark(indexHref, imagesPrefix) {
+  return `        <a class="O_Nav__Wordmark" href="${indexHref}" aria-hidden="true" tabindex="-1">
+          <img
+            src="${imagesPrefix}/logos/logo-wordmark.svg"
+            width="2305"
+            height="710"
+            alt=""
+          />
+        </a>`
+}
+
+function navToggle(imagesPrefix) {
+  return `        <button
+          class="A_IconButton O_Nav__Toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Открыть меню"
+        >
+          <img
+            class="A_Icon O_Nav__Icon-menu"
+            src="${imagesPrefix}/icons/list.svg"
+            width="20"
+            height="20"
+            alt=""
+          />
+          <img
+            class="A_Icon O_Nav__Icon-close"
+            src="${imagesPrefix}/icons/x.svg"
+            width="20"
+            height="20"
+            alt=""
+          />
+        </button>`
+}
+
 function caseImageSrc(caseId, index, fromPages) {
   const dir = path.join(__dirname, '../src/images/cases', caseId)
   const base = `${caseId}-${index}`
@@ -176,26 +213,27 @@ function renderCasePage(item, index, total) {
             alt=""
           />
         </a>
+${navWordmark('../../index.html', '../../images')}
         <div class="O_Nav__Actions">
-          <div class="M_NavTabs">
+          <div class="M_NavTabs" id="site-menu">
             <a class="M_Button M_Button-quiet" href="../../index.html">
               <span class="A_TextLabel">Главная</span>
             </a>
             <a class="M_Button M_Button-quiet" href="../articles.html">
               <span class="A_TextLabel">Статьи</span>
             </a>
-            <a class="M_Button" href="../tests.html" aria-current="page">
+            <a class="M_Button" href="../cases.html" aria-current="page">
               <span class="A_TextLabel">Разборы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="../dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../../index.html#about">
+            <a class="M_Button M_Button-quiet" href="../about.html">
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
           <a
-            class="A_IconButton"
+            class="A_IconButton O_Nav__Search"
             href="../../index.html"
             aria-label="Поиск"
           >
@@ -208,6 +246,7 @@ function renderCasePage(item, index, total) {
             />
           </a>
         </div>
+${navToggle('../../images')}
       </nav>
 
       <main class="S_Case">
@@ -265,7 +304,7 @@ ${caseNavButton(
               <nav class="M_Breadcrumbs" aria-label="Хлебные крошки">
                 <a class="A_TextBodySerif" href="../../index.html">Главная</a>
                 <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
-                <a class="A_TextBodySerif" href="../tests.html">Кейсы</a>
+                <a class="A_TextBodySerif" href="../cases.html">Кейсы</a>
                 <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
               </nav>
               <h1 class="A_TextLead">${escapeHtml(shortTitle)}</h1>
@@ -327,8 +366,17 @@ ${tagsMarkup}
     })
     .join('\n')
 
-  const filtersMarkup = FILTER_TAGS.map(
-    (tag) => `          <button
+  const filtersMarkup = [
+    `          <button
+            class="M_Tag is-active"
+            type="button"
+            data-case-filter=""
+            aria-pressed="true"
+          >
+            <span class="A_TextBodyBold">Все</span>
+          </button>`,
+    ...FILTER_TAGS.map(
+      (tag) => `          <button
             class="M_Tag"
             type="button"
             data-case-filter="${escapeHtml(tag)}"
@@ -336,7 +384,8 @@ ${tagsMarkup}
           >
             <span class="A_TextBodyBold">${escapeHtml(tag)}</span>
           </button>`
-  ).join('\n')
+    )
+  ].join('\n')
 
   return `<!DOCTYPE html>
 <html lang="ru">
@@ -351,25 +400,26 @@ ${tagsMarkup}
         <a class="A_Logo" href="../index.html" aria-label="Underground and Pound">
           <img src="../images/logos/logo-mark.svg" width="32" height="32" alt="" />
         </a>
+${navWordmark('../index.html', '../images')}
         <div class="O_Nav__Actions">
-          <div class="M_NavTabs">
+          <div class="M_NavTabs" id="site-menu">
             <a class="M_Button M_Button-quiet" href="../index.html">
               <span class="A_TextLabel">Главная</span>
             </a>
             <a class="M_Button M_Button-quiet" href="articles.html">
               <span class="A_TextLabel">Статьи</span>
             </a>
-            <a class="M_Button" href="tests.html" aria-current="page">
+            <a class="M_Button" href="cases.html" aria-current="page">
               <span class="A_TextLabel">Разборы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../index.html#about">
+            <a class="M_Button M_Button-quiet" href="about.html">
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
-          <a class="A_IconButton" href="../index.html" aria-label="Поиск">
+          <a class="A_IconButton O_Nav__Search" href="../index.html" aria-label="Поиск">
             <img
               class="A_Icon"
               src="../images/icons/magnifying-glass-nav.svg"
@@ -379,6 +429,7 @@ ${tagsMarkup}
             />
           </a>
         </div>
+${navToggle('../images')}
       </nav>
 
       <main data-case-listing>
@@ -539,7 +590,7 @@ cases.forEach((item, index) => {
 })
 
 fs.writeFileSync(
-  path.join(__dirname, '../src/pages/tests.html'),
+  path.join(__dirname, '../src/pages/cases.html'),
   renderListingPage()
 )
 

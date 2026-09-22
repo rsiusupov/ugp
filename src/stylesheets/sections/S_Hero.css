@@ -85,3 +85,18 @@
     padding-top: 48px;
   }
 }
+
+@media (max-width: 833px) {
+  .S_Hero {
+    padding-bottom: 32px;
+  }
+
+  .S_Hero__Center {
+    padding-top: 80px;
+    gap: 32px;
+  }
+
+  .S_Hero__Cards {
+    padding-top: 32px;
+  }
+}

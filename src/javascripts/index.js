@@ -39,10 +39,50 @@ if (searchForm) {
 const stickyNav = document.querySelector('.O_Nav')
 if (stickyNav) {
   const syncNav = () => {
-    stickyNav.classList.toggle('is-scrolled', window.scrollY > 8)
+    if (!stickyNav.classList.contains('is-open')) {
+      stickyNav.classList.toggle('is-scrolled', window.scrollY > 8)
+    }
   }
   syncNav()
   window.addEventListener('scroll', syncNav, { passive: true })
+}
+
+const navToggle = document.querySelector('[data-nav-toggle]')
+if (stickyNav && navToggle) {
+  const MOBILE_NAV = 834
+  const setNavOpen = (open) => {
+    stickyNav.classList.toggle('is-open', open)
+    document.body.classList.toggle('is-nav-open', open)
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false')
+    navToggle.setAttribute(
+      'aria-label',
+      open ? 'Закрыть меню' : 'Открыть меню'
+    )
+  }
+
+  navToggle.addEventListener('click', () => {
+    setNavOpen(!stickyNav.classList.contains('is-open'))
+  })
+
+  stickyNav.querySelectorAll('.M_NavTabs a').forEach((link) => {
+    link.addEventListener('click', () => setNavOpen(false))
+  })
+
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setNavOpen(false)
+    }
+  })
+
+  window.addEventListener(
+    'resize',
+    () => {
+      if (window.innerWidth >= MOBILE_NAV) {
+        setNavOpen(false)
+      }
+    },
+    { passive: true }
+  )
 }
 
 const shareButton = document.querySelector('[data-share]')
@@ -79,6 +119,56 @@ document.querySelectorAll('[data-share-network]').forEach((link) => {
     link.href = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(pageUrl)}&description=${encodeURIComponent(pageTitle)}`
   }
 })
+
+const aboutScene = document.querySelector('[data-about-scene]')
+if (aboutScene) {
+  const board = aboutScene.querySelector('.S_AboutPage__Board')
+  const viewport = aboutScene.querySelector('.S_AboutPage__Viewport')
+  const words = [...aboutScene.querySelectorAll('[data-about-word]')]
+  const desktop = window.matchMedia('(min-width: 834px)')
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+
+  const fitAboutBoard = () => {
+    if (!board || !viewport) {
+      return
+    }
+
+    const scale = desktop.matches
+      ? Math.min(1, viewport.clientWidth / 1440, viewport.clientHeight / 900)
+      : Math.min(viewport.clientWidth / 640, viewport.clientHeight / 700)
+    board.style.setProperty('--about-scale', String(scale))
+  }
+
+  const syncAbout = () => {
+    fitAboutBoard()
+
+    if (!desktop.matches || reduceMotion.matches) {
+      words.forEach((word) => word.classList.add('is-visible'))
+      return
+    }
+
+    const total = aboutScene.offsetHeight - window.innerHeight
+    if (total <= 0) {
+      words.forEach((word) => word.classList.add('is-visible'))
+      return
+    }
+
+    const progress = Math.min(
+      1,
+      Math.max(0, -aboutScene.getBoundingClientRect().top / total)
+    )
+
+    words.forEach((word, index) => {
+      const threshold = 0.08 + (index * 0.84) / words.length
+      word.classList.toggle('is-visible', progress >= threshold)
+    })
+  }
+
+  syncAbout()
+  window.addEventListener('scroll', syncAbout, { passive: true })
+  window.addEventListener('resize', syncAbout)
+  desktop.addEventListener('change', syncAbout)
+}
 
 const luckyLink = document.querySelector('[data-lucky-link]')
 if (luckyLink) {

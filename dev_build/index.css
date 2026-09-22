@@ -654,7 +654,6 @@ a {
 }
 
 .M_Button-ghost {
-  background: var(--white);
   color: var(--black);
 }
 
@@ -908,7 +907,6 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   height: 64px;
   padding: 12px var(--margin);

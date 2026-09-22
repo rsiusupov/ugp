@@ -11,25 +11,57 @@
         <a class="A_Logo" href="../index.html" aria-label="Underground and Pound">
           <img src="../images/logos/logo-mark.svg" width="32" height="32" alt="" />
         </a>
+        <a class="O_Nav__Wordmark" href="../index.html" aria-hidden="true" tabindex="-1">
+          <img
+            src="../images/logos/logo-wordmark.svg"
+            width="2305"
+            height="710"
+            alt=""
+          />
+        </a>
         <div class="O_Nav__Actions">
-          <div class="M_NavTabs">
+          <div class="M_NavTabs" id="site-menu">
             <a class="M_Button M_Button-quiet" href="../index.html">
               <span class="A_TextLabel">Главная</span>
             </a>
             <a class="M_Button M_Button-quiet" href="articles.html">
               <span class="A_TextLabel">Статьи</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="tests.html">
+            <a class="M_Button M_Button-quiet" href="cases.html">
               <span class="A_TextLabel">Разборы</span>
             </a>
             <a class="M_Button" href="dictionary.html" aria-current="page">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../index.html#about">
+            <a class="M_Button M_Button-quiet" href="about.html">
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
         </div>
+          <button
+            class="A_IconButton O_Nav__Toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Открыть меню"
+          >
+            <img
+              class="A_Icon O_Nav__Icon-menu"
+              src="../images/icons/list.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+            <img
+              class="A_Icon O_Nav__Icon-close"
+              src="../images/icons/x.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </button>
+
       </nav>
       <main class="S_Inner">
         <h1 class="A_TextH2">Ресурсы</h1>

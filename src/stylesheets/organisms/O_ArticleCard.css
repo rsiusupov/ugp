@@ -43,6 +43,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  overflow-wrap: break-word;
 }
 
 .O_ArticleCard__Date {

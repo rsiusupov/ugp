@@ -106,3 +106,24 @@
     height: auto;
   }
 }
+
+@media (max-width: 833px) {
+  .S_ArticleHero {
+    padding-bottom: 24px;
+  }
+
+  .S_ArticleHero__Copy {
+    padding-top: 48px;
+    gap: 24px;
+  }
+
+  .S_ArticleHero__Bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .S_ArticleHero__Meta {
+    white-space: normal;
+    text-align: left;
+  }
+}

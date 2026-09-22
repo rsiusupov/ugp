@@ -1,0 +1,156 @@
+.S_AboutPage {
+  min-height: 100vh;
+}
+
+.S_AboutPage__Stage {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 64px var(--margin) 24px;
+}
+
+.S_AboutPage__Viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.S_AboutPage__Board {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1440px;
+  height: 900px;
+  transform: translate(-50%, -50%) scale(var(--about-scale, 1));
+  transform-origin: center center;
+}
+
+.S_AboutPage__Ellipse {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.S_AboutPage__Dove {
+  position: absolute;
+  left: 419px;
+  top: 70px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.S_AboutPage__Logo {
+  position: absolute;
+  left: 508px;
+  top: 691px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.S_AboutPage__Word {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  font-family: 'Taler', serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 29px;
+  color: var(--black);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.S_AboutPage__Word.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.S_AboutPage__Word-freedom {
+  left: 657px;
+  top: 41px;
+}
+
+.S_AboutPage__Word-openness {
+  left: 246px;
+  top: 160px;
+}
+
+.S_AboutPage__Word-courage {
+  left: 1104px;
+  top: 170px;
+}
+
+.S_AboutPage__Word-provocation {
+  left: 37px;
+  top: 440px;
+}
+
+.S_AboutPage__Word-irony {
+  left: 1266px;
+  top: 440px;
+}
+
+.S_AboutPage__Word-experiment {
+  left: 184px;
+  top: 630px;
+}
+
+.S_AboutPage__Word-curiosity {
+  left: 1078px;
+  top: 662px;
+}
+
+.S_AboutPage__Word-independence {
+  left: 603px;
+  top: 830px;
+}
+
+.S_AboutPage__Dove,
+.S_AboutPage__Logo,
+.S_AboutPage__Ellipse {
+  opacity: 1;
+}
+
+@media (min-width: 834px) {
+  .S_AboutPage {
+    height: 420vh;
+  }
+}
+
+@media (max-width: 833px) {
+  .S_AboutPage {
+    height: 100vh;
+  }
+
+  .S_AboutPage__Stage {
+    padding: 48px var(--margin) 16px;
+  }
+
+  .S_AboutPage__Word,
+  .S_AboutPage__Ellipse {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .S_AboutPage {
+    height: 100vh;
+  }
+
+  .S_AboutPage__Dove,
+  .S_AboutPage__Logo,
+  .S_AboutPage__Ellipse,
+  .S_AboutPage__Word {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

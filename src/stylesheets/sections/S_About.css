@@ -80,3 +80,9 @@
     margin-top: 24px;
   }
 }
+
+@media (max-width: 833px) {
+  .S_About__Illustration {
+    height: 240px;
+  }
+}

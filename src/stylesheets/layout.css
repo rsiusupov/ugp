@@ -68,6 +68,19 @@ a {
   scroll-margin-top: 64px;
 }
 
+@media (max-width: 833px) {
+  #about,
+  #articles,
+  #webzine,
+  .S_Experience {
+    scroll-margin-top: 48px;
+  }
+
+  .S_Inner {
+    padding: 72px var(--margin) 48px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
