@@ -1,0 +1,27 @@
+.O_CaseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 16px;
+  background: var(--orange);
+  border-bottom: 1px solid var(--black);
+  flex-shrink: 0;
+}
+
+.O_CaseDetails__Copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.O_CaseDetails .M_Breadcrumbs {
+  height: auto;
+}
+
+.O_CaseDetails .M_Breadcrumbs a,
+.O_CaseDetails .M_Breadcrumbs span {
+  color: var(--black);
+}

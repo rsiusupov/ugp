@@ -1,0 +1,17 @@
+.M_Pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.M_Pagination__Counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.M_Pagination__Counter .A_Text-darkGray {
+  color: var(--dark-gray);
+}

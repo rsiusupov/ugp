@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const cases = require('../src/data/cases.json')
 
 function createPages(template, filename, chunks) {
   return new HtmlWebpackPlugin({
@@ -7,6 +8,14 @@ function createPages(template, filename, chunks) {
     chunks: chunks
   })
 }
+
+const casePages = cases.map((item) =>
+  createPages(
+    `./src/pages/cases/${item.id}.html`,
+    `./pages/cases/${item.id}.html`,
+    ['index']
+  )
+)
 
 const htmlPages = [
   createPages('./src/index.html', './index.html', ['index']),
@@ -48,7 +57,8 @@ const htmlPages = [
   ),
   createPages('./src/pages/tests/test1.html', './pages/tests/test1.html', [
     'index'
-  ])
+  ]),
+  ...casePages
 ]
 
 module.exports = htmlPages

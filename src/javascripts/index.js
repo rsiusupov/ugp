@@ -90,6 +90,43 @@ if (luckyLink) {
   luckyLink.href = luckyPages[Math.floor(Math.random() * luckyPages.length)]
 }
 
+const caseGallery = document.querySelector('[data-case-gallery]')
+if (caseGallery) {
+  const scroller = caseGallery.querySelector('[data-case-scroller]')
+  const frames = [...caseGallery.querySelectorAll('[data-case-frame]')]
+  const currentEl = caseGallery.querySelector('[data-case-slide-current]')
+
+  const syncSlide = () => {
+    if (!scroller || !frames.length || !currentEl) {
+      return
+    }
+
+    const viewport = scroller.getBoundingClientRect()
+    let index = 0
+    let mostVisible = -1
+
+    frames.forEach((frame, frameIndex) => {
+      const rect = frame.getBoundingClientRect()
+      const visible =
+        Math.min(rect.right, viewport.right) - Math.max(rect.left, viewport.left)
+
+      if (visible > mostVisible) {
+        mostVisible = visible
+        index = frameIndex
+      }
+    })
+
+    currentEl.textContent = String(index + 1)
+  }
+
+  syncSlide()
+  scroller?.addEventListener('scroll', syncSlide, { passive: true })
+  window.addEventListener('resize', syncSlide)
+  frames.forEach((frame) => {
+    frame.querySelector('img')?.addEventListener('load', syncSlide)
+  })
+}
+
 const articleNav = document.querySelector('[data-article-nav]')
 if (articleNav) {
   const links = [...articleNav.querySelectorAll('a[href^="#"]')]

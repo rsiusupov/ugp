@@ -1,0 +1,30 @@
+.O_CaseCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--black);
+  background: var(--white);
+}
+
+.O_CaseCard:hover,
+.O_CaseCard:focus-visible {
+  background: var(--light-gray);
+}
+
+.O_CaseCard__Index {
+  flex-shrink: 0;
+  min-width: 24px;
+}
+
+.O_CaseCard__Text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.O_CaseCard__Text .A_TextBody {
+  color: var(--dark-gray);
+}

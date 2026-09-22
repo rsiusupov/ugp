@@ -26,3 +26,21 @@
   height: 28px;
   padding: 6px;
 }
+
+.A_IconButton-outline {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.A_IconButton-outline:hover,
+.A_IconButton-outline:focus-visible {
+  background: var(--light-gray);
+}
+
+.A_IconButton-outline.is-disabled,
+.A_IconButton-outline[aria-disabled='true'] {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: default;
+}

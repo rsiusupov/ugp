@@ -1,0 +1,9 @@
+.M_Divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--light-gray);
+  border-bottom: 1px solid var(--black);
+  flex-shrink: 0;
+}
