@@ -25,10 +25,27 @@
   background: var(--white);
 }
 
+@media (min-width: 834px) {
+  .O_Nav-onBlack:not(.is-scrolled):not(.is-open) .A_Logo,
+  .O_Nav-onBlack:not(.is-scrolled):not(.is-open) .A_IconButton {
+    background: var(--white);
+  }
+
+  .O_Nav-onBlack:not(.is-scrolled):not(.is-open) .A_Logo img,
+  .O_Nav-onBlack:not(.is-scrolled):not(.is-open) .O_Nav__Search .A_Icon {
+    filter: invert(1);
+  }
+}
+
 .O_Nav__Actions {
   display: flex;
   align-items: flex-start;
   gap: 4px;
+  margin-left: auto;
+}
+
+.O_Nav__Search {
+  display: flex;
 }
 
 .O_Nav__Wordmark,
@@ -54,6 +71,12 @@
 
   .O_Nav__Actions {
     display: none;
+    margin-left: 0;
+  }
+
+  .O_Nav__Search {
+    display: flex;
+    margin-left: auto;
   }
 
   .O_Nav__Toggle {
@@ -132,6 +155,7 @@
 
   .O_Nav.is-open .O_Nav__Search {
     display: none;
+    margin-left: 0;
   }
 
   .O_Nav.is-open .M_NavTabs {

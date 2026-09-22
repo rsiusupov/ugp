@@ -1,156 +1,124 @@
+html:has(.S_AboutPage),
+body:has(.S_AboutPage) {
+  background: var(--black);
+}
+
+.S_Page:has(.S_AboutPage) {
+  max-width: none;
+  background: var(--black);
+}
+
 .S_AboutPage {
-  min-height: 100vh;
-}
-
-.S_AboutPage__Stage {
-  position: sticky;
-  top: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 64px var(--margin) 24px;
+  width: 100%;
+  background: var(--black);
 }
 
-.S_AboutPage__Viewport {
-  position: relative;
+.S_AboutPage__Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 100%;
-  height: 100%;
+  max-width: 1440px;
+  height: 960px;
+  padding: 0 var(--margin) 32px;
+}
+
+.S_AboutPage__HeroInner {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0;
+  width: 100%;
+  padding-top: 96px;
+}
+
+.S_AboutPage__Wordmark {
+  width: 100%;
   overflow: hidden;
 }
 
-.S_AboutPage__Board {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 1440px;
-  height: 900px;
-  transform: translate(-50%, -50%) scale(var(--about-scale, 1));
-  transform-origin: center center;
+.S_AboutPage__Wordmark img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
 }
 
-.S_AboutPage__Ellipse {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  z-index: 0;
-  pointer-events: none;
+.S_AboutPage__Intro {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  min-height: 0;
+  text-align: center;
 }
 
-.S_AboutPage__Dove {
-  position: absolute;
-  left: 419px;
-  top: 70px;
-  z-index: 1;
-  pointer-events: none;
+.S_AboutPage__Intro .A_TextH2,
+.S_AboutPage__Lead {
+  width: 100%;
+  max-width: 642px;
 }
 
-.S_AboutPage__Logo {
-  position: absolute;
-  left: 508px;
-  top: 691px;
-  z-index: 2;
-  pointer-events: none;
+.S_AboutPage__Cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 32px var(--margin);
 }
 
-.S_AboutPage__Word {
-  position: absolute;
-  z-index: 3;
-  margin: 0;
-  font-family: 'Taler', serif;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 29px;
-  color: var(--black);
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+.S_AboutPage__CardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 1080px;
 }
 
-.S_AboutPage__Word.is-visible {
-  opacity: 1;
-  transform: none;
-}
+@media (max-width: 1100px) {
+  .S_AboutPage__Hero {
+    height: auto;
+    min-height: 0;
+  }
 
-.S_AboutPage__Word-freedom {
-  left: 657px;
-  top: 41px;
-}
+  .S_AboutPage__HeroInner {
+    flex: none;
+    padding-top: 96px;
+    gap: 32px;
+  }
 
-.S_AboutPage__Word-openness {
-  left: 246px;
-  top: 160px;
-}
-
-.S_AboutPage__Word-courage {
-  left: 1104px;
-  top: 170px;
-}
-
-.S_AboutPage__Word-provocation {
-  left: 37px;
-  top: 440px;
-}
-
-.S_AboutPage__Word-irony {
-  left: 1266px;
-  top: 440px;
-}
-
-.S_AboutPage__Word-experiment {
-  left: 184px;
-  top: 630px;
-}
-
-.S_AboutPage__Word-curiosity {
-  left: 1078px;
-  top: 662px;
-}
-
-.S_AboutPage__Word-independence {
-  left: 603px;
-  top: 830px;
-}
-
-.S_AboutPage__Dove,
-.S_AboutPage__Logo,
-.S_AboutPage__Ellipse {
-  opacity: 1;
-}
-
-@media (min-width: 834px) {
-  .S_AboutPage {
-    height: 420vh;
+  .S_AboutPage__Intro {
+    flex: none;
+    padding: 24px 0 16px;
   }
 }
 
 @media (max-width: 833px) {
-  .S_AboutPage {
-    height: 100vh;
+  .S_AboutPage__Hero {
+    padding: 0 var(--margin) 16px;
   }
 
-  .S_AboutPage__Stage {
-    padding: 48px var(--margin) 16px;
+  .S_AboutPage__HeroInner {
+    padding-top: 64px;
+    gap: 24px;
   }
 
-  .S_AboutPage__Word,
-  .S_AboutPage__Ellipse {
-    display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .S_AboutPage {
-    height: 100vh;
+  .S_AboutPage__Intro {
+    gap: 16px;
+    padding: 8px 0 8px;
   }
 
-  .S_AboutPage__Dove,
-  .S_AboutPage__Logo,
-  .S_AboutPage__Ellipse,
-  .S_AboutPage__Word {
-    opacity: 1;
-    transform: none;
-    transition: none;
+  .S_AboutPage__Cards {
+    padding: 16px var(--margin) 32px;
+  }
+
+  .S_AboutPage__CardsList {
+    gap: 12px;
   }
 }

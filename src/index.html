@@ -35,6 +35,9 @@
             <a class="M_Button M_Button-quiet" href="pages/cases.html">
               <span class="A_TextLabel">Разборы</span>
             </a>
+            <a class="M_Button M_Button-quiet" href="pages/tests.html">
+              <span class="A_TextLabel">Тесты</span>
+            </a>
             <a class="M_Button M_Button-quiet" href="pages/dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
@@ -42,10 +45,10 @@
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
-          <button
+        </div>
+          <a
             class="A_IconButton O_Nav__Search"
-            type="button"
-            data-search-toggle
+            href="pages/search.html"
             aria-label="Поиск"
           >
             <img
@@ -55,8 +58,7 @@
               height="20"
               alt=""
             />
-          </button>
-        </div>
+          </a>
         <button
           class="A_IconButton O_Nav__Toggle"
           type="button"
@@ -98,7 +100,7 @@
                   alt="Underground & Pound"
                 />
               </div>
-              <form class="M_SearchBar" role="search" data-search-form>
+              <form class="M_SearchBar" role="search" action="pages/search.html" method="get">
                 <label class="M_SearchBar__Field">
                   <span class="visually-hidden">Поиск по сайту</span>
                   <input
@@ -106,7 +108,6 @@
                     type="search"
                     name="q"
                     placeholder="Поиск"
-                    data-search-input
                   />
                 </label>
                 <button class="A_IconButton" type="submit" aria-label="Искать">
@@ -549,7 +550,7 @@
                   тебе подойдут как художнику
                 </p>
               </div>
-              <a class="M_ButtonCTA" href="pages/dictionary.html">
+              <a class="M_ButtonCTA" href="pages/tests.html">
                 <span class="M_Button M_Button-quiet">
                   <span class="A_TextLabel">Связь</span>
                 </span>

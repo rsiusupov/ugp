@@ -22,6 +22,7 @@ const htmlPages = [
   createPages('./src/404.html', './404.html', ['index']),
   createPages('./src/pages/articles.html', './pages/articles.html', ['index']),
   createPages('./src/pages/cases.html', './pages/cases.html', ['index']),
+  createPages('./src/pages/search.html', './pages/search.html', ['index']),
   createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
     'index'
   ]),
@@ -56,7 +57,14 @@ const htmlPages = [
     './pages/articles/kaws.html',
     ['index']
   ),
+  createPages('./src/pages/tests.html', './pages/tests.html', ['index']),
   createPages('./src/pages/tests/test1.html', './pages/tests/test1.html', [
+    'index'
+  ]),
+  createPages('./src/pages/tests/test2.html', './pages/tests/test2.html', [
+    'index'
+  ]),
+  createPages('./src/pages/tests/test3.html', './pages/tests/test3.html', [
     'index'
   ]),
   ...casePages

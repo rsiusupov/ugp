@@ -77,7 +77,14 @@ module.exports = {
     new HtmlWebpackPartialsPlugin([
       footerPartial(['./index.html', './404.html'], ''),
       footerPartial(
-        ['./pages/articles.html', './pages/cases.html', './pages/dictionary.html'],
+        [
+          './pages/articles.html',
+          './pages/cases.html',
+          './pages/dictionary.html',
+          './pages/about.html',
+          './pages/search.html',
+          './pages/tests.html'
+        ],
         '../'
       ),
       footerPartial(
@@ -88,7 +95,9 @@ module.exports = {
           './pages/articles/hajime-sorayama.html',
           './pages/articles/samuel-ross.html',
           './pages/articles/kaws.html',
-          './pages/tests/test1.html'
+          './pages/tests/test1.html',
+          './pages/tests/test2.html',
+          './pages/tests/test3.html'
         ],
         '../../'
       )

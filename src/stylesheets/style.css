@@ -31,6 +31,8 @@
 @import 'organisms/O_ArticleNav.css';
 @import 'organisms/O_CaseDetails.css';
 @import 'organisms/O_CaseCard.css';
+@import 'organisms/O_ManifestoCard.css';
+@import 'organisms/O_TestCard.css';
 
 @import 'sections/S_Hero.css';
 @import 'sections/S_About.css';
@@ -43,3 +45,5 @@
 @import 'sections/S_AboutPage.css';
 @import 'sections/S_Case.css';
 @import 'sections/S_Cases.css';
+@import 'sections/S_Search.css';
+@import 'sections/S_Tests.css';

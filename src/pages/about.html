@@ -7,7 +7,10 @@
   </head>
   <body>
     <div class="S_Page">
-      <nav class="O_Nav O_Nav-overlay" aria-label="Основная навигация">
+      <nav
+        class="O_Nav O_Nav-overlay O_Nav-ghost O_Nav-onBlack"
+        aria-label="Основная навигация"
+      >
         <a class="A_Logo" href="../index.html" aria-label="Underground and Pound">
           <img
             src="../images/logos/logo-mark.svg"
@@ -40,6 +43,9 @@
             <a class="M_Button M_Button-quiet" href="cases.html">
               <span class="A_TextLabel">Разборы</span>
             </a>
+            <a class="M_Button M_Button-quiet" href="tests.html">
+              <span class="A_TextLabel">Тесты</span>
+            </a>
             <a class="M_Button M_Button-quiet" href="dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
@@ -47,20 +53,20 @@
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
-          <a
-            class="A_IconButton O_Nav__Search"
-            href="../index.html"
-            aria-label="Поиск"
-          >
-            <img
-              class="A_Icon"
-              src="../images/icons/magnifying-glass-nav.svg"
-              width="20"
-              height="20"
-              alt=""
-            />
-          </a>
         </div>
+        <a
+          class="A_IconButton O_Nav__Search"
+          href="search.html"
+          aria-label="Поиск"
+        >
+          <img
+            class="A_Icon"
+            src="../images/icons/magnifying-glass-nav.svg"
+            width="20"
+            height="20"
+            alt=""
+          />
+        </a>
         <button
           class="A_IconButton O_Nav__Toggle"
           type="button"
@@ -86,86 +92,187 @@
         </button>
       </nav>
 
-      <main class="S_AboutPage" data-about-scene>
-        <h1 class="visually-hidden">О проекте</h1>
-        <div class="S_AboutPage__Stage">
-          <div class="S_AboutPage__Viewport">
-            <div class="S_AboutPage__Board">
-              <div class="S_AboutPage__Ellipse">
-                <img
-                  src="../images/illustrations/about-ellipse.svg"
-                  width="1400"
-                  height="860"
-                  alt=""
-                />
-              </div>
-              <div class="S_AboutPage__Dove">
-                <img
-                  src="../images/illustrations/about-dove.svg"
-                  width="554"
-                  height="579.767"
-                  alt=""
-                />
-              </div>
-              <div class="S_AboutPage__Logo">
-                <img
-                  src="../images/logos/logo-about.svg"
-                  width="424"
-                  height="131"
-                  alt="Underground & Pound"
-                />
-              </div>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-freedom"
-                data-about-word
-              >
-                Свобода
-              </p>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-openness"
-                data-about-word
-              >
-                Открытость
-              </p>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-provocation"
-                data-about-word
-              >
-                Провокация
-              </p>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-experiment"
-                data-about-word
-              >
-                Эксперимент
-              </p>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-independence"
-                data-about-word
-              >
-                Независимость
-              </p>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-curiosity"
-                data-about-word
-              >
-                Любопытство
-              </p>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-irony"
-                data-about-word
-              >
-                Ирония
-              </p>
-              <p
-                class="S_AboutPage__Word S_AboutPage__Word-courage"
-                data-about-word
-              >
-                Смелость
+      <main class="S_AboutPage">
+        <section class="S_AboutPage__Hero">
+          <div class="S_AboutPage__HeroInner">
+            <div class="S_AboutPage__Wordmark">
+              <img
+                src="../images/logos/logo-wordmark.svg"
+                width="2305"
+                height="710"
+                alt="Underground & Pound"
+              />
+            </div>
+            <div class="S_AboutPage__Intro">
+              <h1 class="A_TextH2 A_Text-white">Манифест андерграунда</h1>
+              <p class="S_AboutPage__Lead A_TextBodyBold A_Text-white">
+                Мы верим, что только через открытость, коллаборацию и стремление
+                к новым форматам можно создавать<br />
+                действительно крутые кейсы
               </p>
             </div>
           </div>
-        </div>
+        </section>
+
+        <section class="S_AboutPage__Cards" aria-label="Манифест">
+          <div class="S_AboutPage__CardsList">
+            <article class="O_ManifestoCard" data-manifesto-card>
+              <h2 class="O_ManifestoCard__Title A_TextH3">
+                «Чистое искусство» придумали те, у кого не получилось продаться
+              </h2>
+              <div class="O_ManifestoCard__Aside">
+                <p class="A_TextBody">
+                  Микеланджело работал по контракту. Боттичелли — на Медичи.
+                  «Чистое искусство» появилось тогда, когда появился рынок,
+                  который отказал. Не философия. Обида, упакованная в эстетику
+                </p>
+                <div class="O_ManifestoCard__Slot">
+                  <img
+                    class="O_ManifestoCard__Image"
+                    src="../images/illustrations/manifesto-landscape.png"
+                    width="120"
+                    height="120"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+
+            <article class="O_ManifestoCard" data-manifesto-card>
+              <h2 class="O_ManifestoCard__Title A_TextH3">
+                Хороший бизнес<br />— это лучшее искусство
+              </h2>
+              <div class="O_ManifestoCard__Aside">
+                <p class="A_TextBody">
+                  Плохой бизнес значит плохое искусство. Уорхол умел продать
+                  работу коллекционеру, галеристу и бренд-менеджеру одновременно.
+                </p>
+                <div class="O_ManifestoCard__Slot">
+                  <img
+                    class="O_ManifestoCard__Image O_ManifestoCard__Image-money"
+                    src="../images/illustrations/manifesto-money.png"
+                    width="1024"
+                    height="1024"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+
+            <article class="O_ManifestoCard" data-manifesto-card>
+              <h2 class="O_ManifestoCard__Title A_TextH3">
+                Художник имеет<br />право зарабатывать
+              </h2>
+              <div class="O_ManifestoCard__Aside">
+                <p class="A_TextBody">
+                  Бедность это бедность. Страдания не делает ваше искусство более
+                  значимым, спросите у Ницше
+                </p>
+                <div class="O_ManifestoCard__Slot">
+                  <img
+                    class="O_ManifestoCard__Image O_ManifestoCard__Image-bottle"
+                    src="../images/illustrations/manifesto-bottle.png"
+                    width="1024"
+                    height="1024"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+
+            <article class="O_ManifestoCard" data-manifesto-card>
+              <h2 class="O_ManifestoCard__Title A_TextH3">
+                В маркетинге<br />нет ничего злого
+              </h2>
+              <div class="O_ManifestoCard__Aside">
+                <p class="A_TextBody">
+                  Продвижение это часть работы.<br />
+                  Злое это когда о тебе никто не знает<br /><br />
+                  Твои работы уже лежат у тебя в студии, тебе осталось лишь
+                  загрузить их в интернет
+                </p>
+                <div class="O_ManifestoCard__Slot">
+                  <img
+                    class="O_ManifestoCard__Image O_ManifestoCard__Image-envelope"
+                    src="../images/illustrations/manifesto-envelope.png"
+                    width="1024"
+                    height="1024"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+
+            <article class="O_ManifestoCard" data-manifesto-card>
+              <h2 class="O_ManifestoCard__Title A_TextH3">
+                Рынок — это не враг культуры<br /><br />Это его единственный<br />аддекватный
+                критик
+              </h2>
+              <div class="O_ManifestoCard__Aside">
+                <p class="A_TextBody">
+                  Лайки врут. Кураторы льстят. Друзья говорят интересно. Платят
+                  только тогда, когда действительно хотят. Рынок честен с тобой.
+                  Рынок не боится отказать.
+                </p>
+                <div class="O_ManifestoCard__Slot">
+                  <img
+                    class="O_ManifestoCard__Image O_ManifestoCard__Image-scale"
+                    src="../images/illustrations/manifesto-scale.png"
+                    width="1024"
+                    height="1024"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+
+            <article class="O_ManifestoCard" data-manifesto-card>
+              <h2 class="O_ManifestoCard__Title A_TextH3">
+                Художник, который<br />не коммуницирует -<br />не является
+                художником
+              </h2>
+              <div class="O_ManifestoCard__Aside">
+                <p class="A_TextBody">
+                  Художник обязан говорить о своей работе. Если не говоришь, не
+                  объясняешь метод, не выходишь к людям. Тебя не существует.
+                  Коммуникация нужна так же, как работа в студии.
+                </p>
+                <div class="O_ManifestoCard__Slot">
+                  <img
+                    class="O_ManifestoCard__Image O_ManifestoCard__Image-megaphone"
+                    src="../images/illustrations/manifesto-megaphone.png"
+                    width="1024"
+                    height="1024"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+
+            <article class="O_ManifestoCard" data-manifesto-card>
+              <h2 class="O_ManifestoCard__Title A_TextH3">
+                Искусство - это гэмбл<br /><br />Важно чувствовать, когда<br />нужно
+                дэпнуть
+              </h2>
+              <div class="O_ManifestoCard__Aside">
+                <p class="A_TextBody">
+                  Карьера состоит из решений. Выбрать галерею. Согласиться на
+                  коллабу. Вовремя уйти. Вовремя остаться. Кто-то читает рынок.
+                  Кто-то ждёт. Дэпнуть значит понять момент
+                </p>
+                <div class="O_ManifestoCard__Slot">
+                  <img
+                    class="O_ManifestoCard__Image O_ManifestoCard__Image-casino"
+                    src="../images/illustrations/manifesto-casino.png"
+                    width="1024"
+                    height="1024"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
       </main>
     </div>
   </body>

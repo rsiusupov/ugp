@@ -1,0 +1,50 @@
+[
+  {
+    "id": "asap-rocky",
+    "title": "Асап Роки",
+    "lede": "«Я не хочу выглядеть как кто-то другой»",
+    "date": "22/11—2026",
+    "href": "articles/asap-rocky.html",
+    "aliases": ["asap rocky", "a$ap rocky", "asap", "асап"]
+  },
+  {
+    "id": "daniel-arsham",
+    "title": "Дэниэль Аршам",
+    "lede": "«По сути, мы все — ископаемые и артефакты в ожидании»",
+    "date": "22/11—2026",
+    "href": "articles/daniel-arsham.html",
+    "aliases": ["daniel arsham", "arsham", "даниэль аршам", "дэниел аршам"]
+  },
+  {
+    "id": "gucci-ghost",
+    "title": "Gucci Ghost",
+    "lede": "Как забуллить бренд и заставить его сотрудничать",
+    "date": "22/11—2026",
+    "href": "articles/gucci-ghost.html",
+    "aliases": ["guccighost", "trevor andrew", "гуччи гост"]
+  },
+  {
+    "id": "hajime-sorayama",
+    "title": "Хадзимэ Сораяма",
+    "lede": "«Если я что-то делаю, я говорю им сто процентов того, чего хочу»",
+    "date": "22/11—2026",
+    "href": "articles/hajime-sorayama.html",
+    "aliases": ["hajime sorayama", "sorayama", "сораяма"]
+  },
+  {
+    "id": "samuel-ross",
+    "title": "Сэмюэль Росс",
+    "lede": "«Меня интересует, как одежда стареет, и я хочу взять пользователя с собой в это путешествие»",
+    "date": "22/11—2026",
+    "href": "articles/samuel-ross.html",
+    "aliases": ["samuel ross", "a-cold-wall", "a cold wall", "сэмюэл росс"]
+  },
+  {
+    "id": "kaws",
+    "title": "KAWS",
+    "lede": "«Мне интересна возможность попасть к аудитории, которая не может покупать скульптуры»",
+    "date": "22/11—2026",
+    "href": "articles/kaws.html",
+    "aliases": ["brian donnelly", "брайан доннелли"]
+  }
+]

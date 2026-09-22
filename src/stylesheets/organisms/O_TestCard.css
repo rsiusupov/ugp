@@ -1,0 +1,144 @@
+.O_TestCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+  height: 562px;
+  padding: 12px;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--black);
+}
+
+.O_TestCard:hover,
+.O_TestCard:focus-visible {
+  background: var(--light-gray);
+}
+
+.O_TestCard__Media {
+  position: relative;
+  flex: 1 0 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.O_TestCard__Media img {
+  position: absolute;
+  pointer-events: none;
+}
+
+.O_TestCard__Media-collab {
+  overflow: visible;
+}
+
+.O_TestCard__Media-collab img {
+  left: -40px;
+  top: 24px;
+  width: 496.525px;
+  height: 643px;
+  overflow: visible;
+}
+
+.O_TestCard__Media-sold img {
+  left: 24px;
+  top: 8px;
+  width: 377.226px;
+  height: 667.982px;
+}
+
+.O_TestCard__Media-worth {
+  overflow: visible;
+}
+
+.O_TestCard__Media-worth img {
+  left: -80px;
+  bottom: -30px;
+  top: auto;
+  width: 760.763px;
+  height: 429.053px;
+  transform: rotate(22deg);
+}
+
+.O_TestCard__Body {
+  z-index: 1;
+  display: flex;
+  flex: 1.8 0 0;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-width: 0;
+  max-width: 861px;
+  height: 100%;
+}
+
+.O_TestCard__Text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.O_TestCard__Lede {
+  max-width: 489px;
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--black);
+}
+
+@media (max-width: 1100px) {
+  .O_TestCard {
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  .O_TestCard__Media {
+    width: 100%;
+    height: 320px;
+    flex: none;
+  }
+
+  .O_TestCard__Body {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    gap: 32px;
+    padding-top: 8px;
+  }
+
+  .O_TestCard__Media-collab img,
+  .O_TestCard__Media-sold img,
+  .O_TestCard__Media-worth img {
+    left: 50%;
+    top: 16px;
+    height: auto;
+    transform: translateX(-50%);
+  }
+
+  .O_TestCard__Media-collab img {
+    width: min(100%, 360px);
+  }
+
+  .O_TestCard__Media-sold img {
+    width: min(100%, 280px);
+  }
+
+  .O_TestCard__Media-worth img {
+    width: min(100%, 420px);
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 833px) {
+  .O_TestCard__Media {
+    height: 240px;
+  }
+
+  .O_TestCard__Lede {
+    max-width: none;
+  }
+}

@@ -1,40 +1,10 @@
 import Swiper from 'swiper'
 import { Keyboard } from 'swiper/modules'
 import { initCaseListing } from './cases-listing'
+import { initSiteSearch } from './search'
 import '../stylesheets/style.css'
 
-const searchInput = document.querySelector('[data-search-input]')
-const searchForm = document.querySelector('[data-search-form]')
-const searchToggle = document.querySelector('[data-search-toggle]')
-const articleCards = document.querySelectorAll('.O_ArticleCard')
-
-if (searchToggle && searchInput) {
-  searchToggle.addEventListener('click', () => {
-    searchInput.focus()
-    searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  })
-}
-
-if (searchForm) {
-  searchForm.addEventListener('submit', (event) => {
-    event.preventDefault()
-    const query = (searchInput?.value || '').trim().toLowerCase()
-
-    if (!articleCards.length) {
-      return
-    }
-
-    articleCards.forEach((card) => {
-      const haystack = card.textContent.toLowerCase()
-      card.hidden = Boolean(query) && !haystack.includes(query)
-    })
-
-    document.getElementById('articles')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+initSiteSearch()
 
 const stickyNav = document.querySelector('.O_Nav')
 if (stickyNav) {
@@ -120,54 +90,44 @@ document.querySelectorAll('[data-share-network]').forEach((link) => {
   }
 })
 
-const aboutScene = document.querySelector('[data-about-scene]')
-if (aboutScene) {
-  const board = aboutScene.querySelector('.S_AboutPage__Board')
-  const viewport = aboutScene.querySelector('.S_AboutPage__Viewport')
-  const words = [...aboutScene.querySelectorAll('[data-about-word]')]
+const manifestoCards = [...document.querySelectorAll('[data-manifesto-card]')]
+if (manifestoCards.length) {
   const desktop = window.matchMedia('(min-width: 834px)')
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+  let observer
 
-  const fitAboutBoard = () => {
-    if (!board || !viewport) {
-      return
-    }
-
-    const scale = desktop.matches
-      ? Math.min(1, viewport.clientWidth / 1440, viewport.clientHeight / 900)
-      : Math.min(viewport.clientWidth / 640, viewport.clientHeight / 700)
-    board.style.setProperty('--about-scale', String(scale))
+  const showCards = () => {
+    manifestoCards.forEach((card) => card.classList.add('is-visible'))
   }
 
-  const syncAbout = () => {
-    fitAboutBoard()
+  const setupManifesto = () => {
+    if (observer) {
+      observer.disconnect()
+      observer = undefined
+    }
 
     if (!desktop.matches || reduceMotion.matches) {
-      words.forEach((word) => word.classList.add('is-visible'))
+      showCards()
       return
     }
 
-    const total = aboutScene.offsetHeight - window.innerHeight
-    if (total <= 0) {
-      words.forEach((word) => word.classList.add('is-visible'))
-      return
-    }
-
-    const progress = Math.min(
-      1,
-      Math.max(0, -aboutScene.getBoundingClientRect().top / total)
+    manifestoCards.forEach((card) => card.classList.remove('is-visible'))
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -12% 0px' }
     )
-
-    words.forEach((word, index) => {
-      const threshold = 0.08 + (index * 0.84) / words.length
-      word.classList.toggle('is-visible', progress >= threshold)
-    })
+    manifestoCards.forEach((card) => observer.observe(card))
   }
 
-  syncAbout()
-  window.addEventListener('scroll', syncAbout, { passive: true })
-  window.addEventListener('resize', syncAbout)
-  desktop.addEventListener('change', syncAbout)
+  setupManifesto()
+  desktop.addEventListener('change', setupManifesto)
 }
 
 const luckyLink = document.querySelector('[data-lucky-link]')

@@ -73,6 +73,22 @@ function navWordmark(indexHref, imagesPrefix) {
         </a>`
 }
 
+function navSearch(searchHref, imagesPrefix) {
+  return `          <a
+            class="A_IconButton O_Nav__Search"
+            href="${searchHref}"
+            aria-label="Поиск"
+          >
+            <img
+              class="A_Icon"
+              src="${imagesPrefix}/icons/magnifying-glass-nav.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </a>`
+}
+
 function navToggle(imagesPrefix) {
   return `        <button
           class="A_IconButton O_Nav__Toggle"
@@ -225,6 +241,9 @@ ${navWordmark('../../index.html', '../../images')}
             <a class="M_Button" href="../cases.html" aria-current="page">
               <span class="A_TextLabel">Разборы</span>
             </a>
+            <a class="M_Button M_Button-quiet" href="../tests.html">
+              <span class="A_TextLabel">Тесты</span>
+            </a>
             <a class="M_Button M_Button-quiet" href="../dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
@@ -232,20 +251,8 @@ ${navWordmark('../../index.html', '../../images')}
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
-          <a
-            class="A_IconButton O_Nav__Search"
-            href="../../index.html"
-            aria-label="Поиск"
-          >
-            <img
-              class="A_Icon"
-              src="../../images/icons/magnifying-glass-nav.svg"
-              width="20"
-              height="20"
-              alt=""
-            />
-          </a>
         </div>
+${navSearch('../search.html', '../../images')}
 ${navToggle('../../images')}
       </nav>
 
@@ -412,6 +419,9 @@ ${navWordmark('../index.html', '../images')}
             <a class="M_Button" href="cases.html" aria-current="page">
               <span class="A_TextLabel">Разборы</span>
             </a>
+            <a class="M_Button M_Button-quiet" href="tests.html">
+              <span class="A_TextLabel">Тесты</span>
+            </a>
             <a class="M_Button M_Button-quiet" href="dictionary.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
@@ -419,16 +429,8 @@ ${navWordmark('../index.html', '../images')}
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
-          <a class="A_IconButton O_Nav__Search" href="../index.html" aria-label="Поиск">
-            <img
-              class="A_Icon"
-              src="../images/icons/magnifying-glass-nav.svg"
-              width="20"
-              height="20"
-              alt=""
-            />
-          </a>
         </div>
+${navSearch('search.html', '../images')}
 ${navToggle('../images')}
       </nav>
 
