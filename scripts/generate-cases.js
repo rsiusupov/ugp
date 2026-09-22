@@ -62,6 +62,17 @@ function padIndex(index) {
   return String(index).padStart(2, '0')
 }
 
+function caseImageSrc(caseId, index, fromPages) {
+  const dir = path.join(__dirname, '../src/images/cases', caseId)
+  const base = `${caseId}-${index}`
+  const ext =
+    ['.png', '.jpg', '.jpeg', '.webp', '.avif'].find((candidate) =>
+      fs.existsSync(path.join(dir, `${base}${candidate}`))
+    ) || '.png'
+  const prefix = fromPages ? '../images/cases' : '../../images/cases'
+  return `${prefix}/${caseId}/${base}${ext}`
+}
+
 const FILTER_TAGS = [
   'Скульптура',
   'Арт-объект',
@@ -205,19 +216,19 @@ function renderCasePage(item, index, total) {
             <div class="S_Case__Track swiper-wrapper">
               <div class="S_Case__Frame swiper-slide">
                 <img
-                  src="../../images/cases/${item.id}/${item.id}-1.png"
+                  src="${caseImageSrc(item.id, 1)}"
                   alt="${escapeHtml(shortTitle)}"
                 />
               </div>
               <div class="S_Case__Frame swiper-slide">
                 <img
-                  src="../../images/cases/${item.id}/${item.id}-2.png"
+                  src="${caseImageSrc(item.id, 2)}"
                   alt=""
                 />
               </div>
               <div class="S_Case__Frame swiper-slide">
                 <img
-                  src="../../images/cases/${item.id}/${item.id}-3.png"
+                  src="${caseImageSrc(item.id, 3)}"
                   alt=""
                 />
               </div>
@@ -299,7 +310,7 @@ function renderListingPage() {
           >
             <div class="O_CaseCard__Media">
               <img
-                src="../images/cases/${item.id}/${item.id}-1.png"
+                src="${caseImageSrc(item.id, 1, true)}"
                 alt="${escapeHtml(shortTitle)}"
               />
             </div>
