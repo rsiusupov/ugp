@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Статьи — Underground & Pound</title>
+    <title>Статьи — Underground &amp; Pound</title>
   </head>
   <body>
     <div class="S_Page">
-      <nav class="O_Nav" aria-label="Основная навигация">
+      <nav class="O_Nav O_Nav-overlay O_Nav-ghost" aria-label="Основная навигация">
         <a class="A_Logo" href="../index.html" aria-label="Underground and Pound">
           <img src="../images/logos/logo-mark.svg" width="32" height="32" alt="" />
         </a>
@@ -29,147 +29,248 @@
               <span class="A_TextLabel">О проекте</span>
             </a>
           </div>
+          <a class="A_IconButton" href="../index.html" aria-label="Поиск">
+            <img
+              class="A_Icon"
+              src="../images/icons/magnifying-glass-nav.svg"
+              width="20"
+              height="20"
+              alt=""
+            />
+          </a>
         </div>
       </nav>
 
-      <main class="S_Articles">
-        <div class="M_ArticlesHeader">
-          <h1 class="A_TextH2">Статьи</h1>
-        </div>
-        <div class="S_Articles__Grid">
-          <a class="O_ArticleCard" href="articles/asap-rocky.html">
-            <div class="O_ArticleCard__Body">
-              <div class="O_ArticleCard__Media">
+      <main>
+        <section class="S_ArticlesHero">
+          <div class="S_ArticlesHero__Inner">
+            <div class="S_ArticlesHero__Media">
+              <div class="S_ArticlesHero__Image">
                 <img
-                  src="../images/articles/asap-rocky/cover.svg"
-                  width="400"
-                  height="550"
-                  alt="Асап Роки"
+                  src="../images/illustrations/articles-hero.svg"
+                  width="628"
+                  height="831"
+                  alt=""
                 />
               </div>
-              <div class="O_ArticleCard__Text">
-                <h2 class="A_TextLead">Асап Роки</h2>
-                <p class="A_TextBody">
-                  Great work rarely happens in isolation. It begins where
-                  different perspectives meet.
+            </div>
+            <div class="S_ArticlesHero__Copy">
+              <div class="S_ArticlesHero__Intro">
+                <h1 class="A_TextH1">
+                  Авторские<br />
+                  статьи
+                </h1>
+                <p class="A_TextBodyBold S_ArticlesHero__Lead">
+                  Собрали коллекцию художников, брендов и промо-компании
+                  <br /><br />
+                  Проанализировали кейсы с цитатами самих художников и их
+                  перспективной на творческий процесс
                 </p>
               </div>
-            </div>
-            <div class="O_ArticleCard__Date">
-              <span class="A_TextLabel">22/11—2026</span>
-            </div>
-          </a>
-          <a class="O_ArticleCard" href="articles/daniel-arsham.html">
-            <div class="O_ArticleCard__Body">
-              <div class="O_ArticleCard__Media">
-                <img
-                  src="../images/articles/daniel-arsham/cover.svg"
-                  width="400"
-                  height="550"
-                  alt="Дэниэль Аршам"
-                />
-              </div>
-              <div class="O_ArticleCard__Text">
-                <h2 class="A_TextLead">Дэниэль Аршам</h2>
-                <p class="A_TextBody">
-                  Great work rarely happens in isolation. It begins where
-                  different perspectives meet.
-                </p>
-              </div>
-            </div>
-            <div class="O_ArticleCard__Date">
-              <span class="A_TextLabel">22/11—2026</span>
-            </div>
-          </a>
-          <a class="O_ArticleCard" href="articles/gucci-ghost.html">
-            <div class="O_ArticleCard__Body">
-              <div class="O_ArticleCard__Media">
-                <img
-                  src="../images/articles/gucci-ghost/cover.svg"
-                  width="400"
-                  height="550"
-                  alt="Gucci Ghost"
-                />
-              </div>
-              <div class="O_ArticleCard__Text">
-                <h2 class="A_TextLead">Gucci Ghost</h2>
-                <p class="A_TextBody">
-                  Great work rarely happens in isolation. It begins where
-                  different perspectives meet.
-                </p>
-              </div>
-            </div>
-            <div class="O_ArticleCard__Date">
-              <span class="A_TextLabel">22/11—2026</span>
-            </div>
-          </a>
-          <a class="O_ArticleCard" href="articles/hajime-sorayama.html">
-            <div class="O_ArticleCard__Body">
-              <div class="O_ArticleCard__Media">
-                <img
-                  src="../images/articles/hajime-sorayama/cover.svg"
-                  width="400"
-                  height="550"
-                  alt="Хадзимэ Сораяма"
-                />
-              </div>
-              <div class="O_ArticleCard__Text">
-                <h2 class="A_TextLead">Хадзимэ Сораяма</h2>
-                <p class="A_TextBody">
-                  Great work rarely happens in isolation. It begins where
-                  different perspectives meet.
-                </p>
+              <div class="S_ArticlesHero__Share">
+                <button
+                  class="M_Button M_Button-ghost M_Button-share"
+                  type="button"
+                  data-share
+                >
+                  <span class="A_TextLabel">Поделиться</span>
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/arrow-up-right-16.svg"
+                    width="16"
+                    height="16"
+                    alt=""
+                  />
+                </button>
+                <a
+                  class="A_IconButton"
+                  href="#"
+                  data-share-network="telegram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поделиться в Telegram"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/telegram.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="A_IconButton"
+                  href="#"
+                  data-share-network="pinterest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Поделиться в Pinterest"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/pinterest.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="A_IconButton"
+                  href="https://www.instagram.com/"
+                  data-share-network="instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <img
+                    class="A_Icon"
+                    src="../images/icons/instagram.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
-            <div class="O_ArticleCard__Date">
-              <span class="A_TextLabel">22/11—2026</span>
-            </div>
-          </a>
-          <a class="O_ArticleCard" href="articles/samuel-ross.html">
-            <div class="O_ArticleCard__Body">
-              <div class="O_ArticleCard__Media">
-                <img
-                  src="../images/articles/samuel-ross/cover.svg"
-                  width="400"
-                  height="550"
-                  alt="Сэмюэль Росс"
-                />
+          </div>
+        </section>
+
+        <section class="S_Articles S_Articles-hub">
+          <div class="S_Articles__Grid">
+            <a class="O_ArticleCard" href="articles/asap-rocky.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="../images/articles/asap-rocky/cover.svg"
+                    width="400"
+                    height="550"
+                    alt="Асап Роки"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h2 class="A_TextLead">Асап Роки</h2>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
               </div>
-              <div class="O_ArticleCard__Text">
-                <h2 class="A_TextLead">Сэмюэль Росс</h2>
-                <p class="A_TextBody">
-                  Great work rarely happens in isolation. It begins where
-                  different perspectives meet.
-                </p>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
               </div>
-            </div>
-            <div class="O_ArticleCard__Date">
-              <span class="A_TextLabel">22/11—2026</span>
-            </div>
-          </a>
-          <a class="O_ArticleCard" href="articles/kaws.html">
-            <div class="O_ArticleCard__Body">
-              <div class="O_ArticleCard__Media">
-                <img
-                  src="../images/articles/kaws/cover.svg"
-                  width="400"
-                  height="550"
-                  alt="KAWS"
-                />
+            </a>
+            <a class="O_ArticleCard" href="articles/daniel-arsham.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="../images/articles/daniel-arsham/cover.svg"
+                    width="400"
+                    height="550"
+                    alt="Дэниэль Аршам"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h2 class="A_TextLead">Дэниэль Аршам</h2>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
               </div>
-              <div class="O_ArticleCard__Text">
-                <h2 class="A_TextLead">KAWS</h2>
-                <p class="A_TextBody">
-                  Great work rarely happens in isolation. It begins where
-                  different perspectives meet.
-                </p>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
               </div>
-            </div>
-            <div class="O_ArticleCard__Date">
-              <span class="A_TextLabel">22/11—2026</span>
-            </div>
-          </a>
-        </div>
+            </a>
+            <a class="O_ArticleCard" href="articles/gucci-ghost.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="../images/articles/gucci-ghost/cover.svg"
+                    width="400"
+                    height="550"
+                    alt="Gucci Ghost"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h2 class="A_TextLead">Gucci Ghost</h2>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+            <a class="O_ArticleCard" href="articles/hajime-sorayama.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="../images/articles/hajime-sorayama/cover.svg"
+                    width="400"
+                    height="550"
+                    alt="Хадзимэ Сораяма"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h2 class="A_TextLead">Хадзимэ Сораяма</h2>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+            <a class="O_ArticleCard" href="articles/samuel-ross.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="../images/articles/samuel-ross/cover.svg"
+                    width="400"
+                    height="550"
+                    alt="Сэмюэль Росс"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h2 class="A_TextLead">Сэмюэль Росс</h2>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+            <a class="O_ArticleCard" href="articles/kaws.html">
+              <div class="O_ArticleCard__Body">
+                <div class="O_ArticleCard__Media">
+                  <img
+                    src="../images/articles/kaws/cover.svg"
+                    width="400"
+                    height="550"
+                    alt="KAWS"
+                  />
+                </div>
+                <div class="O_ArticleCard__Text">
+                  <h2 class="A_TextLead">KAWS</h2>
+                  <p class="A_TextBody">
+                    Great work rarely happens in isolation. It begins where
+                    different perspectives meet.
+                  </p>
+                </div>
+              </div>
+              <div class="O_ArticleCard__Date">
+                <span class="A_TextLabel">22/11—2026</span>
+              </div>
+            </a>
+          </div>
+        </section>
       </main>
     </div>
   </body>
