@@ -22,6 +22,7 @@
 @import 'molecules/M_Quote.css';
 @import 'molecules/M_Divider.css';
 @import 'molecules/M_Pagination.css';
+@import 'molecules/M_Choice.css';
 
 @import 'organisms/O_Nav.css';
 @import 'organisms/O_HeroCard.css';
@@ -33,6 +34,7 @@
 @import 'organisms/O_CaseCard.css';
 @import 'organisms/O_ManifestoCard.css';
 @import 'organisms/O_TestCard.css';
+@import 'organisms/O_ResourceCard.css';
 
 @import 'sections/S_Hero.css';
 @import 'sections/S_About.css';
@@ -47,3 +49,6 @@
 @import 'sections/S_Cases.css';
 @import 'sections/S_Search.css';
 @import 'sections/S_Tests.css';
+@import 'sections/S_Test.css';
+@import 'sections/S_Styleguide.css';
+@import 'sections/S_Resources.css';

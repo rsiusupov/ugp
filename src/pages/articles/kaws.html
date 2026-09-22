@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KAWS — Underground & Pound</title>
+    <title>KAWS — Underground &amp; Pound</title>
   </head>
   <body>
     <div class="S_Page">
-      <nav class="O_Nav" aria-label="Основная навигация">
+      <nav class="O_Nav O_Nav-overlay O_Nav-ghost" aria-label="Основная навигация">
         <a class="A_Logo" href="../../index.html" aria-label="Underground and Pound">
           <img
             src="../../images/logos/logo-mark.svg"
@@ -38,7 +38,7 @@
             <a class="M_Button M_Button-quiet" href="../tests.html">
               <span class="A_TextLabel">Тесты</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../dictionary.html">
+            <a class="M_Button M_Button-quiet" href="../resources.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="../about.html">
@@ -84,16 +84,619 @@
           </button>
 
       </nav>
-      <main class="S_Inner">
-        <p class="A_TextLabel A_Text-darkGray">22/11—2026</p>
-        <h1 class="A_TextH2">KAWS</h1>
-        <p class="A_TextBody A_Text-darkGray">
-          Great work rarely happens in isolation. It begins where different
-          perspectives meet.
-        </p>
-        <p class="A_TextBody">
-          <a href="../articles.html">Обратно ко всем статьям</a>
-        </p>
+
+      <main>
+        <section class="S_ArticleHero S_ArticleHero-green">
+          <div class="S_ArticleHero__Inner">
+            <div class="S_ArticleHero__Media">
+              <div class="S_ArticleHero__Image">
+                <img
+                  src="../../images/articles/kaws/hero.svg"
+                  width="680"
+                  height="864"
+                  alt="KAWS"
+                />
+              </div>
+            </div>
+            <div class="S_ArticleHero__Copy">
+              <h1 class="A_TextH2">KAWS</h1>
+              <div class="S_ArticleHero__Bar">
+                <div class="S_ArticleHero__Share">
+                  <button
+                    class="M_Button M_Button-ghost M_Button-share"
+                    type="button"
+                    data-share
+                  >
+                    <span class="A_TextLabel">Поделиться</span>
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/arrow-up-right-16.svg"
+                      width="16"
+                      height="16"
+                      alt=""
+                    />
+                  </button>
+                  <a
+                    class="A_IconButton"
+                    href="#"
+                    data-share-network="telegram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Поделиться в Telegram"
+                  >
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/telegram.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="A_IconButton"
+                    href="#"
+                    data-share-network="pinterest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Поделиться в Pinterest"
+                  >
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/pinterest.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="A_IconButton"
+                    href="https://www.instagram.com/"
+                    data-share-network="instagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <img
+                      class="A_Icon"
+                      src="../../images/icons/instagram.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="S_ArticleHero__Meta">
+                  <p class="A_TextLabel">22.11.2026</p>
+                  <p class="A_TextLabel">Рахат Юсупов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <article class="S_Article">
+          <div class="S_Article__Layout">
+            <aside class="S_Article__Nav">
+              <nav class="M_Breadcrumbs" aria-label="Хлебные крошки">
+                <a class="A_TextBodySerif" href="../../index.html">Главная</a>
+                <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
+                <a class="A_TextBodySerif" href="../articles.html">Статьи</a>
+                <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
+                <span class="A_TextBodySerif M_Breadcrumbs__Current">KAWS</span>
+              </nav>
+              <nav class="O_ArticleNav" aria-label="Содержание" data-article-nav>
+                <a class="O_ArticleNav__Item" href="#snachala">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Сначала — собственный визуальный язык</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#odezhda">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Одежда — не постер, а поверхность конструкции</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#jordan">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >С Jordan и Dior: разная степень вмешательства</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#medium">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Hennessy и Uniqlo: система работает в любом медиуме</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#brand">
+                  <span class="O_ArticleNav__Label A_TextBody"
+                    >Что именно KAWS приносит бренду</span
+                  >
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+                <a class="O_ArticleNav__Item" href="#vyvod">
+                  <span class="O_ArticleNav__Label A_TextBody">Вывод</span>
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/caret-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </a>
+              </nav>
+            </aside>
+
+            <div class="S_Article__Main">
+              <div class="M_Tags">
+                <span class="M_Tag">
+                  <span class="A_TextBodyBold">Фэшн</span>
+                </span>
+                <span class="M_Tag">
+                  <span class="A_TextBodyBold">Графический дизайн</span>
+                </span>
+                <span class="M_Tag">
+                  <span class="A_TextBodyBold">Авто-спорт</span>
+                </span>
+              </div>
+
+              <div class="S_ArticleContent">
+                <div class="S_ArticleContent__Slot">
+                  <div class="A_RichText A_RichText-h" id="snachala">
+                    <h2 class="A_TextH3">
+                      Сначала — собственный визуальный язык
+                    </h2>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      KAWS редко работает с брендом по принципу «вот готовый
+                      продукт, давайте нанесём на него моего персонажа». Его
+                      коллаборации устроены сложнее: художник берёт уже
+                      существующий объект, визуальный код или культурный символ
+                      и пытается понять, что в нём можно переработать, не
+                      уничтожив его исходную узнаваемость. Сам художник
+                      объяснял, что выбирает коллаборации не столько из
+                      коммерческих соображений, сколько из «personal taste and
+                      instinct» — личного вкуса и интуиции. При этом проект
+                      должен совпадать с тем, чем он занимается в данный
+                      момент. Чтобы такой подход вообще работал, KAWS построил
+                      крайне компактную систему визуальных элементов.
+                      COMPANION, CHUM, BFF, череп, перекрещенные глаза, руки в
+                      перчатках, двойные X, округлые формы, яркие цветовые поля
+                      — это не набор случайных персонажей. Это скорее
+                      конструктор, который можно переносить между разными
+                      поверхностями и масштабами. Один и тот же визуальный язык
+                      способен стать графикой на футболке, паттерном на куртке,
+                      вышивкой, скульптурой, виниловой игрушкой или частью
+                      архитектурной инсталляции.
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/tnf-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/tnf-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      KAWS × The North Face
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-hPad" id="odezhda">
+                    <h2 class="A_TextH3">
+                      Одежда — не постер, а поверхность конструкции
+                    </h2>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Хороший пример — коллаборация KAWS с The North Face.
+                      Вместо того чтобы просто напечатать Companion поверх
+                      готовой куртки, команда начала с архивных силуэтов:
+                      Nuptse, Mountain Jacket, Basecamp и других знаковых
+                      моделей. KAWS работал с существующей конструкцией одежды,
+                      используя панели, швы и цветовые блоки как элементы
+                      собственной композиции. Сам KAWS довольно точно описал
+                      этот процесс: конструкция, прострочка и детали курток
+                      «lent themselves to the way I structure a painting» —
+                      позволяли ему мыслить одеждой примерно так же, как он
+                      строит картину. При этом первоначальным материалом были
+                      даже не готовые принты, а цветовые схемы: художник
+                      сначала предоставил изображения с точками, обозначающими
+                      цвет для отдельных частей одежды. То есть он начинал
+                      работу не с украшения поверхности, а с структуры
+                      распределения цвета.
+                    </p>
+                  </div>
+
+                  <div class="A_QuoteWrap">
+                    <blockquote class="A_Quote">
+                      <p class="A_TextLead">
+                        «Коммерческая работа для меня должна попадать в
+                        параметры моей текущей практики, а не воспроизводить
+                        то, что я делал десять лет назад. Мне интересно, что
+                        одежда позволяет говорить с человеком иначе, чем
+                        живопись или скульптура»
+                      </p>
+                      <div class="A_Quote__Caption">
+                        <p class="A_TextBodyBold">KAWS</p>
+                        <p class="A_TextBody">Художник</p>
+                      </div>
+                    </blockquote>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hAfter" id="jordan">
+                    <h2 class="A_TextH3">
+                      С Jordan и Dior: разная степень вмешательства
+                    </h2>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/jordan-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/jordan-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      KAWS × Air Jordan IV
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      В случае Nike и Air Jordan IV метод другой. Вместо яркого
+                      превращения продукта в поп-арт объект KAWS сознательно
+                      пошёл на более сдержанное решение. В интервью Hypebeast он
+                      объяснял, что хотел сделать обувь, которую смог бы сам
+                      носить, и говорил о желании создать «a good object».
+                      Поэтому Air Jordan IV не превращается в огромную
+                      иллюстрацию KAWS. Его вмешательство сосредоточено в
+                      материалах, фактуре, цвете и небольших, но характерных
+                      деталях: серый замшевый верх, изменённые элементы
+                      подошвы, Х-образные мотивы и графика, встроенная
+                      непосредственно в конструкцию модели. Это почти
+                      противоположный The North Face сценарий: там KAWS
+                      активно раскладывает вещь на цветовые плоскости, здесь он
+                      сдерживает собственную графику, чтобы дизайн самого
+                      объекта остался главным.
+                    </p>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Dior показывает ещё один уровень коллаборации. Для
+                      первого мужского шоу Kim Jones в Dior KAWS переосмыслил
+                      один из главных символов дома — пчелу. Мотив был встроен
+                      в одежду и аксессуары, а визуальный язык художника
+                      оказался частью самого фирменного кода Dior. Одновременно
+                      KAWS создал масштабную скульптуру BFF для пространства
+                      шоу: фигура была выполнена из примерно 70 000 роз и
+                      пионов. KAWS не просто добавляет свой знак к логотипу
+                      Dior. Он заставляет сам логотип пройти через собственную
+                      систему форм.
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage A_RichTextImage-natural">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/dior.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      KAWS × Dior Men
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_QuoteWrap">
+                    <blockquote class="A_Quote">
+                      <p class="A_TextLead">
+                        «Мне интересна возможность попасть к аудитории, которая
+                        не может покупать скульптуры и галерейные объекты»
+                      </p>
+                      <div class="A_Quote__Caption">
+                        <p class="A_TextBodyBold">KAWS</p>
+                        <p class="A_TextBody">Художник</p>
+                      </div>
+                    </blockquote>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hPad" id="medium">
+                    <h2 class="A_TextH3">
+                      Hennessy и Uniqlo: система работает в любом медиуме
+                    </h2>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/hennessy-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/hennessy-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      KAWS × Hennessy V.S
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      С бутылкой Hennessy KAWS делает то же самое, но в
+                      совершенно другом медиуме. В 2011 году художник получил
+                      возможность переработать классическую бутылку Hennessy
+                      V.S. Для работы он изучал историю марки, производство,
+                      визуальные элементы бренда и даже традицию написания
+                      названия Hennessy. В итоговом дизайне появились
+                      насыщенные цвета, двойной X и переработанные элементы
+                      герба и виноградной символики. Опять работает та же
+                      схема: изучить собственный язык бренда, найти его
+                      материальные и графические особенности, пропустить их
+                      через язык KAWS.
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/uniqlo-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/uniqlo-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      KAWS × Uniqlo UT
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Если Dior позволяет работать со всем пространством
+                      бренда, то Uniqlo требует другой стратегии — сделать
+                      художественный язык максимально простым и масштабируемым.
+                      В первой большой коллаборации появились футболки, сумки и
+                      домашняя обувь. Сам художник говорил, что сознательно
+                      выбрал именно базовые вещи. X превращается в
+                      повторяющийся паттерн, Companion становится центральным
+                      изображением. Футболка для него — ещё один способ
+                      распространения изображения. В 2024 году KAWS работал с
+                      Uniqlo и Andy Warhol — не поверх произведений Warhol, а
+                      рядом с ними. Он специально подчёркивал, что не хотел
+                      вмешиваться в чужие изображения без возможности самого
+                      Warhol участвовать в процессе. Не случайно в 2025 году
+                      Uniqlo назначил KAWS своим первым Artist in Residence.
+                    </p>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div
+                        class="A_RichTextImage__Frame A_RichTextImage__Frame-portrait"
+                      >
+                        <img
+                          src="../../images/articles/kaws/campana-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/campana-2.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/campana-3.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      KAWS × Campana Brothers
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Если посмотреть на проекты KAWS вместе, оказывается, что
+                      его главное преимущество — не персонаж сам по себе. Это
+                      способность переводить один визуальный язык между
+                      медиумами. На футболке он становится графикой. На куртке
+                      — системой цветовых блоков и панелей. На кроссовке —
+                      материалом, фактурой и деталями. На бутылке — упаковкой и
+                      переосмыслением фирменных символов. В Dior —
+                      сценографией, одеждой, скульптурой и образом коллекции. В
+                      мебели — физическим объектом: например, в совместной
+                      работе с Campana Brothers мягкие KAWS toys были буквально
+                      встроены в конструкцию кресел и диванов. А в public art
+                      масштаб его персонажей расширяется уже до архитектурной
+                      среды.
+                    </p>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hPad" id="brand">
+                    <h2 class="A_TextH3">Что именно KAWS приносит бренду</h2>
+                  </div>
+
+                  <figure class="A_RichTextImage">
+                    <div class="A_RichTextImage__Slot">
+                      <div class="A_RichTextImage__Frame">
+                        <img
+                          src="../../images/articles/kaws/peanuts-1.png"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="A_RichTextImage__Frame A_RichTextImage__Frame-portrait"
+                      >
+                        <img
+                          src="../../images/articles/kaws/peanuts-2.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <figcaption class="A_TextBody A_Text-darkGray">
+                      KAWS × Peanuts
+                    </figcaption>
+                  </figure>
+
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      Если убрать весь hype вокруг его имени, метод можно свести
+                      к четырём операциям. Он берёт узнаваемый объект — не
+                      абстрактную футболку, а конкретную модель. Разбирает его
+                      визуальный код: форма, цвет, логотип, конструкция,
+                      материал, исторический символ. Пропускает это через
+                      ограниченный собственный язык: X, персонажи, округлые
+                      формы, цветовые поля, графические паттерны, деформация
+                      знака. И возвращает объект обратно бренду уже изменённым,
+                      но всё ещё узнаваемым.
+                    </p>
+                  </div>
+
+                  <div class="A_RichText A_RichText-hPad" id="vyvod">
+                    <h2 class="A_TextH3">Вывод</h2>
+                  </div>
+                  <div class="A_RichText A_RichText-body">
+                    <p class="A_TextBody">
+                      В случае KAWS коллаборация — это не нанесение авторского
+                      изображения на чужой продукт. Это временное соединение
+                      двух визуальных систем, где продукт бренда становится
+                      материалом для искусства, а язык художника — способом
+                      заново прочитать этот продукт. Он работает не только на
+                      поверхности продукта, но и с самим способом, которым
+                      продукт выглядит и функционирует. KAWS начинал с того,
+                      что вмешивался в рекламу. Потом научился превращать
+                      одежду, игрушки и упаковку в медиум. А дальше сам бренд
+                      становится пространством, внутри которого художник может
+                      работать.
+                    </p>
+                  </div>
+
+                  <div class="S_ArticleRelated">
+                    <p class="A_TextLead">Читайте также:</p>
+                    <div class="A_NextArticles">
+                      <a class="A_NextArticle" href="kaws.html">
+                        <p class="A_NextArticle__Title A_TextBodySerif">KAWS</p>
+                        <span
+                          class="A_IconButton A_IconButton-s"
+                          aria-hidden="true"
+                        >
+                          <img
+                            class="A_Icon"
+                            src="../../images/icons/caret-right-16.svg"
+                            width="16"
+                            height="16"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                      <a class="A_NextArticle" href="gucci-ghost.html">
+                        <p class="A_NextArticle__Title A_TextBodySerif">
+                          Gucci Ghost
+                        </p>
+                        <span
+                          class="A_IconButton A_IconButton-s"
+                          aria-hidden="true"
+                        >
+                          <img
+                            class="A_Icon"
+                            src="../../images/icons/caret-right-16.svg"
+                            width="16"
+                            height="16"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                      <a class="A_NextArticle" href="hajime-sorayama.html">
+                        <p class="A_NextArticle__Title A_TextBodySerif">
+                          Хадзимэ Сораяма
+                        </p>
+                        <span
+                          class="A_IconButton A_IconButton-s"
+                          aria-hidden="true"
+                        >
+                          <img
+                            class="A_Icon"
+                            src="../../images/icons/caret-right-16.svg"
+                            width="16"
+                            height="16"
+                            alt=""
+                          />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </main>
     </div>
   </body>

@@ -35,10 +35,10 @@
             <a class="M_Button M_Button-quiet" href="../cases.html">
               <span class="A_TextLabel">Разборы</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../tests.html">
+            <a class="M_Button" href="../tests.html" aria-current="page">
               <span class="A_TextLabel">Тесты</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../dictionary.html">
+            <a class="M_Button M_Button-quiet" href="../resources.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="../about.html">
@@ -84,11 +84,153 @@
           </button>
 
       </nav>
-      <main class="S_Inner">
-        <h1 class="A_TextH2">Насколько ты продался?</h1>
-        <p class="A_TextBody">
-          <a href="../tests.html">Обратно ко всем тестам</a>
+      <main class="S_Test" data-test="sold">
+        <div class="S_Test__Rail S_Test__Rail-start">
+        <nav class="M_Breadcrumbs S_Test__Crumbs" aria-label="Хлебные крошки">
+          <a class="A_TextBodySerif" href="../../index.html">Главная</a>
+          <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
+          <a class="A_TextBodySerif" href="../tests.html">Тесты</a>
+          <span class="A_TextBodySerif M_Breadcrumbs__Sep">/</span>
+          <span class="A_TextBodySerif M_Breadcrumbs__Current"
+            >Насколько ты продался?</span
+          >
+        </nav>
+        <button
+          class="M_Button M_Button-ghost M_Button-share S_Test__Prev"
+          type="button"
+          data-test-prev
+          disabled
+        >
+          <img
+            class="A_Icon"
+            src="../../images/icons/arrow-left.svg"
+            width="16"
+            height="16"
+            alt=""
+          />
+          <span class="A_TextLabel">Прошлый</span>
+        </button>
+        </div>
+
+        <div class="S_Test__Stage">
+          <div class="S_Test__Illustration S_Test__Illustration-sold">
+            <img
+              src="../../images/illustrations/tests-card-sold.svg"
+              width="377.226"
+              height="667.982"
+              alt=""
+            />
+          </div>
+          <h1 class="visually-hidden">Насколько ты продался?</h1>
+          <h2 class="A_TextH3 S_Test__Question" data-test-question></h2>
+          <div
+            class="S_Test__Choices"
+            data-test-choices
+            role="group"
+            aria-label="Варианты ответа"
+          >
+            <button class="M_Choice" type="button" data-choice="A" aria-pressed="false">
+              <span class="M_Choice__Key" data-choice-key>A</span>
+              <span class="M_Choice__Label" data-choice-label></span>
+            </button>
+            <button class="M_Choice" type="button" data-choice="B" aria-pressed="false">
+              <span class="M_Choice__Key" data-choice-key>B</span>
+              <span class="M_Choice__Label" data-choice-label></span>
+            </button>
+            <button class="M_Choice" type="button" data-choice="C" aria-pressed="false">
+              <span class="M_Choice__Key" data-choice-key>C</span>
+              <span class="M_Choice__Label" data-choice-label></span>
+            </button>
+            <button class="M_Choice" type="button" data-choice="D" aria-pressed="false">
+              <span class="M_Choice__Key" data-choice-key>D</span>
+              <span class="M_Choice__Label" data-choice-label></span>
+            </button>
+          </div>
+
+          <div class="S_Test__Result" data-test-result hidden>
+            <div class="S_Test__ResultHead">
+              <h2 class="A_TextH2" data-result-title></h2>
+              <p class="S_Test__Partner" data-result-partner></p>
+              <p class="S_Test__Price" data-result-price hidden></p>
+              <p class="S_Test__Formula" data-result-formula hidden></p>
+            </div>
+            <p class="A_TextLead" data-result-verdict></p>
+            <div class="S_Test__Block" data-result-raised hidden>
+              <h3 class="A_TextH3">Что подняло твою цену</h3>
+              <ul class="S_Test__List" data-result-raised-list></ul>
+            </div>
+            <div class="S_Test__Block" data-result-dropped hidden>
+              <h3 class="A_TextH3">Что уронило твою цену</h3>
+              <ul class="S_Test__List" data-result-dropped-list></ul>
+            </div>
+            <figure class="A_Quote">
+              <blockquote class="A_TextBody" data-result-quote></blockquote>
+              <figcaption class="A_Quote__Caption">
+                <span class="A_TextLabel" data-result-cite></span>
+              </figcaption>
+            </figure>
+            <div class="S_Test__Block" data-result-work>
+              <h3 class="A_TextH3">С кем работать</h3>
+              <p class="A_TextBody" data-result-work-text></p>
+            </div>
+            <div class="S_Test__Block" data-result-dont>
+              <h3 class="A_TextH3">Чего не делать</h3>
+              <p class="A_TextBody" data-result-dont-text></p>
+            </div>
+            <div class="S_Test__Actions">
+              <button class="M_ButtonCTA" type="button" data-test-restart>
+                <span class="M_Button M_Button-quiet">
+                  <span class="A_TextLabel">Пройти ещё раз</span>
+                </span>
+                <span class="A_IconButton" aria-hidden="true">
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/arrow-up-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </span>
+              </button>
+              <a class="M_ButtonCTA" href="../tests.html">
+                <span class="M_Button M_Button-quiet">
+                  <span class="A_TextLabel">Ко всем тестам</span>
+                </span>
+                <span class="A_IconButton" aria-hidden="true">
+                  <img
+                    class="A_Icon"
+                    src="../../images/icons/arrow-up-right.svg"
+                    width="20"
+                    height="20"
+                    alt=""
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="S_Test__Rail S_Test__Rail-end">
+        <p class="S_Test__Counter" aria-live="polite">
+          <span data-test-current>1</span><span class="A_Text-darkGray">/</span
+          ><span class="A_Text-darkGray" data-test-total>10</span>
         </p>
+        <button
+          class="M_Button M_Button-ghost M_Button-share S_Test__Next"
+          type="button"
+          data-test-next
+          disabled
+        >
+          <span class="A_TextLabel">Дальше</span>
+          <img
+            class="A_Icon"
+            src="../../images/icons/arrow-right.svg"
+            width="16"
+            height="16"
+            alt=""
+          />
+        </button>
+        </div>
       </main>
     </div>
   </body>

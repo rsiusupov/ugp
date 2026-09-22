@@ -1,0 +1,281 @@
+.S_Styleguide {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--white);
+}
+
+.S_Page:has(.S_Styleguide) {
+  max-width: none;
+}
+
+.S_Styleguide__Hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1440 / 900;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.S_Styleguide__Board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 900px;
+  transform: scale(var(--styleguide-scale, 1));
+  transform-origin: top left;
+}
+
+.S_Styleguide__Ellipse {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  pointer-events: none;
+}
+
+.S_Styleguide__Dove {
+  position: absolute;
+  left: 419px;
+  top: 70px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.S_Styleguide__Logo {
+  position: absolute;
+  left: 508px;
+  top: 691px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.S_Styleguide__Word {
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  font-family: 'Taler', serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 29px;
+  color: var(--light-gray);
+  white-space: nowrap;
+}
+
+.S_Styleguide__Word-freedom {
+  left: 657px;
+  top: 41px;
+}
+
+.S_Styleguide__Word-openness {
+  left: 246px;
+  top: 160px;
+}
+
+.S_Styleguide__Word-courage {
+  left: 1104px;
+  top: 170px;
+}
+
+.S_Styleguide__Word-provocation {
+  left: 37px;
+  top: 440px;
+}
+
+.S_Styleguide__Word-irony {
+  left: 1266px;
+  top: 440px;
+}
+
+.S_Styleguide__Word-experiment {
+  left: 184px;
+  top: 630px;
+}
+
+.S_Styleguide__Word-curiosity {
+  left: 1078px;
+  top: 662px;
+}
+
+.S_Styleguide__Word-independence {
+  left: 603px;
+  top: 830px;
+}
+
+.S_Styleguide__Manifest {
+  width: 100%;
+  padding: 32px;
+  background: var(--green);
+}
+
+.S_Styleguide__ManifestCard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--black);
+}
+
+.S_Styleguide__Row {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.S_Styleguide__Label,
+.S_Styleguide__Lead {
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: var(--black);
+}
+
+.S_Styleguide__Row .A_TextH3 p + p {
+  margin-top: 0;
+}
+
+.S_Styleguide__Block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 32px;
+}
+
+.S_Styleguide__Heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.S_Styleguide__Heading .S_Styleguide__Lead {
+  max-width: 50%;
+}
+
+.S_Styleguide__Figure {
+  width: 100%;
+  overflow: hidden;
+}
+
+.S_Styleguide__Figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.S_Styleguide__Figure-bordered {
+  border: 1px solid var(--black);
+}
+
+.S_Styleguide__LogoPair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.S_Styleguide__LogoDemo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.S_Styleguide__LogoStretch {
+  display: flex;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: var(--yellow);
+  border: 1px solid var(--black);
+}
+
+.S_Styleguide__LogoStretch img {
+  width: 100%;
+  height: 100%;
+}
+
+.S_Styleguide__LogoEmblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: var(--mint);
+  border: 1px solid var(--black);
+}
+
+.S_Styleguide__LogoEmblem img {
+  width: 244px;
+  height: 244px;
+}
+
+.S_Styleguide__Mockups {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+.S_Styleguide__Mockups-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.S_Styleguide__Mockups-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.S_Styleguide__Mockups img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1440 / 900;
+  object-fit: cover;
+}
+
+@media (max-width: 833px) {
+  .S_Styleguide__Word,
+  .S_Styleguide__Ellipse {
+    display: none;
+  }
+
+  .S_Styleguide__Manifest,
+  .S_Styleguide__Block {
+    padding: 16px;
+  }
+
+  .S_Styleguide__ManifestCard {
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .S_Styleguide__Row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .S_Styleguide__Heading .S_Styleguide__Lead {
+    max-width: none;
+  }
+
+  .S_Styleguide__LogoPair,
+  .S_Styleguide__Mockups-2,
+  .S_Styleguide__Mockups-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .S_Styleguide__LogoStretch,
+  .S_Styleguide__LogoEmblem {
+    height: 280px;
+  }
+
+  .S_Styleguide__LogoEmblem img {
+    width: 160px;
+    height: 160px;
+  }
+}

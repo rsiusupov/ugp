@@ -19,6 +19,18 @@
   background: var(--blue);
 }
 
+.S_ArticleHero-brown {
+  background: var(--brown);
+}
+
+.S_ArticleHero-pink {
+  background: var(--pink);
+}
+
+.S_ArticleHero-green {
+  background: var(--green);
+}
+
 .S_ArticleHero__Inner {
   display: flex;
   gap: var(--gap);
@@ -99,6 +111,16 @@
   .S_ArticleHero__Copy {
     width: 100%;
     height: auto;
+  }
+
+  .S_ArticleHero__Media,
+  .S_ArticleHero__Image {
+    overflow: visible;
+  }
+
+  .S_ArticleHero__Image {
+    flex: none;
+    min-height: auto;
   }
 
   .S_ArticleHero__Image img {

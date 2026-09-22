@@ -23,10 +23,13 @@ const htmlPages = [
   createPages('./src/pages/articles.html', './pages/articles.html', ['index']),
   createPages('./src/pages/cases.html', './pages/cases.html', ['index']),
   createPages('./src/pages/search.html', './pages/search.html', ['index']),
-  createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
+  createPages('./src/pages/resources.html', './pages/resources.html', [
     'index'
   ]),
   createPages('./src/pages/about.html', './pages/about.html', ['index']),
+  createPages('./src/pages/styleguide.html', './pages/styleguide.html', [
+    'index'
+  ]),
   createPages(
     './src/pages/articles/asap-rocky.html',
     './pages/articles/asap-rocky.html',

@@ -1,0 +1,56 @@
+.M_Choice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-height: 116px;
+  padding: 12px;
+  background: var(--white);
+  border: 1px solid var(--black);
+  text-align: left;
+  cursor: pointer;
+}
+
+.M_Choice:hover,
+.M_Choice:focus-visible {
+  background: var(--light-gray);
+}
+
+.M_Choice.is-selected,
+.M_Choice.is-selected:hover,
+.M_Choice.is-selected:focus-visible {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.M_Choice__Key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  min-height: 32px;
+  padding: 4px;
+  flex-shrink: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+}
+
+.M_Choice.is-selected .M_Choice__Key {
+  background: var(--white);
+  color: var(--black);
+}
+
+.M_Choice__Label {
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  color: inherit;
+  overflow-wrap: break-word;
+}

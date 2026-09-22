@@ -81,6 +81,10 @@ body:has(.S_AboutPage) {
   max-width: 1080px;
 }
 
+.S_AboutPage__CardsList > a {
+  margin-top: 17px;
+}
+
 @media (max-width: 1100px) {
   .S_AboutPage__Hero {
     height: auto;
@@ -120,5 +124,9 @@ body:has(.S_AboutPage) {
 
   .S_AboutPage__CardsList {
     gap: 12px;
+  }
+
+  .S_AboutPage__CardsList > a {
+    margin-top: 16px;
   }
 }

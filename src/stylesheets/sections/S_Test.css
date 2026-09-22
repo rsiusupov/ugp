@@ -1,0 +1,268 @@
+.S_Test {
+  display: grid;
+  grid-template-columns: 216px minmax(0, 1fr) 216px;
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas:
+    'crumbs stage counter'
+    'prev stage next';
+  gap: var(--gap);
+  align-items: start;
+  width: 100%;
+  padding: 64px var(--margin) 32px;
+  min-height: calc(100dvh - 64px);
+}
+
+.S_Test__Rail {
+  display: contents;
+}
+
+.S_Test__Crumbs {
+  grid-area: crumbs;
+  width: 216px;
+  height: auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-self: start;
+}
+
+.S_Test__Crumbs a,
+.S_Test__Crumbs span {
+  white-space: normal;
+}
+
+.S_Test__Crumbs .M_Breadcrumbs__Current {
+  flex: 1 0 100%;
+}
+
+.S_Test__Prev {
+  grid-area: prev;
+  align-self: center;
+  justify-self: center;
+}
+
+.S_Test__Next {
+  grid-area: next;
+  align-self: center;
+  justify-self: center;
+}
+
+.S_Test__Stage {
+  position: relative;
+  grid-area: stage;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - 160px);
+  overflow: hidden;
+}
+
+.S_Test.is-result .S_Test__Stage {
+  min-height: 0;
+  overflow: visible;
+}
+
+.S_Test__Illustration {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.S_Test__Illustration img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: auto;
+  max-height: 68%;
+  transform: translateX(-50%);
+}
+
+.S_Test__Illustration-collab img {
+  width: min(62%, 420px);
+}
+
+.S_Test__Illustration-sold img {
+  width: min(48%, 320px);
+}
+
+.S_Test__Illustration-worth img {
+  width: min(88%, 680px);
+}
+
+.S_Test.is-result .S_Test__Illustration {
+  opacity: 0.18;
+}
+
+.S_Test__Question {
+  position: relative;
+  z-index: 1;
+  max-width: 906px;
+  margin: 0 auto;
+  padding: 24px 12px 0;
+  text-align: center;
+}
+
+.S_Test__Choices {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+  padding: 12px 0 0;
+}
+
+.S_Test__Result {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.S_Test__Result[hidden],
+.S_Test__Choices[hidden],
+.S_Test__Block[hidden],
+.S_Test__Partner[hidden],
+.S_Test__Price[hidden],
+.S_Test__Formula[hidden],
+.S_Test__Prev[hidden],
+.S_Test__Next[hidden],
+.S_Test.is-result .S_Test__Question,
+.S_Test.is-result .S_Test__Choices,
+.S_Test.is-result .S_Test__Prev,
+.S_Test.is-result .S_Test__Next {
+  display: none;
+}
+
+.S_Test__ResultHead {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.S_Test__Partner {
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+}
+
+.S_Test__Price {
+  font-family: 'Taler', serif;
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+}
+
+.S_Test__Formula {
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--dark-gray);
+  overflow-wrap: anywhere;
+}
+
+.S_Test__Block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.S_Test__List {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.S_Test__Actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.S_Test__Counter {
+  grid-area: counter;
+  display: flex;
+  justify-content: flex-end;
+  align-self: start;
+  width: 100%;
+  font-family: 'Inter Display', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  text-align: right;
+}
+
+.S_Test.is-result .S_Test__Counter {
+  visibility: hidden;
+}
+
+@media (max-width: 1100px) {
+  .S_Test {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      'crumbs crumbs'
+      'counter counter'
+      'stage stage'
+      'prev next';
+    padding-top: 32px;
+  }
+
+  .S_Test__Crumbs {
+    width: 100%;
+  }
+
+  .S_Test__Counter {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .S_Test__Stage {
+    min-height: calc(100dvh - 280px);
+  }
+
+  .S_Test.is-result .S_Test__Counter {
+    display: none;
+  }
+}
+
+@media (max-width: 833px) {
+  .S_Test {
+    padding: 24px var(--margin) 24px;
+  }
+
+  .S_Test__Choices {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
+
+  .M_Choice {
+    min-height: 0;
+  }
+
+  .S_Test__Illustration-collab img,
+  .S_Test__Illustration-sold img {
+    width: min(70%, 280px);
+    bottom: 0;
+  }
+
+  .S_Test__Illustration-worth img {
+    width: min(110%, 420px);
+    bottom: 12%;
+  }
+
+  .S_Test__Question {
+    padding: 8px 0 0;
+  }
+}

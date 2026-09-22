@@ -34,6 +34,18 @@
   border-color: var(--black);
 }
 
+.M_Button-ghost:hover img,
+.M_Button-ghost:focus-visible img {
+  filter: invert(1);
+}
+
+.M_Button:disabled,
+.M_Button[aria-disabled='true'] {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: default;
+}
+
 .M_Button-quiet {
   background: var(--light-gray);
   color: var(--black);

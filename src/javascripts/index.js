@@ -2,6 +2,7 @@ import Swiper from 'swiper'
 import { Keyboard } from 'swiper/modules'
 import { initCaseListing } from './cases-listing'
 import { initSiteSearch } from './search'
+import { initTest } from './tests'
 import '../stylesheets/style.css'
 
 initSiteSearch()
@@ -130,6 +131,22 @@ if (manifestoCards.length) {
   desktop.addEventListener('change', setupManifesto)
 }
 
+const styleguideHero = document.querySelector('.S_Styleguide__Hero')
+if (styleguideHero) {
+  const board = styleguideHero.querySelector('.S_Styleguide__Board')
+  const fitStyleguide = () => {
+    if (!board) {
+      return
+    }
+    board.style.setProperty(
+      '--styleguide-scale',
+      String(styleguideHero.clientWidth / 1440)
+    )
+  }
+  fitStyleguide()
+  window.addEventListener('resize', fitStyleguide)
+}
+
 const luckyLink = document.querySelector('[data-lucky-link]')
 if (luckyLink) {
   const luckyPages = [
@@ -215,3 +232,4 @@ if (articleNav) {
 }
 
 initCaseListing()
+initTest()

@@ -46,3 +46,19 @@
 .A_RichTextImage__Frame-portrait {
   flex: 0.8 0 auto;
 }
+
+.A_RichTextImage-natural .A_RichTextImage__Slot {
+  height: auto;
+}
+
+.A_RichTextImage-natural .A_RichTextImage__Frame {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.A_RichTextImage-natural .A_RichTextImage__Frame img {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}

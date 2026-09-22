@@ -80,8 +80,9 @@ module.exports = {
         [
           './pages/articles.html',
           './pages/cases.html',
-          './pages/dictionary.html',
+          './pages/resources.html',
           './pages/about.html',
+          './pages/styleguide.html',
           './pages/search.html',
           './pages/tests.html'
         ],

@@ -244,7 +244,7 @@ ${navWordmark('../../index.html', '../../images')}
             <a class="M_Button M_Button-quiet" href="../tests.html">
               <span class="A_TextLabel">Тесты</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="../dictionary.html">
+            <a class="M_Button M_Button-quiet" href="../resources.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="../about.html">
@@ -422,7 +422,7 @@ ${navWordmark('../index.html', '../images')}
             <a class="M_Button M_Button-quiet" href="tests.html">
               <span class="A_TextLabel">Тесты</span>
             </a>
-            <a class="M_Button M_Button-quiet" href="dictionary.html">
+            <a class="M_Button M_Button-quiet" href="resources.html">
               <span class="A_TextLabel">Ресурсы</span>
             </a>
             <a class="M_Button M_Button-quiet" href="about.html">
