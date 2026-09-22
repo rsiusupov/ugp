@@ -1,3 +1,5 @@
+import Swiper from 'swiper'
+import { Keyboard } from 'swiper/modules'
 import '../stylesheets/style.css'
 
 const searchInput = document.querySelector('[data-search-input]')
@@ -92,39 +94,45 @@ if (luckyLink) {
 
 const caseGallery = document.querySelector('[data-case-gallery]')
 if (caseGallery) {
-  const scroller = caseGallery.querySelector('[data-case-scroller]')
-  const frames = [...caseGallery.querySelectorAll('[data-case-frame]')]
+  const container = caseGallery.querySelector('.swiper')
   const currentEl = caseGallery.querySelector('[data-case-slide-current]')
+  const totalEl = caseGallery.querySelector('[data-case-slide-total]')
 
-  const syncSlide = () => {
-    if (!scroller || !frames.length || !currentEl) {
-      return
+  if (container) {
+    const syncIndex = (swiper) => {
+      if (currentEl) {
+        currentEl.textContent = String(swiper.realIndex + 1)
+      }
+      if (totalEl) {
+        totalEl.textContent = String(swiper.slides.length)
+      }
     }
 
-    const viewport = scroller.getBoundingClientRect()
-    let index = 0
-    let mostVisible = -1
-
-    frames.forEach((frame, frameIndex) => {
-      const rect = frame.getBoundingClientRect()
-      const visible =
-        Math.min(rect.right, viewport.right) - Math.max(rect.left, viewport.left)
-
-      if (visible > mostVisible) {
-        mostVisible = visible
-        index = frameIndex
+    const swiper = new Swiper(container, {
+      modules: [Keyboard],
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      grabCursor: true,
+      speed: 500,
+      watchOverflow: true,
+      observer: true,
+      observeParents: true,
+      keyboard: {
+        enabled: true
+      },
+      on: {
+        init: syncIndex,
+        slideChange: syncIndex
       }
     })
 
-    currentEl.textContent = String(index + 1)
+    container.querySelectorAll('img').forEach((img) => {
+      if (img.complete) {
+        return
+      }
+      img.addEventListener('load', () => swiper.update(), { once: true })
+    })
   }
-
-  syncSlide()
-  scroller?.addEventListener('scroll', syncSlide, { passive: true })
-  window.addEventListener('resize', syncSlide)
-  frames.forEach((frame) => {
-    frame.querySelector('img')?.addEventListener('load', syncSlide)
-  })
 }
 
 const articleNav = document.querySelector('[data-article-nav]')

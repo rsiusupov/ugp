@@ -191,31 +191,33 @@ function renderCasePage(item, index, total) {
 
       <main class="S_Case">
         <div class="S_Case__Gallery" data-case-gallery>
-          <div class="S_Case__Images" data-case-scroller>
-            <div class="S_Case__Frame" data-case-frame>
-              <img
-                src="../../images/cases/${item.id}/${item.id}-1.png"
-                alt="${escapeHtml(shortTitle)}"
-              />
-            </div>
-            <div class="S_Case__Frame" data-case-frame>
-              <img
-                src="../../images/cases/${item.id}/${item.id}-2.png"
-                alt=""
-              />
-            </div>
-            <div class="S_Case__Frame" data-case-frame>
-              <img
-                src="../../images/cases/${item.id}/${item.id}-3.png"
-                alt=""
-              />
+          <div class="S_Case__Images swiper">
+            <div class="S_Case__Track swiper-wrapper">
+              <div class="S_Case__Frame swiper-slide">
+                <img
+                  src="../../images/cases/${item.id}/${item.id}-1.png"
+                  alt="${escapeHtml(shortTitle)}"
+                />
+              </div>
+              <div class="S_Case__Frame swiper-slide">
+                <img
+                  src="../../images/cases/${item.id}/${item.id}-2.png"
+                  alt=""
+                />
+              </div>
+              <div class="S_Case__Frame swiper-slide">
+                <img
+                  src="../../images/cases/${item.id}/${item.id}-3.png"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
           <div class="S_Case__Meta">
             <p class="S_Case__SlideIndex A_TextBody" aria-live="polite">
               <span data-case-slide-current>1</span>
               <span class="A_Text-darkGray">/</span>
-              <span class="A_Text-darkGray">3</span>
+              <span class="A_Text-darkGray" data-case-slide-total>3</span>
             </p>
             <nav class="S_Case__Nav" aria-label="Навигация по кейсам">
 ${caseNavButton(

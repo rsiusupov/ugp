@@ -36,6 +36,7 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "swiper": "^14.2.0",
     "yarn": "^1.22.22"
   }
 }
